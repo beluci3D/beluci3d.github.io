@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>beluci — 3D Print & Design Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#050508;--bg1:#08080e;--bg2:#0d0d17;
+  --surface:#111120;--surface2:#16162a;
+  --border:rgba(255,255,255,.06);--border2:rgba(255,255,255,.12);
+  --cyan:#00f0ff;--cd:rgba(0,240,255,.09);
+  --orange:#ff6b2b;--od:rgba(255,107,43,.09);
+  --green:#00e87a;--gd:rgba(0,232,122,.09);
+  --violet:#9d4edd;
+  --text:#f0f0fa;--muted:#5a5a7a;--muted2:#3a3a55;
+  --syne:'Syne',sans-serif;--mono:'Space Mono',monospace;--inter:'Inter',sans-serif;
+  --expo:cubic-bezier(.16,1,.3,1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--inter);overflow-x:hidden;cursor:none}
+a{color:inherit;text-decoration:none}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--cyan),var(--orange));border-radius:3px}
+
+/* CURSOR */
+#cur{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .15s var(--expo),background .2s}
+#cur-r{position:fixed;width:38px;height:38px;border:1.5px solid rgba(0,240,255,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .4s var(--expo),width .3s,height .3s,border-color .3s}
+body.hov #cur{transform:translate(-50%,-50%) scale(2.5);background:var(--orange)}
+body.hov #cur-r{width:55px;height:55px;border-color:rgba(255,107,43,.4)}
+#bgc{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+/* PAGE LOADER */
+#loader{position:fixed;inset:0;z-index:9000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;transition:opacity .7s var(--expo),visibility .7s}
+#loader.gone{opacity:0;visibility:hidden}
+.spinner{width:44px;height:44px;animation:spinner-y0fdc1 2s infinite ease;transform-style:preserve-3d}
+.spinner>div{background-color:rgba(0,240,255,.14);height:100%;position:absolute;width:100%;border:2px solid var(--cyan)}
+.spinner div:nth-of-type(1){transform:translateZ(-22px) rotateY(180deg)}
+.spinner div:nth-of-type(2){transform:rotateY(-270deg) translateX(50%);transform-origin:top right}
+.spinner div:nth-of-type(3){transform:rotateY(270deg) translateX(-50%);transform-origin:center left}
+.spinner div:nth-of-type(4){transform:rotateX(90deg) translateY(-50%);transform-origin:top center}
+.spinner div:nth-of-type(5){transform:rotateX(-90deg) translateY(50%);transform-origin:bottom center}
+.spinner div:nth-of-type(6){transform:translateZ(22px)}
+@keyframes spinner-y0fdc1{
+  0%{transform:rotate(45deg) rotateX(-25deg) rotateY(25deg)}
+  50%{transform:rotate(45deg) rotateX(-385deg) rotateY(25deg)}
+  100%{transform:rotate(45deg) rotateX(-385deg) rotateY(385deg)}
+}
+.ld-txt{font-family:var(--syne);font-size:1.1rem;font-weight:800;letter-spacing:.15em}
+.ld-sub{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.15em}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);height:70px;transition:background .4s}
+nav.sc{background:rgba(5,5,8,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nl{font-family:var(--syne);font-weight:800;font-size:1.35rem;letter-spacing:-.02em;display:flex;align-items:center;gap:.3rem}
+.nl .b{color:var(--cyan);font-family:var(--mono);font-size:.95rem}
+.nc{display:flex;gap:2rem;list-style:none;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em}
+.nc a{color:var(--muted);transition:color .2s;position:relative;padding-bottom:2px}
+.nc a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--cyan);transition:width .3s var(--expo)}
+.nc a:hover{color:var(--text)}
+.nc a:hover::after{width:100%}
+.nc a.active{color:var(--cyan)}
+.nc a.active::after{width:100%}
+.np{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;padding:.48rem 1.1rem;border:1px solid var(--green);color:var(--green);border-radius:100px;transition:background .2s,box-shadow .2s}
+.np:hover{background:var(--gd);box-shadow:0 0 20px rgba(0,232,122,.25)}
+
+/* HERO */
+#hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8rem clamp(1.5rem,6vw,5rem) 5rem;text-align:center;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,240,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,255,.03) 1px,transparent 1px);background-size:50px 50px;animation:hg 20s linear infinite}
+@keyframes hg{from{background-position:0 0}to{background-position:50px 50px}}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,232,122,.06) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.h-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(0,232,122,.08);border:1px solid rgba(0,232,122,.2);border-radius:100px;padding:.4rem 1.1rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--green);margin-bottom:1.8rem;opacity:0;animation:fadeUp .8s .2s var(--expo) forwards}
+.h-badge .bdot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:bp 2s ease-in-out infinite;box-shadow:0 0 8px var(--green)}
+@keyframes bp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.h1{font-family:var(--syne);font-weight:800;font-size:clamp(3.5rem,10vw,9rem);line-height:.9;letter-spacing:-.04em;margin-bottom:1.5rem;opacity:0;animation:fadeUp .9s .35s var(--expo) forwards;position:relative;z-index:1}
+.h1 .l1{display:block;color:var(--text)}
+.h1 .l2{display:block;color:var(--text)}
+.h1 .l3{display:block;background:linear-gradient(135deg,var(--green) 0%,var(--cyan) 50%,var(--orange) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:gs 5s ease infinite 1s}
+@keyframes gs{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.h-sub{max-width:560px;margin:0 auto 3rem;font-size:1.05rem;color:var(--muted);font-weight:300;line-height:1.8;opacity:0;animation:fadeUp .9s .5s var(--expo) forwards;position:relative;z-index:1}
+.h-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .9s .65s var(--expo) forwards;position:relative;z-index:1}
+.h-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.15em;color:var(--muted);opacity:0;animation:fadeUp 1s 1.2s var(--expo) forwards}
+.sc-line{width:1px;height:44px;background:linear-gradient(var(--muted),transparent);animation:sp 2s ease-in-out infinite}
+@keyframes sp{0%,100%{opacity:.4}50%{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* BUTTONS */
+.bg{position:relative;overflow:hidden;padding:.85rem 2.1rem;background:var(--green);color:var(--bg);font-family:var(--mono);font-size:.76rem;font-weight:700;letter-spacing:.08em;border-radius:5px;transition:transform .2s,box-shadow .2s;box-shadow:0 0 40px rgba(0,232,122,.28),inset 0 1px 0 rgba(255,255,255,.3);display:inline-flex;align-items:center;gap:.5rem}
+.bg::after{content:'';position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:rgba(255,255,255,.3);transform:skewX(-20deg);transition:left .5s var(--expo)}
+.bg:hover::after{left:120%}
+.bg:hover{transform:translateY(-3px);box-shadow:0 0 60px rgba(0,232,122,.45)}
+.bo{padding:.85rem 2.1rem;border:1px solid var(--border2);color:var(--text);font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;border-radius:5px;transition:border-color .2s,background .2s,transform .2s;display:inline-flex;align-items:center;gap:.5rem}
+.bo:hover{border-color:var(--cyan);background:var(--cd);transform:translateY(-3px)}
+.bc-btn{position:relative;overflow:hidden;padding:.85rem 2.1rem;background:var(--cyan);color:var(--bg);font-family:var(--mono);font-size:.76rem;font-weight:700;letter-spacing:.08em;border-radius:5px;transition:transform .2s,box-shadow .2s;box-shadow:0 0 40px rgba(0,240,255,.28);display:inline-flex;align-items:center;gap:.5rem}
+.bc-btn:hover{transform:translateY(-3px);box-shadow:0 0 60px rgba(0,240,255,.45)}
+
+/* SECTIONS */
+section{position:relative;z-index:1}
+.sp{padding:8rem clamp(1.5rem,6vw,5rem)}
+.lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:var(--green);margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem}
+.lbl::before{content:'//';opacity:.45}
+.bt{font-family:var(--syne);font-weight:800;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-.03em;line-height:1}
+.section-max{max-width:1200px;margin:0 auto}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(38px);transition:opacity .8s var(--expo),transform .8s var(--expo)}
+.rev.in{opacity:1;transform:translateY(0)}
+.rl{opacity:0;transform:translateX(-38px);transition:opacity .8s var(--expo),transform .8s var(--expo)}
+.rl.in{opacity:1;transform:translateX(0)}
+.rr{opacity:0;transform:translateX(38px);transition:opacity .8s var(--expo),transform .8s var(--expo)}
+.rr.in{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* TICKER */
+.tk-wrap{position:relative;z-index:1;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);overflow:hidden;padding:.9rem 0}
+.tk-track{display:flex;width:max-content;animation:tk 30s linear infinite}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tk-item{display:flex;align-items:center;gap:.8rem;padding:0 2.2rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+.tk-item .d{width:4px;height:4px;border-radius:50%;background:var(--green);flex-shrink:0}
+.tk-item.hi{color:var(--green)}
+
+/* SERVICES GRID */
+#services{background:var(--bg1)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.svc-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2.5rem;position:relative;overflow:hidden;transition:transform .3s var(--expo),border-color .3s,box-shadow .3s}
+.svc-card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity .3s}
+.svc-card:hover::before{opacity:1}
+.svc-card.s-green::before{background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.svc-card.s-green:hover{border-color:rgba(0,232,122,.2)}
+.svc-card.s-cyan::before{background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
+.svc-card.s-cyan:hover{border-color:rgba(0,240,255,.2)}
+.svc-card.s-orange::before{background:linear-gradient(90deg,transparent,var(--orange),transparent)}
+.svc-card.s-orange:hover{border-color:rgba(255,107,43,.2)}
+.svc-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(0,232,122,.05),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.svc-card.s-cyan::after{background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(0,240,255,.05),transparent 60%)}
+.svc-card.s-orange::after{background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,107,43,.05),transparent 60%)}
+.svc-card:hover::after{opacity:1}
+.svc-num{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--green);margin-bottom:1.5rem}
+.svc-card.s-cyan .svc-num{color:var(--cyan)}
+.svc-card.s-orange .svc-num{color:var(--orange)}
+.svc-icon{font-size:2.5rem;margin-bottom:1.3rem;display:block;filter:drop-shadow(0 0 16px rgba(0,232,122,.4))}
+.svc-card.s-cyan .svc-icon{filter:drop-shadow(0 0 16px rgba(0,240,255,.4))}
+.svc-card.s-orange .svc-icon{filter:drop-shadow(0 0 16px rgba(255,107,43,.4))}
+.svc-title{font-family:var(--syne);font-weight:700;font-size:1.4rem;letter-spacing:-.01em;margin-bottom:.9rem}
+.svc-desc{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
+.svc-features{display:flex;flex-direction:column;gap:.5rem}
+.svc-feature{display:flex;align-items:center;gap:.6rem;font-size:.83rem;color:var(--muted)}
+.svc-feature::before{content:'✓';color:var(--green);font-weight:700;font-size:.8rem;flex-shrink:0}
+.svc-card.s-cyan .svc-feature::before{color:var(--cyan)}
+.svc-card.s-orange .svc-feature::before{color:var(--orange)}
+.svc-price{margin-top:1.8rem;padding-top:1.4rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.price-from{font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.1em}
+.price-val{font-family:var(--syne);font-weight:800;font-size:1.5rem;color:var(--green)}
+.svc-card.s-cyan .price-val{color:var(--cyan)}
+.svc-card.s-orange .price-val{color:var(--orange)}
+.price-unit{font-family:var(--mono);font-size:.6rem;color:var(--muted)}
+
+/* PROCESS */
+#process{background:var(--bg)}
+.process-track{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process-track::before{content:'';position:absolute;top:28px;left:calc(12.5%);right:calc(12.5%);height:1px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--orange));opacity:.3}
+.process-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 1.5rem;position:relative}
+.step-num{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--border2);background:var(--surface);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.75rem;color:var(--green);font-weight:700;margin-bottom:1.5rem;position:relative;z-index:1;transition:border-color .3s,box-shadow .3s}
+.process-step:hover .step-num{border-color:var(--green);box-shadow:0 0 20px rgba(0,232,122,.3)}
+.step-icon{font-size:1.2rem}
+.step-title{font-family:var(--syne);font-weight:700;font-size:1rem;margin-bottom:.6rem}
+.step-desc{font-size:.82rem;color:var(--muted);line-height:1.7}
+
+/* CASE STUDIES */
+#cases{background:var(--bg2)}
+.cases-intro{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:4rem}
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.case-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:transform .4s var(--expo),box-shadow .4s,border-color .3s}
+.case-card:hover{transform:translateY(-6px);box-shadow:0 30px 80px rgba(0,0,0,.5);border-color:rgba(0,232,122,.15)}
+.case-visual{height:260px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--bg2)}
+.case-visual .vis-emoji{font-size:5rem;position:relative;z-index:1;filter:drop-shadow(0 0 30px rgba(0,232,122,.3));animation:visFloat 4s ease-in-out infinite}
+@keyframes visFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-10px) rotate(3deg)}}
+.case-visual::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--bg2),var(--surface2))}
+.case-visual::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 40% 50%,rgba(0,232,122,.08),transparent 60%)}
+.case-tag{position:absolute;top:1rem;left:1rem;z-index:2;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;padding:.3rem .75rem;background:rgba(0,232,122,.12);border:1px solid rgba(0,232,122,.25);border-radius:100px;color:var(--green)}
+.case-status{position:absolute;top:1rem;right:1rem;z-index:2;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;padding:.28rem .7rem;border-radius:100px;display:flex;align-items:center;gap:.4rem}
+.case-status.done{background:rgba(0,232,122,.1);border:1px solid rgba(0,232,122,.2);color:var(--green)}
+.case-status .sd{width:5px;height:5px;border-radius:50%;background:var(--green);animation:bp 2s infinite}
+.case-body{padding:2rem}
+
+/* problem → solution layout */
+.case-ps{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+.ps-box{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1.1rem}
+.ps-label{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem}
+.ps-label.problem{color:#ff6b6b}
+.ps-label.solution{color:var(--green)}
+.ps-label .dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.ps-label.problem .dot{background:#ff6b6b}
+.ps-label.solution .dot{background:var(--green)}
+.ps-text{font-size:.83rem;color:var(--muted);line-height:1.65}
+.case-title{font-family:var(--syne);font-weight:800;font-size:1.2rem;letter-spacing:-.01em;margin-bottom:.5rem}
+.case-meta{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.08em;margin-bottom:1.2rem}
+
+/* testimonial */
+.testimonial{background:linear-gradient(135deg,rgba(0,232,122,.05),rgba(0,240,255,.03));border:1px solid rgba(0,232,122,.15);border-radius:12px;padding:1.3rem;position:relative;margin-top:1.5rem}
+.testimonial::before{content:'"';position:absolute;top:-.5rem;left:1rem;font-size:4rem;font-family:var(--syne);color:var(--green);opacity:.2;line-height:1}
+.testi-text{font-size:.86rem;color:var(--text);line-height:1.75;font-style:italic;margin-bottom:.9rem;position:relative;z-index:1}
+.testi-author{display:flex;align-items:center;gap:.8rem}
+.testi-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--cyan));display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.testi-name{font-family:var(--syne);font-weight:700;font-size:.85rem}
+.testi-role{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.testi-stars{margin-left:auto;color:#ffd700;font-size:.85rem;letter-spacing:.1em}
+
+/* STATS BAR */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-top:4rem}
+.stat-box{background:var(--surface);padding:2rem;text-align:center}
+.stat-num{font-family:var(--syne);font-weight:800;font-size:2.5rem;line-height:1;color:var(--green)}
+.stat-lbl{font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.12em;margin-top:.4rem}
+
+/* MATERIALS / SPECS */
+#specs{background:var(--bg1)}
+.specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.spec-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.spec-panel-head{padding:1.5rem 2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem}
+.spec-panel-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.spec-panel-icon.g{background:var(--gd);border:1px solid rgba(0,232,122,.2)}
+.spec-panel-icon.c{background:var(--cd);border:1px solid rgba(0,240,255,.2)}
+.spec-panel-title{font-family:var(--syne);font-weight:700;font-size:1rem}
+.spec-panel-sub{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.spec-list{padding:1.5rem 2rem;display:flex;flex-direction:column;gap:.7rem}
+.spec-item{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--border)}
+.spec-item:last-child{border-bottom:none}
+.spec-name{font-size:.88rem;font-weight:500}
+.spec-detail{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:right;line-height:1.5}
+.spec-badge{display:inline-block;padding:.2rem .6rem;border-radius:3px;font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;font-weight:700}
+.sb-g{background:var(--gd);color:var(--green);border:1px solid rgba(0,232,122,.2)}
+.sb-c{background:var(--cd);color:var(--cyan);border:1px solid rgba(0,240,255,.2)}
+.sb-o{background:var(--od);color:var(--orange);border:1px solid rgba(255,107,43,.2)}
+
+/* CTA */
+#contact-cta{background:var(--bg);text-align:center}
+.cta-wrap{max-width:800px;margin:0 auto;position:relative}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,232,122,.06),transparent 70%);pointer-events:none}
+.cta-options{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem;max-width:700px;margin-left:auto;margin-right:auto}
+.cta-opt{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center;transition:border-color .3s,transform .3s,box-shadow .3s;cursor:pointer}
+.cta-opt:hover{border-color:rgba(0,232,122,.25);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.cta-opt-icon{font-size:1.8rem;margin-bottom:.7rem}
+.cta-opt-title{font-family:var(--syne);font-weight:700;font-size:.9rem;margin-bottom:.3rem}
+.cta-opt-sub{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.contact-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
+
+/* FOOTER */
+footer{position:relative;z-index:1;border-top:1px solid var(--border);background:var(--bg);padding:2rem clamp(1.5rem,6vw,5rem);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fl{font-family:var(--syne);font-weight:800;font-size:1.05rem}
+.fl .fb{color:var(--cyan);font-family:var(--mono);font-size:.85rem}
+.fc{font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.06em}
+.flinks{display:flex;gap:1.4rem}
+.flinks a{font-family:var(--mono);font-size:.62rem;color:var(--muted);transition:color .2s}
+.flinks a:hover{color:var(--cyan)}
+
+@media(max-width:960px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .case-grid{grid-template-columns:1fr}
+  .process-track{grid-template-columns:1fr 1fr;gap:2rem}
+  .process-track::before{display:none}
+  .specs-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .nc{display:none}
+}
+@media(max-width:600px){
+  .svc-grid,.cta-options{grid-template-columns:1fr}
+  .case-ps{grid-template-columns:1fr}
+  body{cursor:auto}
+  #cur,#cur-r{display:none}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-r"></div>
+<canvas id="bgc"></canvas>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  <div class="ld-txt">BELUCI SERVICES</div>
+  <div class="ld-sub">// loading print lab...</div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nl"><span class="b">[</span>beluci<span class="b">]</span></div>
+  <ul class="nc">
+    <li><a href="index.html">home</a></li>
+    <li><a href="#services">services</a></li>
+    <li><a href="#cases">case_studies</a></li>
+    <li><a href="#specs">materials</a></li>
+    <li><a href="#contact-cta" class="active">get_quote</a></li>
+  </ul>
+  <a href="#contact-cta" class="np">Get a Quote →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="h-badge"><span class="bdot"></span>Custom 3D Print & CAD Design Services</div>
+  <h1 class="h1">
+    <span class="l1">YOUR IDEA.</span>
+    <span class="l2">MY PRINTER.</span>
+    <span class="l3">REAL RESULTS.</span>
+  </h1>
+  <p class="h-sub">From concept to finished part — I design, model and 3D print custom solutions for your exact problem. No templates. No guesswork. Just parts that work.</p>
+  <div class="h-btns">
+    <a href="#contact-cta" class="bg">🖨 Get a Quote</a>
+    <a href="#cases" class="bo">📂 See Case Studies</a>
+  </div>
+  <div class="h-scroll"><div class="sc-line"></div>SCROLL</div>
+</section>
+
+<!-- TICKER -->
+<div class="tk-wrap">
+  <div class="tk-track">
+    <div class="tk-item hi"><span class="d"></span>CUSTOM PRINTS</div>
+    <div class="tk-item"><span class="d"></span>CAD DESIGN</div>
+    <div class="tk-item hi"><span class="d"></span>FUNCTIONAL PARTS</div>
+    <div class="tk-item"><span class="d"></span>PLA · PETG · TPU</div>
+    <div class="tk-item hi"><span class="d"></span>FAST TURNAROUND</div>
+    <div class="tk-item"><span class="d"></span>ENCLOSURES & BRACKETS</div>
+    <div class="tk-item hi"><span class="d"></span>PROTOTYPING</div>
+    <div class="tk-item"><span class="d"></span>AUTODESK INVENTOR</div>
+    <div class="tk-item hi"><span class="d"></span>FUSION 360</div>
+    <div class="tk-item"><span class="d"></span>PTC CREO</div>
+    <div class="tk-item hi"><span class="d"></span>REVISION INCLUDED</div>
+    <div class="tk-item"><span class="d"></span>ELECTRONICS MOUNTS</div>
+    <div class="tk-item hi"><span class="d"></span>CUSTOM PRINTS</div>
+    <div class="tk-item"><span class="d"></span>CAD DESIGN</div>
+    <div class="tk-item hi"><span class="d"></span>FUNCTIONAL PARTS</div>
+    <div class="tk-item"><span class="d"></span>PLA · PETG · TPU</div>
+    <div class="tk-item hi"><span class="d"></span>FAST TURNAROUND</div>
+    <div class="tk-item"><span class="d"></span>ENCLOSURES & BRACKETS</div>
+    <div class="tk-item hi"><span class="d"></span>PROTOTYPING</div>
+    <div class="tk-item"><span class="d"></span>AUTODESK INVENTOR</div>
+    <div class="tk-item hi"><span class="d"></span>FUSION 360</div>
+    <div class="tk-item"><span class="d"></span>PTC CREO</div>
+    <div class="tk-item hi"><span class="d"></span>REVISION INCLUDED</div>
+    <div class="tk-item"><span class="d"></span>ELECTRONICS MOUNTS</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="sp">
+  <div class="section-max">
+    <div style="margin-bottom:3.5rem">
+      <div class="lbl rev">what i offer</div>
+      <h2 class="bt rev d1">Services &amp;<br>Pricing.</h2>
+      <p class="rev d2" style="color:var(--muted);margin-top:1rem;max-width:500px;font-size:.95rem;line-height:1.7">Every project is different — prices below are starting points. Send me your idea and I'll give you an exact quote within 24h.</p>
+    </div>
+    <div class="svc-grid">
+
+      <!-- SERVICE 1 -->
+      <div class="svc-card s-green rev d1">
+        <div class="svc-num">01 /</div>
+        <span class="svc-icon">🖨</span>
+        <div class="svc-title">Custom 3D Printing</div>
+        <p class="svc-desc">You have a file, I print it. Or describe what you need and I'll source or create the model. High-quality FDM printing with careful settings for every job.</p>
+        <div class="svc-features">
+          <div class="svc-feature">Multiple materials available (PLA, PETG, TPU)</div>
+          <div class="svc-feature">Layer heights from 0.1mm to 0.3mm</div>
+          <div class="svc-feature">Multiple colour options</div>
+          <div class="svc-feature">Post-processing &amp; finishing available</div>
+          <div class="svc-feature">Your STL or I'll find/design one</div>
+        </div>
+        <div class="svc-price">
+          <div><div class="price-from">STARTING FROM</div><div class="price-unit">depending on size &amp; material</div></div>
+          <div class="price-val">Contact</div>
+        </div>
+      </div>
+
+      <!-- SERVICE 2 -->
+      <div class="svc-card s-cyan rev d2">
+        <div class="svc-num">02 /</div>
+        <span class="svc-icon">📐</span>
+        <div class="svc-title">CAD Design</div>
+        <p class="svc-desc">Custom 3D modelling in Autodesk Inventor, Fusion 360 or PTC Creo. I design parametric, print-ready models from your sketch, photo or description.</p>
+        <div class="svc-features">
+          <div class="svc-feature">Parametric &amp; print-optimised models</div>
+          <div class="svc-feature">Inventor, Fusion 360 or Creo files</div>
+          <div class="svc-feature">STL + native files delivered</div>
+          <div class="svc-feature">1 revision round included</div>
+          <div class="svc-feature">Technical drawings on request</div>
+        </div>
+        <div class="svc-price">
+          <div><div class="price-from">STARTING FROM</div><div class="price-unit">per design / part</div></div>
+          <div class="price-val" style="color:var(--cyan)">Contact</div>
+        </div>
+      </div>
+
+      <!-- SERVICE 3 -->
+      <div class="svc-card s-orange rev d3">
+        <div class="svc-num">03 /</div>
+        <span class="svc-icon">⚡</span>
+        <div class="svc-title">Design + Print Bundle</div>
+        <p class="svc-desc">The complete package — I design your part from scratch AND print it. Best for functional parts, enclosures, brackets and prototypes that need to fit perfectly first time.</p>
+        <div class="svc-features">
+          <div class="svc-feature">Full CAD design included</div>
+          <div class="svc-feature">Test print + refinement cycle</div>
+          <div class="svc-feature">Electronics enclosures speciality</div>
+          <div class="svc-feature">Assembly guidance if needed</div>
+          <div class="svc-feature">Source files delivered</div>
+        </div>
+        <div class="svc-price">
+          <div><div class="price-from">STARTING FROM</div><div class="price-unit">full project price</div></div>
+          <div class="price-val" style="color:var(--orange)">Contact</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="sp">
+  <div class="section-max">
+    <div style="margin-bottom:4rem">
+      <div class="lbl rev">how it works</div>
+      <h2 class="bt rev d1">From Idea<br>to Object.</h2>
+    </div>
+    <div class="process-track">
+      <div class="process-step rev d1">
+        <div class="step-num"><span class="step-icon">💬</span></div>
+        <div class="step-title">1. You Describe It</div>
+        <p class="step-desc">Send me your idea — a sketch, photo, description or existing file. No technical knowledge needed.</p>
+      </div>
+      <div class="process-step rev d2">
+        <div class="step-num"><span class="step-icon">📐</span></div>
+        <div class="step-title">2. I Design It</div>
+        <p class="step-desc">I model the part in CAD, send you a preview render and apply any changes you want before printing.</p>
+      </div>
+      <div class="process-step rev d3">
+        <div class="step-num"><span class="step-icon">🖨</span></div>
+        <div class="step-title">3. Print &amp; Check</div>
+        <p class="step-desc">I print the part, check tolerances and quality, and refine if needed. No shortcuts.</p>
+      </div>
+      <div class="process-step rev d4">
+        <div class="step-num"><span class="step-icon">📦</span></div>
+        <div class="step-title">4. Delivered</div>
+        <p class="step-desc">You receive the finished part plus all source files. If anything's off — I fix it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases" class="sp">
+  <div class="section-max">
+    <div class="cases-intro">
+      <div>
+        <div class="lbl rev">solved problems</div>
+        <h2 class="bt rev d1">Real Projects.<br>Real Results.</h2>
+        <p class="rev d2" style="color:var(--muted);margin-top:1rem;max-width:460px;font-size:.95rem;line-height:1.7">Every case below started as a problem without an off-the-shelf solution. Here's how I solved them.</p>
+      </div>
+    </div>
+
+    <div class="case-grid">
+
+      <!-- CASE 1 -->
+      <div class="case-card rev d1">
+        <div class="case-visual">
+          <div class="case-tag">Custom Enclosure</div>
+          <div class="case-status done"><span class="sd"></span>DELIVERED</div>
+          <div class="vis-emoji" style="animation-delay:0s">🔌</div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">// PROJECT_001 · ESP32 · 3D Print + CAD</div>
+          <div class="case-title">ESP32 Project Enclosure</div>
+          <div class="case-ps">
+            <div class="ps-box">
+              <div class="ps-label problem"><span class="dot"></span>PROBLEM</div>
+              <div class="ps-text">Customer built a custom ESP32 sensor node but had no way to mount it cleanly. Exposed PCB, loose wires, no protection.</div>
+            </div>
+            <div class="ps-box">
+              <div class="ps-label solution"><span class="dot"></span>SOLUTION</div>
+              <div class="ps-text">Designed a snap-fit enclosure in Fusion 360 with cable management, ventilation slots and a magnetic lid for easy access.</div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="testi-text">Exactly what I needed — fitted perfectly on the first print. The magnetic lid is a genius touch, makes changing the firmware so easy. Will definitely order again.</p>
+            <div class="testi-author">
+              <div class="testi-avatar">👤</div>
+              <div>
+                <div class="testi-name">M. K.</div>
+                <div class="testi-role">Hobbyist Electronics Builder</div>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 2 -->
+      <div class="case-card rev d2">
+        <div class="case-visual">
+          <div class="case-tag">Replacement Part</div>
+          <div class="case-status done"><span class="sd"></span>DELIVERED</div>
+          <div class="vis-emoji" style="animation-delay:.5s">⚙️</div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">// PROJECT_002 · Mechanical · PETG</div>
+          <div class="case-title">Discontinued Machine Part</div>
+          <div class="case-ps">
+            <div class="ps-box">
+              <div class="ps-label problem"><span class="dot"></span>PROBLEM</div>
+              <div class="ps-text">A small bracket on a workshop machine snapped. Part was discontinued — no spare available anywhere. Machine was unusable.</div>
+            </div>
+            <div class="ps-box">
+              <div class="ps-label solution"><span class="dot"></span>SOLUTION</div>
+              <div class="ps-text">Measured the original broken part, modelled an improved version in Inventor with added reinforcement ribs. Printed in PETG for heat resistance.</div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="testi-text">I thought the machine was done for. Beluci measured the broken part from my photos and had a replacement to me in 3 days. It's been running ever since — stronger than the original.</p>
+            <div class="testi-author">
+              <div class="testi-avatar">👤</div>
+              <div>
+                <div class="testi-name">T. W.</div>
+                <div class="testi-role">Workshop Owner</div>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 3 -->
+      <div class="case-card rev d3">
+        <div class="case-visual">
+          <div class="case-tag">Cable Management</div>
+          <div class="case-status done"><span class="sd"></span>DELIVERED</div>
+          <div class="vis-emoji" style="animation-delay:1s">🔧</div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">// PROJECT_003 · Desk Setup · PLA</div>
+          <div class="case-title">Custom Desk Cable System</div>
+          <div class="case-ps">
+            <div class="ps-box">
+              <div class="ps-label problem"><span class="dot"></span>PROBLEM</div>
+              <div class="ps-text">Customer had a non-standard desk frame with no cable management solution. Generic clips didn't fit the unusual rail profile.</div>
+            </div>
+            <div class="ps-box">
+              <div class="ps-label solution"><span class="dot"></span>SOLUTION</div>
+              <div class="ps-text">Designed a parametric clip system in Fusion 360 that snaps onto the exact desk profile. Printed a full set of 12 clips + cable tray in matte black PLA.</div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="testi-text">Sent over some measurements and photos and got a perfect fit back. The clips look like they came with the desk. Setup looks completely clean now — totally worth it.</p>
+            <div class="testi-author">
+              <div class="testi-avatar">👤</div>
+              <div>
+                <div class="testi-name">L. B.</div>
+                <div class="testi-role">Remote Worker / Setup Enthusiast</div>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 4 -->
+      <div class="case-card rev d4">
+        <div class="case-visual">
+          <div class="case-tag">Prototype</div>
+          <div class="case-status done"><span class="sd"></span>DELIVERED</div>
+          <div class="vis-emoji" style="animation-delay:1.5s">📦</div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta">// PROJECT_004 · Product Design · PLA + PETG</div>
+          <div class="case-title">Product Prototype Housing</div>
+          <div class="case-ps">
+            <div class="ps-box">
+              <div class="ps-label problem"><span class="dot"></span>PROBLEM</div>
+              <div class="ps-text">Small startup needed functional prototypes of their smart home device housing to test form factor and show to investors. Injection moulding too expensive at this stage.</div>
+            </div>
+            <div class="ps-box">
+              <div class="ps-label solution"><span class="dot"></span>SOLUTION</div>
+              <div class="ps-text">Modelled the housing in Creo based on their technical brief, printed 3 iterations with refinements. Final version was presentation-ready with smooth surface finish.</div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="testi-text">We needed something investor-presentable on a startup budget. Beluci delivered three prototype versions with fast turnaround on changes. The final one looked genuinely professional.</p>
+            <div class="testi-author">
+              <div class="testi-avatar">👤</div>
+              <div>
+                <div class="testi-name">A. R.</div>
+                <div class="testi-role">Startup Founder</div>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row rev" style="margin-top:3rem">
+      <div class="stat-box">
+        <div class="stat-num" id="c1">0</div>
+        <div class="stat-lbl">PROJECTS COMPLETED</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="c2">0</div>
+        <div class="stat-lbl">HAPPY CUSTOMERS</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="c3">0</div>
+        <div class="stat-lbl">AVG. TURNAROUND DAYS</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="c4">0</div>
+        <div class="stat-lbl">STAR AVERAGE RATING</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS & SPECS -->
+<section id="specs" class="sp">
+  <div class="section-max">
+    <div style="margin-bottom:3.5rem">
+      <div class="lbl rev">capabilities</div>
+      <h2 class="bt rev d1">Materials &amp;<br>Specs.</h2>
+    </div>
+    <div class="specs-grid">
+      <div class="spec-panel rev d1">
+        <div class="spec-panel-head">
+          <div class="spec-panel-icon g">🧵</div>
+          <div>
+            <div class="spec-panel-title">Print Materials</div>
+            <div class="spec-panel-sub">Available filament types</div>
+          </div>
+        </div>
+        <div class="spec-list">
+          <div class="spec-item">
+            <div><div class="spec-name">PLA</div></div>
+            <div class="spec-detail">Best for display, prototypes<br>Easy to paint &amp; post-process<span class="spec-badge sb-g" style="margin-left:.4rem;display:inline-block">RECOMMENDED</span></div>
+          </div>
+          <div class="spec-item">
+            <div><div class="spec-name">PETG</div></div>
+            <div class="spec-detail">Functional &amp; heat resistant<br>Great for mechanical parts<span class="spec-badge sb-c" style="margin-left:.4rem;display:inline-block">STRONG</span></div>
+          </div>
+          <div class="spec-item">
+            <div><div class="spec-name">TPU</div></div>
+            <div class="spec-detail">Flexible &amp; rubber-like<br>Ideal for grips, gaskets, bumpers<span class="spec-badge sb-o" style="margin-left:.4rem;display:inline-block">FLEX</span></div>
+          </div>
+          <div class="spec-item">
+            <div><div class="spec-name">PLA+</div></div>
+            <div class="spec-detail">Improved toughness over standard PLA<br>Smooth surface finish</div>
+          </div>
+        </div>
+      </div>
+      <div class="spec-panel rev d2">
+        <div class="spec-panel-head">
+          <div class="spec-panel-icon c">⚙️</div>
+          <div>
+            <div class="spec-panel-title">Print Capabilities</div>
+            <div class="spec-panel-sub">Technical specifications</div>
+          </div>
+        </div>
+        <div class="spec-list">
+          <div class="spec-item">
+            <div class="spec-name">Layer Resolution</div>
+            <div class="spec-detail">0.10 mm (ultra fine)<br>to 0.30 mm (fast draft)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-name">CAD Software</div>
+            <div class="spec-detail">Autodesk Inventor · Fusion 360<br>PTC Creo</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-name">File Formats</div>
+            <div class="spec-detail">STL · STEP · F3D · IPT<br>Accepts: sketches, photos, descriptions</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-name">Typical Turnaround</div>
+            <div class="spec-detail">Design: 2–5 days<br>Print only: 1–3 days</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section id="contact-cta" class="sp" style="text-align:center">
+  <div class="cta-wrap">
+    <div class="cta-glow"></div>
+    <div style="position:relative;z-index:1">
+      <div class="lbl rev" style="justify-content:center;display:flex">get started</div>
+      <h2 class="bt rev d1" style="font-size:clamp(3rem,7vw,6rem);margin:1.2rem 0">Have a<br>Problem?</h2>
+      <p class="rev d2" style="color:var(--muted);max-width:460px;margin:0 auto;font-weight:300;line-height:1.8">I'll turn it into a printed part. Describe your idea — no technical experience needed. I'll quote you within 24h.</p>
+
+      <div class="cta-options rev d3">
+        <div class="cta-opt">
+          <div class="cta-opt-icon">🔌</div>
+          <div class="cta-opt-title">Electronics Part</div>
+          <div class="cta-opt-sub">Enclosures, mounts, holders</div>
+        </div>
+        <div class="cta-opt">
+          <div class="cta-opt-icon">🔧</div>
+          <div class="cta-opt-title">Replacement Part</div>
+          <div class="cta-opt-sub">Broken or discontinued parts</div>
+        </div>
+        <div class="cta-opt">
+          <div class="cta-opt-icon">💡</div>
+          <div class="cta-opt-title">Custom Idea</div>
+          <div class="cta-opt-sub">Anything you can imagine</div>
+        </div>
+      </div>
+
+      <div class="contact-btns rev d4">
+        <a href="https://www.youtube.com/@Belutschy" target="_blank" class="bg">📩 Contact via YouTube</a>
+        <a href="https://makerworld.com/@beluci" target="_blank" class="bo">🖨 View my Models</a>
+        <a href="index.html" class="bc-btn">← Back to Main Site</a>
+      </div>
+      <p class="rev d5" style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-top:1.5rem;letter-spacing:.08em">// Typical response within 24 hours · All projects include source files</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl"><span class="fb">[</span>beluci<span class="fb">]</span> services</div>
+  <div class="fc">© 2026 beluci — Custom 3D Print & CAD Design</div>
+  <div class="flinks">
+    <a href="index.html">Home</a>
+    <a href="https://www.youtube.com/@Belutschy" target="_blank">YouTube</a>
+    <a href="https://makerworld.com/@beluci" target="_blank">MakerWorld</a>
+  </div>
+</footer>
+
+<script>
+/* CURSOR */
+const cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function a(){cur.style.left=mx+'px';cur.style.top=my+'px';rx+=(mx-rx)*.11;ry+=(my-ry)*.11;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(a)})();
+document.querySelectorAll('a,button,.svc-card,.case-card,.cta-opt,.process-step').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+});
+
+/* NAV */
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>navEl.classList.toggle('sc',scrollY>40));
+
+/* LOADER */
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('gone'),1300));
+
+/* CANVAS */
+const cv=document.getElementById('bgc'),cx=cv.getContext('2d');
+let W,H,pts=[];
+function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight}
+resize();window.addEventListener('resize',()=>{resize();initPts()});
+function initPts(){
+  pts=[];const n=Math.floor(W*H/18000);
+  for(let i=0;i<n;i++) pts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*.8+.2,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,a:Math.random()*.4+.07,g:Math.random()>.6});
+}
+initPts();
+function draw(){
+  cx.clearRect(0,0,W,H);
+  for(let i=0;i<pts.length;i++){
+    for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<100){cx.beginPath();cx.strokeStyle=`rgba(0,232,122,${.03*(1-d/100)})`;cx.lineWidth=.35;cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.stroke()}
+    }
+    const p=pts[i];
+    cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    cx.fillStyle=p.g?`rgba(0,232,122,${p.a})`:`rgba(0,240,255,${p.a*.6})`;
+    cx.fill();
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+  }
+  requestAnimationFrame(draw);
+}
+draw();
+
+/* BENTO MOUSE GLOW */
+document.querySelectorAll('.svc-card').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+    c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+  });
+});
+
+/* SCROLL REVEAL */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}});
+},{threshold:.08});
+document.querySelectorAll('.rev,.rl,.rr').forEach(el=>obs.observe(el));
+
+/* COUNTER ANIMATION */
+function animCount(id, target, suffix='', duration=1800){
+  const el=document.getElementById(id);
+  if(!el)return;
+  let start=null;
+  function step(ts){
+    if(!start)start=ts;
+    const p=Math.min((ts-start)/duration,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=Math.round(ease*target)+suffix;
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+const statObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      animCount('c1',24,'');
+      animCount('c2',24,'');
+      animCount('c3',3,'');
+      animCount('c4',5,'★');
+      statObs.unobserve(e.target);
+    }
+  });
+},{threshold:.3});
+const statsRow=document.querySelector('.stats-row');
+if(statsRow)statObs.observe(statsRow);
+
+/* SMOOTH SCROLL */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
