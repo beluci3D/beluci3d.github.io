@@ -1,0 +1,193 @@
+{
+ "updatedAt": "2026-10-18T18:33:16.836Z",
+ "profile": {
+  "uid": "3937368763",
+  "handle": "beluci",
+  "url": "https://makerworld.com/en/@beluci",
+  "name": "Beluci",
+  "avatar": "https://makerworld.bblmw.com/makerworld/user/20261013/3937368763/deb12864dafbda18.png",
+  "followers": 4
+ },
+ "totals": {
+  "models": 7,
+  "downloads": 337,
+  "likes": 82,
+  "prints": 199
+ },
+ "models": [
+  {
+   "id": "3035529",
+   "title": "Custom Shim & Spacer Plate – Fully Parametric",
+   "url": "https://makerworld.com/en/models/3035529-custom-shim-spacer-plate-fully-parametric",
+   "cover": "https://makerworld.bblmw.com/makerworld/model/USce147a5b0893e5/design/c9c97d5f55587758.png",
+   "likes": 4,
+   "downloads": 23,
+   "prints": 19,
+   "collects": 17,
+   "comments": 0,
+   "boosts": 0,
+   "created": "2026-07-10T17:10:56Z",
+   "tags": [
+    "shim plate",
+    "shim",
+    "spacer",
+    "spacer plate",
+    "customiazble",
+    "custom shim plate"
+   ],
+   "category": "",
+   "creatorUid": "3937368763",
+   "creatorHandle": "",
+   "image": "assets/mw/3035529.webp"
+  },
+  {
+   "id": "2587766",
+   "title": "Universal Drill Dust Collector / Wall Protector",
+   "url": "https://makerworld.com/en/models/2587766-universal-drill-dust-collector-wall-protector",
+   "cover": "https://makerworld.bblmw.com/makerworld/model/USdaa35cc7e0460d/design/c7716eb3831af3ce.jpeg",
+   "likes": 2,
+   "downloads": 5,
+   "prints": 8,
+   "collects": 3,
+   "comments": 0,
+   "boosts": 0,
+   "created": "2026-03-29T10:58:57Z",
+   "tags": [
+    "drilling",
+    "workshop",
+    "dust",
+    "dust catcher",
+    "drill dust",
+    "drill debris"
+   ],
+   "category": "",
+   "creatorUid": "3937368763",
+   "creatorHandle": "",
+   "image": "assets/mw/2587766.webp"
+  },
+  {
+   "id": "2572898",
+   "title": "Minimalist Cup Stand | Only 10g of Filament!",
+   "url": "https://makerworld.com/en/models/2572898-minimalist-cup-stand-only-10g-of-filament",
+   "cover": "https://makerworld.bblmw.com/makerworld/model/US78d6cd96c0290d/design/ac1a64ac2d658881.jpg",
+   "likes": 2,
+   "downloads": 3,
+   "prints": 2,
+   "collects": 5,
+   "comments": 0,
+   "boosts": 1,
+   "created": "2026-03-25T20:32:53Z",
+   "tags": [
+    "cup",
+    "cup stand",
+    "cup drying stand",
+    "bottle drying",
+    "bottle holder",
+    "bottle drying stand"
+   ],
+   "category": "",
+   "creatorUid": "3937368763",
+   "creatorHandle": "",
+   "image": "assets/mw/2572898.webp"
+  },
+  {
+   "id": "1751606",
+   "title": "Customizable Desk Hook – Adjustable",
+   "url": "https://makerworld.com/en/models/1751606-customizable-desk-hook-adjustable",
+   "cover": "https://makerworld.bblmw.com/makerworld/model/USe990958872e09a/design/2025-08-31_0b498ceae565a8.jpg",
+   "likes": 44,
+   "downloads": 200,
+   "prints": 96,
+   "collects": 156,
+   "comments": 2,
+   "boosts": 0,
+   "created": "2025-08-31T15:59:54Z",
+   "tags": [
+    "customizable desk hook",
+    "table hook",
+    "bag hook",
+    "headphone hanger",
+    "headphone hanger hook"
+   ],
+   "category": "",
+   "creatorUid": "3937368763",
+   "creatorHandle": "",
+   "image": "assets/mw/1751606.webp"
+  },
+  {
+   "id": "1742058",
+   "title": "Mini Card Adapter (Credit Card Size)",
+   "url": "https://makerworld.com/en/models/1742058-mini-card-adapter-credit-card-size",
+   "cover": "https://makerworld.bblmw.com/makerworld/model/US6f1d3629a8abb2/design/1feeddd8a2be507e.jpeg",
+   "likes": 9,
+   "downloads": 18,
+   "prints": 9,
+   "collects": 21,
+   "comments": 0,
+   "boosts": 1,
+   "created": "2025-08-28T16:06:43Z",
+   "tags": [
+    "wallet",
+    "card holder",
+    "small card to big card",
+    "small card to big card adapter",
+    "card adapter",
+    "wallet adapter"
+   ],
+   "category": "",
+   "creatorUid": "3937368763",
+   "creatorHandle": "",
+   "image": "assets/mw/1742058.webp"
+  },
+  {
+   "id": "1739461",
+   "title": "Universal Desk Hook for 25 mm Tabletops",
+   "url": "https://makerworld.com/en/models/1739461-universal-desk-hook-for-25-mm-tabletops",
+   "cover": "https://makerworld.bblmw.com/makerworld/model/US4ccc5533dfc47f/design/2025-08-27_a492b5ac7feab8.jpg",
+   "likes": 17,
+   "downloads": 42,
+   "prints": 27,
+   "collects": 35,
+   "comments": 0,
+   "boosts": 2,
+   "created": "2025-08-27T18:39:27Z",
+   "tags": [
+    "desk hook bag hook headphone hook backpack hanger organizer 25mm desk office school",
+    "desk hook",
+    "bag hook",
+    "headphone hook",
+    "backpack hanger",
+    "organizer 25mm d"
+   ],
+   "category": "",
+   "creatorUid": "3937368763",
+   "creatorHandle": "",
+   "image": "assets/mw/1739461.webp"
+  },
+  {
+   "id": "1317644",
+   "title": "Philips Sonicare Gunk Stopper",
+   "url": "https://makerworld.com/en/models/1317644-philips-sonicare-gunk-stopper",
+   "cover": "https://makerworld.bblmw.com/makerworld/model/USf734122a1096c2/design/2025-04-13_5566476e637db8.webp",
+   "likes": 4,
+   "downloads": 46,
+   "prints": 38,
+   "collects": 50,
+   "comments": 0,
+   "boosts": 0,
+   "created": "2025-04-13T21:46:16Z",
+   "tags": [
+    "phillips sonicare",
+    "phillips",
+    "sonicare",
+    "gunk",
+    "stopper",
+    "gunk stopper"
+   ],
+   "category": "",
+   "creatorUid": "3937368763",
+   "creatorHandle": "",
+   "image": "assets/mw/1317644.webp"
+  }
+ ]
+}
