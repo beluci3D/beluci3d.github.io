@@ -12,7 +12,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cfg = JSON.parse(await fs.readFile(path.join(ROOT, "site.config.json"), "utf8"));
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36";
-const log = (...a) => console.log("[feeds]", ...a);
+const LOG = [];
+const log = (...a) => { const m = a.map(String).join(" "); LOG.push(m); console.log("[feeds]", m); };
 
 async function readJson(rel, fallback) {
   try { return JSON.parse(await fs.readFile(path.join(ROOT, rel), "utf8")); } catch { return fallback; }
@@ -153,6 +154,24 @@ async function uidFromModelUrl(u) {
   return String(d?.designCreator?.uid || d?.creatorUid || "");
 }
 
+/** Profilseite als normales HTML laden und eingebettete Daten auslesen. */
+async function viaHtml(handle) {
+  const out = { uid: "", designs: [], ids: [] };
+  for (const u of [`https://makerworld.com/en/@${handle}/upload`, `https://makerworld.com/en/@${handle}`]) {
+    try {
+      const html = await (await get(u, { headers: { accept: "text/html,application/xhtml+xml" } })).text();
+      const nd = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+      if (nd) { try { out.designs.push(...collectDesigns(JSON.parse(nd[1])).values()); } catch {} }
+      out.ids.push(...[...html.matchAll(/\/models\/(\d{4,})/g)].map((m) => m[1]));
+      out.uid = out.uid || (html.match(/\/user\/[^"']*?\/(\d{6,})\//) || [])[1] || "";
+      log(`HTML ${u}: ${out.designs.length} Designs, ${new Set(out.ids).size} Modell-Links, uid=${out.uid || "?"}`);
+      if (out.designs.length || out.ids.length) break;
+    } catch (e) { log("HTML-Abruf fehlgeschlagen:", u, e.message); }
+  }
+  out.ids = [...new Set(out.ids)];
+  return out;
+}
+
 /** Fallback mit echtem Browser (Playwright) – löst Cloudflare-Checks meist. */
 async function viaBrowser(handle, uid) {
   let chromium;
@@ -216,37 +235,49 @@ async function updateMakerWorld() {
   const handle = cfg.makerworldHandle;
   const prev = await readJson("data/makerworld.json", null);
   let uid = String(cfg.makerworldUid || prev?.profile?.uid || "");
-  if (!uid && cfg.makerworldAnyModelUrl) {
-    try { uid = await uidFromModelUrl(cfg.makerworldAnyModelUrl); log("uid über Modell-Link gefunden:", uid); }
+  if (cfg.makerworldAnyModelUrl) {
+    try { const u = await uidFromModelUrl(cfg.makerworldAnyModelUrl); if (u) uid = u; log("uid über Modell-Link:", u || "?"); }
     catch (e) { log("uid über Modell-Link fehlgeschlagen:", e.message); }
   }
 
   let raw = [];
+  const fromApi = async (u) => {
+    const list = [];
+    for (let offset = 0; offset < 400; offset += 100) {
+      const j = await (await get(`${MW_API}/published/${u}/design?offset=${offset}&limit=100`)).json();
+      const hits = j.hits || j.data || j.list || [];
+      list.push(...hits);
+      if (hits.length < 100) break;
+    }
+    return list;
+  };
   // 1) Offizielle Bambu-API (kein Cloudflare)
   if (uid) {
-    try {
-      for (let offset = 0; offset < 400; offset += 100) {
-        const j = await (await get(`${MW_API}/published/${uid}/design?offset=${offset}&limit=100`)).json();
-        const hits = j.hits || j.data || j.list || [];
-        raw.push(...hits);
-        if (hits.length < 100) break;
-      }
-      log(`MakerWorld API ✓ ${raw.length} Designs`);
-    } catch (e) { log("MakerWorld API fehlgeschlagen:", e.message); }
+    try { raw = await fromApi(uid); log(`MakerWorld API ✓ ${raw.length} Designs (uid ${uid})`); }
+    catch (e) { log("MakerWorld API fehlgeschlagen:", e.message); }
   }
-  // 2) Fallback: echter Browser
+  // 2) Profilseite als HTML
+  let html = { ids: [] };
+  if (!raw.length) {
+    html = await viaHtml(handle);
+    if (!uid && html.uid) { uid = html.uid; try { raw = await fromApi(uid); log(`API mit HTML-uid ✓ ${raw.length}`); } catch (e) { log("API mit HTML-uid ✗", e.message); } }
+    if (!raw.length && html.designs.length) raw = html.designs;
+  }
+  // 3) Echter Browser
   if (!raw.length) {
     const r = await viaBrowser(handle, uid);
     uid = uid || r.uid || "";
     raw = r.designs || [];
     log(`MakerWorld Browser ${raw.length ? "✓" : "✗"} ${raw.length} Designs, uid=${uid || "?"}`);
-    // mit gefundener uid noch einmal die saubere API probieren
-    if (uid && raw.length) {
-      try {
-        const j = await (await get(`${MW_API}/published/${uid}/design?offset=0&limit=100`)).json();
-        if ((j.hits || []).length) raw = j.hits;
-      } catch {}
+  }
+  // 4) Einzelne Modelle über ihre IDs nachladen
+  const ids = [...new Set([...(html.ids || []), ...(cfg.makerworldModelIds || []).map(String)])];
+  if (!raw.length && ids.length) {
+    for (const id of ids.slice(0, cfg.maxModels || 48)) {
+      try { raw.push(await (await get(`${MW_API}/design/${id}`)).json()); }
+      catch (e) { log("Modell", id, "✗", e.message); }
     }
+    log(`Einzelabruf: ${raw.length}/${ids.length} Modelle`);
   }
   if (!raw.length) throw new Error("Keine MakerWorld-Designs gefunden – alte Daten bleiben bestehen");
 
@@ -282,5 +313,6 @@ async function updateMakerWorld() {
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
   const results = await Promise.allSettled([updateYouTube(), updateMakerWorld()]);
   results.forEach((r, i) => r.status === "rejected" && log(["YouTube", "MakerWorld"][i], "✗", r.reason?.message));
+  await writeJson("data/feeds-log.json", { at: new Date().toISOString(), log: LOG });
   // Exit 0, damit die Website trotzdem mit den letzten Daten deployed wird.
 }
