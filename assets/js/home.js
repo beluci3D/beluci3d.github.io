@@ -7,11 +7,28 @@
   const getJSON = (u) => fetch(u + bust).then((r) => (r.ok ? r.json() : null)).catch(() => null);
 
   let MW = null, YT = null, EL = [];
-  const PAGE = () => (innerWidth < 620 ? 4 : 9);
-  let sort = "new", shown = PAGE();
+  let sort = "new";
+  const svg = (id) => `<svg><use href="#${id}"/></svg>`;
+  const isNew = (d) => d && Date.now() - new Date(d) < 21 * 864e5;
+
+  // ═════════════ rails: arrows ═════════════
+  function syncArrows(rail) {
+    const box = document.querySelector(`.arrows[data-for="${rail.id}"]`); if (!box) return;
+    const [l, r] = box.querySelectorAll(".ar");
+    l.disabled = rail.scrollLeft < 8;
+    r.disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 8;
+  }
+  document.querySelectorAll(".arrows").forEach((box) => {
+    const rail = document.getElementById(box.dataset.for);
+    box.addEventListener("click", (e) => {
+      const b = e.target.closest(".ar"); if (!b) return;
+      rail.scrollBy({ left: +b.dataset.dir * rail.clientWidth * 0.8, behavior: "smooth" });
+    });
+    rail.addEventListener("scroll", () => syncArrows(rail), { passive: true });
+    addEventListener("resize", () => syncArrows(rail));
+  });
 
   // ═════════════ MakerWorld ═════════════
-  const svg = (id) => `<svg><use href="#${id}"/></svg>`;
   function sorted() {
     const m = [...(MW?.models || [])];
     if (sort === "popular") m.sort((a, b) => b.likes + b.collects - (a.likes + a.collects));
@@ -20,81 +37,56 @@
     return m;
   }
   function modelCard(m, i) {
-    const isNew = m.created && Date.now() - new Date(m.created) < 30 * 864e5;
     const img = m.image || m.cover;
-    return `<a class="mcard rv${i === 0 ? " feat" : ""}" style="--d:${(i % 6) * 0.06}s" href="${esc(m.url)}" target="_blank" rel="noopener">
-      <div class="img">
-        ${isNew ? `<span class="badge new">${t("newest")}</span>` : m.category ? `<span class="badge">${esc(m.category)}</span>` : ""}
+    const hot = sort === "downloads" ? "dl" : sort === "popular" ? "like" : "";
+    return `<a class="mc" href="${esc(m.url)}" target="_blank" rel="noopener" title="${esc(m.title)}">
+      <div class="mc-img">
+        ${img ? `<img src="${esc(img)}" alt="${esc(m.title)}" loading="${i < 5 ? "eager" : "lazy"}" onload="this.classList.add('ld')" onerror="this.parentNode.classList.add('skeleton');this.remove()">` : ""}
+        ${isNew(m.created) ? `<span class="new">${t("newest")}</span>` : ""}
         <span class="go">${svg("i-up")}</span>
-        ${img ? `<img src="${esc(img)}" alt="${esc(m.title)}" loading="${i < 3 ? "eager" : "lazy"}" onload="this.classList.add('ld')" onerror="this.closest('.img').classList.add('skeleton');this.remove()">` : ""}
       </div>
-      <div class="body">
-        <h3>${esc(m.title)}</h3>
-        <div class="mstats">
-          <span title="Likes">${svg("i-heart")}${fmt(m.likes)}</span>
-          <span title="Downloads">${svg("i-dl")}${fmt(m.downloads)}</span>
-          ${m.prints ? `<span title="Prints">${svg("i-print")}${fmt(m.prints)}</span>` : ""}
-          ${m.created ? `<span style="margin-left:auto">${ago(m.created)}</span>` : ""}
-        </div>
+      <h3>${esc(m.title)}</h3>
+      <div class="st">
+        <span class="${hot === "like" ? "hot" : ""}">${svg("i-heart")}${fmt(m.likes)}</span>
+        <span class="${hot === "dl" ? "hot" : ""}">${svg("i-dl")}${fmt(m.downloads)}</span>
+        ${m.prints ? `<span>${svg("i-print")}${fmt(m.prints)}</span>` : ""}
       </div>
     </a>`;
   }
   function renderModels() {
-    const grid = $("#models-grid");
+    const rail = $("#models-grid");
     const list = sorted();
-    if (!list.length) {
-      grid.innerHTML = `<div class="empty rv"><span class="live-pill">${t("noModels")}</span><h3>MakerWorld · @beluci</h3><p>${t("noModelsD")}</p>
-        <a class="btn btn-primary" href="https://makerworld.com/@beluci" target="_blank" rel="noopener">${t("toMW")}${svg("i-up")}</a></div>`;
-      $("#mw-more").hidden = true;
-    } else {
-      grid.innerHTML = list.slice(0, shown).map(modelCard).join("");
-      $("#mw-more").hidden = shown >= list.length;
-    }
-    observe(grid);
+    $("#mw-count").textContent = list.length ? `${list.length} ${t("models")}` : "";
+    rail.innerHTML = list.length
+      ? list.map(modelCard).join("")
+      : `<div class="empty-mini"><span>${t("noModels")} …</span><a class="btn btn-ghost btn-sm" href="https://makerworld.com/@beluci" target="_blank" rel="noopener">${t("toMW")}${svg("i-up")}</a></div>`;
+    rail.scrollLeft = 0; syncArrows(rail);
   }
   $("#mw-tabs").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
-    sort = b.dataset.sort; shown = PAGE();
+    sort = b.dataset.sort;
     $("#mw-tabs").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
     renderModels();
   });
-  $("#mw-more").addEventListener("click", () => { shown += 6; renderModels(); });
 
   // ═════════════ YouTube ═════════════
-  const thumb = (v, big) => v.isShort
-    ? `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`
-    : `https://i.ytimg.com/vi/${v.id}/${big ? "maxresdefault" : "hqdefault"}.jpg`;
-  function vcard(v, cls = "", chip = "") {
+  function vcard(v, i) {
     const meta = [v.published ? ago(v.published) : "", v.views ? `${fmt(v.views)} ${t("views")}` : ""].filter(Boolean).join(" · ");
-    return `<button class="vcard rv ${cls}" data-vid="${esc(v.id)}" aria-label="${esc(v.title)}">
-      <div class="thumb"><img src="${thumb(v, cls.includes("big"))}" alt="" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/${esc(v.id)}/hqdefault.jpg'}"><span class="play">${svg("i-play")}</span></div>
-      <div class="vb">${chip ? `<span class="chip">${chip}</span>` : ""}<h3>${esc(v.title)}</h3>${meta ? `<div class="meta">${meta}</div>` : ""}</div>
+    const tag = i === 0 && isNew(v.published) ? `<span class="tag new">${t("newest")}</span>` : v.isShort ? `<span class="tag">${t("short")}</span>` : "";
+    return `<button class="vc" data-vid="${esc(v.id)}" aria-label="${esc(v.title)}">
+      <div class="vc-img"><img src="https://i.ytimg.com/vi/${esc(v.id)}/${i < 3 ? "maxresdefault" : "hqdefault"}.jpg" alt="" loading="${i < 4 ? "eager" : "lazy"}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/${esc(v.id)}/hqdefault.jpg'}">${tag}<span class="pl">${svg("i-play")}</span></div>
+      <h3>${esc(v.title)}</h3>${meta ? `<div class="meta">${meta}</div>` : ""}
     </button>`;
   }
   function renderVideos() {
-    const w = $("#yt-wrap");
+    const rail = $("#yt-wrap");
     const vids = YT?.videos || [];
-    if (!vids.length) {
-      w.innerHTML = `<div class="empty rv"><span class="live-pill">${t("noVideos")}</span><h3>YouTube · @Belutschy</h3><p>${t("noVideosD")}</p>
-        <a class="btn btn-primary" href="https://www.youtube.com/@Belutschy" target="_blank" rel="noopener">${svg("i-yt")}${t("toYT")}</a></div>`;
-      observe(w); return;
-    }
-    const longs = vids.filter((v) => !v.isShort);
-    const ordered = longs.length >= 1 ? [...longs, ...vids.filter((v) => v.isShort)] : vids;
-    const [first, ...rest] = ordered;
-    const side = rest.slice(0, 2), row = rest.slice(2, 6);
-    w.innerHTML = `
-      <div class="yt-grid">${vcard(first, "big", t("latest"))}
-        ${side.length ? `<div class="yt-side">${side.map((v) => vcard(v, "", v.isShort ? t("short") : "")).join("")}</div>` : ""}
-      </div>
-      ${row.length ? `<div class="yt-row">${row.map((v) => vcard(v, "", v.isShort ? t("short") : "")).join("")}</div>` : ""}`;
-    if (!side.length) w.querySelector(".yt-grid").style.gridTemplateColumns = "1fr";
-    observe(w);
-    // channel pill
-    const ch = YT.channel || {};
-    const c = $("#yt-channel");
-    if (ch.avatar) c.querySelector(".av").outerHTML = `<img src="${esc(ch.avatar)}" alt="">`;
-    if (ch.subscribers) c.querySelector("small").textContent = `${ch.subscribers} ${t("subs")}`;
+    rail.innerHTML = vids.length
+      ? vids.map(vcard).join("")
+      : `<div class="empty-mini"><span>${t("noVideos")} …</span><a class="btn btn-ghost btn-sm" href="https://www.youtube.com/@Belutschy" target="_blank" rel="noopener">${t("toYT")}${svg("i-up")}</a></div>`;
+    const ch = YT?.channel || {};
+    if (ch.subscribers) $("#yt-meta").textContent = `YouTube · @Belutschy · ${ch.subscribers} ${t("subs")}`;
+    rail.scrollLeft = 0; syncArrows(rail);
   }
   document.addEventListener("click", (e) => {
     const v = e.target.closest("[data-vid]"); if (!v) return;

@@ -13,6 +13,7 @@
     "hud.live": "PRINTING",
     "models.title": 'Latest <span class="serif">models.</span>', "models.more": "Load more", "models.all": "All on MakerWorld",
     "live.synced": "Live synced",
+    "feed.eyebrow": "Live from the workshop", "feed.title": 'Freshly <span class="serif">printed</span> &amp; filmed.', "feed.models": "3D models", "feed.videos": "Videos", "feed.all": "All", "feed.sub": "Subscribe",
     "sort.new": "Latest", "sort.popular": "Popular", "sort.downloads": "Downloads",
     "yt.title": 'From sketch to <span class="serif">finished build.</span>', "yt.sub": "Subscribe to channel →",
     "el.eyebrow": "Code & schematics", "el.title": 'Electronics <span class="serif">projects.</span>',
@@ -72,8 +73,8 @@
     "c.yt": "Message on YouTube", "c.mw": "Models on MakerWorld", "c.resp": "Typical reply within 24 h",
   };
   const DYN = {
-    de: { justNow: "gerade eben", updated: "Aktualisiert", views: "Aufrufe", newest: "Neu", latest: "Neuestes Video", short: "Short", copy: "Kopieren", copied: "Kopiert ✓", schematic: "Schaltplan", code: "Quellcode", wiring: "Verdrahtung", open: "Schaltplan & Code", noModels: "Modelle werden synchronisiert", noModelsD: "Die neuesten Designs erscheinen hier automatisch. Bis dahin findest du alle Modelle direkt auf MakerWorld.", noVideos: "Videos werden synchronisiert", noVideosD: "Die neuesten Videos erscheinen hier automatisch.", toMW: "Zu MakerWorld", toYT: "Zum Kanal", subs: "Abonnenten", sent: "E-Mail-Programm wird geöffnet …", copiedReq: "Anfrage in die Zwischenablage kopiert – schick sie mir per YouTube oder E-Mail." },
-    en: { justNow: "just now", updated: "Updated", views: "views", newest: "New", latest: "Latest video", short: "Short", copy: "Copy", copied: "Copied ✓", schematic: "Schematic", code: "Source code", wiring: "Wiring", open: "Schematic & code", noModels: "Models are syncing", noModelsD: "The latest designs will appear here automatically. Until then you'll find all models on MakerWorld.", noVideos: "Videos are syncing", noVideosD: "The latest videos will appear here automatically.", toMW: "Go to MakerWorld", toYT: "Go to channel", subs: "subscribers", sent: "Opening your email app …", copiedReq: "Request copied to clipboard – send it to me via YouTube or email." },
+    de: { models: "Modelle", justNow: "gerade eben", updated: "Aktualisiert", views: "Aufrufe", newest: "Neu", latest: "Neuestes Video", short: "Short", copy: "Kopieren", copied: "Kopiert ✓", schematic: "Schaltplan", code: "Quellcode", wiring: "Verdrahtung", open: "Schaltplan & Code", noModels: "Modelle werden synchronisiert", noModelsD: "Die neuesten Designs erscheinen hier automatisch. Bis dahin findest du alle Modelle direkt auf MakerWorld.", noVideos: "Videos werden synchronisiert", noVideosD: "Die neuesten Videos erscheinen hier automatisch.", toMW: "Zu MakerWorld", toYT: "Zum Kanal", subs: "Abonnenten", sent: "E-Mail-Programm wird geöffnet …", copiedReq: "Anfrage in die Zwischenablage kopiert – schick sie mir per YouTube oder E-Mail." },
+    en: { models: "models", justNow: "just now", updated: "Updated", views: "views", newest: "New", latest: "Latest video", short: "Short", copy: "Copy", copied: "Copied ✓", schematic: "Schematic", code: "Source code", wiring: "Wiring", open: "Schematic & code", noModels: "Models are syncing", noModelsD: "The latest designs will appear here automatically. Until then you'll find all models on MakerWorld.", noVideos: "Videos are syncing", noVideosD: "The latest videos will appear here automatically.", toMW: "Go to MakerWorld", toYT: "Go to channel", subs: "subscribers", sent: "Opening your email app …", copiedReq: "Request copied to clipboard – send it to me via YouTube or email." },
   };
 
   const store = {

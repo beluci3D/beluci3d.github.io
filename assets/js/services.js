@@ -41,7 +41,7 @@
     e.preventDefault();
     const d = Object.fromEntries(new FormData(form));
     const bad = ["name", "email", "message"].filter((k) => !String(d[k] || "").trim() || (k === "email" && !/^\S+@\S+\.\S+$/.test(d[k])));
-    form.querySelectorAll("input,textarea").forEach((el) => (el.style.borderColor = bad.includes(el.name) ? "#ff5b1f" : ""));
+    form.querySelectorAll("input,textarea").forEach((el) => (el.style.borderColor = bad.includes(el.name) ? "#c6f432" : ""));
     if (bad.length) { form.querySelector(`[name="${bad[0]}"]`).focus(); return; }
 
     const subject = `Neue Anfrage: ${d.type} – ${d.name}`;

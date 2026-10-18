@@ -33,7 +33,7 @@ function init() {
   edge.position.y = -0.03; plate.add(edge);
   const glow = new THREE.Mesh(
     new THREE.CircleGeometry(1.6, 64),
-    new THREE.MeshBasicMaterial({ color: 0xff5b1f, transparent: true, opacity: 0.07, depthWrite: false })
+    new THREE.MeshBasicMaterial({ color: 0xc6f432, transparent: true, opacity: 0.035, depthWrite: false })
   );
   glow.rotation.x = -Math.PI / 2; glow.position.y = 0.002; plate.add(glow);
   root.add(plate);
@@ -45,7 +45,7 @@ function init() {
     { name: "PLA+", temp: 220, layers: 120, h: 2.5, r: (a, z) => { const k = 6, sec = Math.cos(Math.PI / k) / Math.cos(((a + z * 0.55) % (2 * Math.PI / k)) - Math.PI / k); return (0.78 + 0.32 * Math.sin(z * 1.25)) * sec; } },
   ];
   const SEG = 150;
-  const C_BASE = new THREE.Color(0x3b2016), C_TOP = new THREE.Color(0xff5b1f), C_HOT = new THREE.Color(0xffd6bf);
+  const C_BASE = new THREE.Color(0x1f2a0a), C_TOP = new THREE.Color(0xc6f432), C_HOT = new THREE.Color(0xf0ffc8);
 
   let line, geo, mat, pts = 0, shapeIx = 0, shape;
   const nozzle = new THREE.Group();
@@ -55,8 +55,8 @@ function init() {
   block.position.y = 0.39; nozzle.add(block);
   const blockEdge = new THREE.LineSegments(new THREE.EdgesGeometry(block.geometry), new THREE.LineBasicMaterial({ color: 0x55555f }));
   blockEdge.position.copy(block.position); nozzle.add(blockEdge);
-  const tip = new THREE.PointLight(0xff7a3c, 2, 1.5); nozzle.add(tip);
-  const spark = new THREE.Mesh(new THREE.SphereGeometry(0.035, 12, 12), new THREE.MeshBasicMaterial({ color: 0xffe2d0 }));
+  const tip = new THREE.PointLight(0xd6ff5a, 2, 1.5); nozzle.add(tip);
+  const spark = new THREE.Mesh(new THREE.SphereGeometry(0.035, 12, 12), new THREE.MeshBasicMaterial({ color: 0xf4ffd6 }));
   nozzle.add(spark);
   root.add(nozzle);
 

@@ -37,7 +37,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a href="index.html" class="logo" aria-label="beluci – Startseite">
-      <svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="9" fill="#ff5b1f"/><path d="M9 22h14M10.5 18h11M12 14h8" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="9" r="2" fill="#0a0a0a"/></svg>
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="9" fill="#c6f432"/><path d="M9 22h14M10.5 18h11M12 14h8" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="9" r="2" fill="#0a0a0a"/></svg>
       beluci
     </a>
     <ul class="nav-links">
@@ -104,52 +104,51 @@
   </div>
 </div>
 
-<!-- ───────────── MODELS ───────────── -->
-<section class="sec" id="models">
+<!-- ───────────── LIVE FEED: MAKERWORLD + YOUTUBE ───────────── -->
+<section class="sec feed" id="feed">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="eyebrow rv"><span class="dot"></span>MakerWorld</div>
-        <h2 class="h-sec split" data-i18n-html="models.title">Neueste <span class="serif">Modelle.</span></h2>
+        <div class="eyebrow rv"><span class="dot"></span><span data-i18n="feed.eyebrow">Live aus der Werkstatt</span></div>
+        <h2 class="h-mid split" data-i18n-html="feed.title">Frisch <span class="serif">gedruckt</span> &amp; gefilmt.</h2>
       </div>
-      <div class="sec-head-r rv">
-        <span class="live-pill" id="mw-updated" data-i18n="live.synced">Live synchronisiert</span>
-        <div class="tabs" id="mw-tabs">
-          <button class="on" data-sort="new" data-i18n="sort.new">Neueste</button>
-          <button data-sort="popular" data-i18n="sort.popular">Beliebt</button>
-          <button data-sort="downloads" data-i18n="sort.downloads">Downloads</button>
+      <span class="live-pill rv" id="mw-updated" data-i18n="live.synced">Live synchronisiert</span>
+    </div>
+
+    <div class="rail-block rv" id="models">
+      <div class="rail-head">
+        <div class="rh-l">
+          <span class="rh-ic"><svg><use href="#i-cube"/></svg></span>
+          <div><b data-i18n="feed.models">3D-Modelle</b><small>MakerWorld · @beluci <span class="cnt" id="mw-count"></span></small></div>
+        </div>
+        <div class="rh-r">
+          <div class="tabs tabs-sm" id="mw-tabs">
+            <button class="on" data-sort="new" data-i18n="sort.new">Neueste</button>
+            <button data-sort="popular" data-i18n="sort.popular">Beliebt</button>
+            <button data-sort="downloads" data-i18n="sort.downloads">Downloads</button>
+          </div>
+          <div class="arrows" data-for="models-grid"><button class="ar" data-dir="-1" aria-label="Zurück"><svg><use href="#i-arrow"/></svg></button><button class="ar" data-dir="1" aria-label="Weiter"><svg><use href="#i-arrow"/></svg></button></div>
+          <a class="rh-link" href="https://makerworld.com/@beluci" target="_blank" rel="noopener"><span data-i18n="feed.all">Alle</span><svg><use href="#i-up"/></svg></a>
         </div>
       </div>
-    </div>
-    <div class="models" id="models-grid">
-      <div class="mcard feat"><div class="img skeleton"></div><div class="body"><h3 class="skeleton" style="height:28px;width:60%;border-radius:8px"></h3></div></div>
-      <div class="mcard"><div class="img skeleton"></div><div class="body"><h3 class="skeleton" style="height:20px;width:70%;border-radius:6px"></h3></div></div>
-      <div class="mcard"><div class="img skeleton"></div><div class="body"><h3 class="skeleton" style="height:20px;width:50%;border-radius:6px"></h3></div></div>
-    </div>
-    <div class="more-row">
-      <button class="btn btn-ghost" id="mw-more" hidden><span data-i18n="models.more">Mehr laden</span></button>
-      <a class="btn btn-ghost" href="https://makerworld.com/@beluci" target="_blank" rel="noopener"><span data-i18n="models.all">Alle auf MakerWorld</span><svg><use href="#i-up"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- ───────────── YOUTUBE ───────────── -->
-<section class="sec" id="videos" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="eyebrow rv"><span class="dot"></span>YouTube</div>
-        <h2 class="h-sec split" data-i18n-html="yt.title">Vom Sketch zum <span class="serif">fertigen Build.</span></h2>
+      <div class="rail" id="models-grid">
+        <div class="mc"><div class="mc-img skeleton"></div></div><div class="mc"><div class="mc-img skeleton"></div></div><div class="mc"><div class="mc-img skeleton"></div></div><div class="mc"><div class="mc-img skeleton"></div></div>
       </div>
-      <a class="channel rv" href="https://www.youtube.com/@Belutschy" target="_blank" rel="noopener" id="yt-channel">
-        <span class="av">B</span>
-        <span><b>@Belutschy</b><small data-i18n="yt.sub">Kanal abonnieren →</small></span>
-      </a>
     </div>
-    <div id="yt-wrap">
-      <div class="yt-grid">
-        <div class="vcard big"><div class="thumb skeleton"></div></div>
-        <div class="yt-side"><div class="vcard"><div class="thumb skeleton"></div></div><div class="vcard"><div class="thumb skeleton"></div></div></div>
+
+    <div class="rail-block rv" id="videos">
+      <div class="rail-head">
+        <div class="rh-l">
+          <span class="rh-ic yt"><svg><use href="#i-yt"/></svg></span>
+          <div><b data-i18n="feed.videos">Videos</b><small id="yt-meta">YouTube · @Belutschy</small></div>
+        </div>
+        <div class="rh-r">
+          <div class="arrows" data-for="yt-wrap"><button class="ar" data-dir="-1" aria-label="Zurück"><svg><use href="#i-arrow"/></svg></button><button class="ar" data-dir="1" aria-label="Weiter"><svg><use href="#i-arrow"/></svg></button></div>
+          <a class="rh-link" href="https://www.youtube.com/@Belutschy?sub_confirmation=1" target="_blank" rel="noopener"><span data-i18n="feed.sub">Abonnieren</span><svg><use href="#i-up"/></svg></a>
+        </div>
+      </div>
+      <div class="rail" id="yt-wrap">
+        <div class="vc"><div class="vc-img skeleton"></div></div><div class="vc"><div class="vc-img skeleton"></div></div><div class="vc"><div class="vc-img skeleton"></div></div>
       </div>
     </div>
   </div>
@@ -228,7 +227,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="9" fill="#ff5b1f"/><path d="M9 22h14M10.5 18h11M12 14h8" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="9" r="2" fill="#0a0a0a"/></svg>beluci</a>
+        <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="9" fill="#c6f432"/><path d="M9 22h14M10.5 18h11M12 14h8" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="9" r="2" fill="#0a0a0a"/></svg>beluci</a>
         <p data-i18n="foot.tag">3D-Druck, CAD-Design & Elektronik. Von der Idee zum fertigen Bauteil.</p>
       </div>
       <div><h4 data-i18n="foot.nav">Navigation</h4><ul><li><a href="#models" data-i18n="nav.models">Modelle</a></li><li><a href="#videos" data-i18n="nav.videos">Videos</a></li><li><a href="#electronics" data-i18n="nav.electronics">Elektronik</a></li><li><a href="services.html" data-i18n="nav.services">Services</a></li></ul></div>
