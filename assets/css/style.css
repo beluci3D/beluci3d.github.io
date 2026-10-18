@@ -426,7 +426,7 @@ footer { border-top: 1px solid var(--line); padding: 60px 0 34px; margin-top: cl
 /* ───────── reveal ───────── */
 .js .rv { opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); transition-delay: var(--d, 0s); }
 .rv.in { opacity: 1; transform: none; }
-.split .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+.split .w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .04em .14em; margin: 0 -.04em -.14em; }
 .split .w > span { display: inline-block; }
 .js .split .w > span { transform: translateY(105%); transition: transform 1.1s var(--ease); transition-delay: calc(var(--i) * 55ms + var(--d, 0s)); }
 .split.in .w > span { transform: none; }

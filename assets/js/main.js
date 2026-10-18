@@ -207,4 +207,12 @@
   document.querySelectorAll(".split").forEach((el) => { if (!el.hasAttribute("data-i18n-html")) splitWords(el); });
   applyLang(lang);
   observe();
+  // Hero sofort zeigen – nicht auf den Scroll-Beobachter warten
+  requestAnimationFrame(() => document.querySelectorAll(".hero .rv, .hero .split, .page-hero .rv, .page-hero .split").forEach((el) => el.classList.add("in")));
+  // Sicherheitsnetz: alles, was schon im Bild ist, nach kurzer Zeit sicher einblenden
+  const reveal = () => document.querySelectorAll(".rv:not(.in), .split:not(.in)").forEach((el) => {
+    const r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add("in");
+  });
+  setTimeout(reveal, 1200);
+  addEventListener("scroll", () => { clearTimeout(reveal._t); reveal._t = setTimeout(reveal, 250); }, { passive: true });
 })();

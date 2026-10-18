@@ -45,7 +45,7 @@ function init() {
     { name: "PLA+", temp: 220, layers: 120, h: 2.5, r: (a, z) => { const k = 6, sec = Math.cos(Math.PI / k) / Math.cos(((a + z * 0.55) % (2 * Math.PI / k)) - Math.PI / k); return (0.78 + 0.32 * Math.sin(z * 1.25)) * sec; } },
   ];
   const SEG = 150;
-  const C_BASE = new THREE.Color(0x1f2a0a), C_TOP = new THREE.Color(0xc6f432), C_HOT = new THREE.Color(0xf0ffc8);
+  const C_BASE = new THREE.Color(0x2a3610), C_TOP = new THREE.Color(0xc6f432), C_HOT = new THREE.Color(0xf0ffc8);
 
   let line, geo, mat, pts = 0, shapeIx = 0, shape;
   const nozzle = new THREE.Group();
@@ -77,12 +77,16 @@ function init() {
       const z = (i / N) * shape.h;
       const r = shape.r(a % (Math.PI * 2), z);
       positions.push(Math.cos(a) * r, z, Math.sin(a) * r);
-      const c = C_BASE.clone().lerp(C_TOP, Math.pow(i / N, 0.8));
+      const c = C_BASE.clone().lerp(C_TOP, Math.pow(i / N, 0.7));
+      // fake lighting: side facing the light is bright, back side dark -> real 3D look with visible layers
+      const lit = 0.32 + 0.68 * Math.pow(0.5 + 0.5 * Math.cos(a - 0.9), 1.6);
+      const ridge = (i % SEG) % 2 ? 1 : 0.92;
+      c.multiplyScalar(lit * ridge);
       colors.push(c.r, c.g, c.b);
     }
     geo = new LineGeometry();
     geo.setPositions(positions); geo.setColors(colors);
-    mat = mat || new LineMaterial({ vertexColors: true, linewidth: 2.1, worldUnits: false, transparent: true, opacity: 1 });
+    mat = mat || new LineMaterial({ vertexColors: true, linewidth: 1.7, worldUnits: false, transparent: true, opacity: 1 });
     mat.opacity = 1;
     line = new Line2(geo, mat);
     root.add(line);
@@ -137,7 +141,7 @@ function init() {
     geo.instanceCount = n;
     const p = Math.min(n, positions.length / 3 - 1) * 3;
     const x = positions[p], y = positions[p + 1], z = positions[p + 2];
-    nozzle.position.set(x, y + 0.02 + (phase === "print" ? 0 : Math.min(0.6, hold * 0.5)), z);
+    nozzle.position.set(x, y + 0.02 + (phase === "print" ? 0 : Math.min(0.35, hold * 0.3)), z);
     spark.visible = phase === "print"; tip.intensity = phase === "print" ? 2 + Math.random() * 0.6 : 0.5;
 
     // HUD
@@ -150,8 +154,9 @@ function init() {
     mx += (tmx - mx) * 0.05; my += (tmy - my) * 0.05;
     const a = angle + mx * 0.8;
     const camH = 2.6 + my * 1.2;
-    camera.position.set(Math.cos(a) * 6.6, camH + 0.9, Math.sin(a) * 6.6);
-    camera.lookAt(0, 1.0, 0);
+    const fit = 9.2 * Math.max(1, 0.95 / camera.aspect);
+    camera.position.set(Math.cos(a) * fit, camH + 1.4, Math.sin(a) * fit);
+    camera.lookAt(0, 1.15, 0);
     renderer.render(scene, camera);
   }
   requestAnimationFrame(frame);
