@@ -1,0 +1,134 @@
+{
+ "updatedAt": "2026-10-18T18:21:15.051Z",
+ "channel": {
+  "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
+  "handle": "Belutschy",
+  "title": "Beluci ",
+  "url": "https://www.youtube.com/@Belutschy",
+  "subscribers": "15",
+  "videoCount": "12",
+  "avatar": "https://yt3.googleusercontent.com/mo_npURdrSlf6RxR5hrYZsUDRhWLNw3Y0omklgkmmPp8e15JpI9_mbqaKlS3pyrT_P_3EuqOtlY=s900-c-k-c0x00ffffff-no-rj"
+ },
+ "videos": [
+  {
+   "id": "Eun_8FbvTFU",
+   "title": "Infill vs Walls: How to Make 3D Prints Stronger (Without Wasting Filament)",
+   "published": "2026-10-17T22:00:18+00:00",
+   "description": "100 % infill is NOT the way to stronger 3D prints. In this video you'll learn where the strength of a print really comes from: walls vs infill, how much infill you actually need, which infill pattern to use, top layers, layer height and the setting that's not even in your slicer menu – print orientation. Plus my three starting recipes.\n\n⏱️ Chapters\n0:00 100 % infill?\n0:26 Intro\n0:41 Inside a 3D pr",
+   "views": 13,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU"
+  },
+  {
+   "id": "2ThP3sJ8j08",
+   "title": "The $5 Chip That's Probably in Your Home #shorts",
+   "published": "2026-10-17T07:17:55+00:00",
+   "description": "In 2014 a tiny $5 Wi-Fi module appeared online with documentation only in Chinese. Makers translated it, hacked it, and started a revolution. Today Espressif says it has shipped over one billion chips.\n\n▶️ Full documentary on my channel: The ESP8266 & ESP32 Story\n\n#shorts #esp32 #esp8266 #iot #smarthome #electronics",
+   "views": 625,
+   "likes": 14,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/2ThP3sJ8j08"
+  },
+  {
+   "id": "wPa9cUiJhks",
+   "title": "This Board Is Named After a Bar #shorts",
+   "published": "2026-10-17T07:16:46+00:00",
+   "description": "Arduino is named after a bar in Ivrea, Italy, and that bar is named after Arduin of Ivrea, King of Italy from 1002. Here's how a cheap, open-source board for design students became the standard for makers.\n\n▶️ Full documentary on my channel: The Arduino Story\n\n#shorts #arduino #electronics #maker #history",
+   "views": 191,
+   "likes": 4,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/wPa9cUiJhks"
+  },
+  {
+   "id": "luzxKA9FLJE",
+   "title": "Can an ESP32 Run 1 Year on One Battery? (The Real Math)",
+   "published": "2026-10-16T22:00:01+00:00",
+   "description": "Can a Wi-Fi sensor with an ESP32 really run for a year on a single battery? Instead of guessing, we do the real math: from a typical setup that lasts 71 days to a design that reaches just over a year – and the one factor that surprises most people.\n\n⏱️ Chapters\n0:00 1 year on one battery?\n0:23 Intro\n0:46 The project: ESP32-C3 + BME280 + 18650\n1:11 The math: average current\n1:39 Why a LiFePO4 cell?",
+   "views": 18,
+   "likes": 1,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=luzxKA9FLJE"
+  },
+  {
+   "id": "sw9QcQZghsw",
+   "title": "Perfect First Layer Every Time – 7 Fixes That Actually Work",
+   "published": "2026-10-15T22:00:22+00:00",
+   "description": "Most 3D print failures start in the very first layer. In this video: what a too high, too low and perfect first layer looks like, and 7 fixes in the order I'd check them – from nozzle height and a clean print sheet to temperature, speed, brims, glue stick and elephant's foot.\n\n⏱️ Chapters\n0:00 The spaghetti moment\n0:24 Intro\n0:39 Why the first layer matters\n0:59 Fix #1: Nozzle height\n1:33 Fine-tun",
+   "views": 12,
+   "likes": 1,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=sw9QcQZghsw"
+  },
+  {
+   "id": "4C2RwchM2oc",
+   "title": "5 ESP32 Mistakes Beginners Make (and How to Fix Them)",
+   "published": "2026-10-14T22:00:29+00:00",
+   "description": "Your ESP32 won't boot, analogRead() returns 0, or it keeps resetting when Wi-Fi turns on? It's almost always one of these 5 beginner mistakes. Here's what goes wrong and how to fix each one.\n\n⏱️ Chapters\n0:00 Sound familiar?\n0:28 Intro\n0:46 Mistake #1: Using the wrong pins (strapping & flash pins)\n2:00 Mistake #2: ADC2 + Wi-Fi\n2:51 Mistake #3: Power supply too weak (brownout)\n3:32 Mistake #4: 5 V ",
+   "views": 57,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=4C2RwchM2oc"
+  },
+  {
+   "id": "Jyy9UjGjKX0",
+   "title": "PLA vs PETG vs ABS vs TPU – Which Filament Should You Use?",
+   "published": "2026-10-13T22:00:26+00:00",
+   "description": "PLA, PETG, ABS or TPU – which 3D printing filament should you actually use? In this video you get the real temperatures, strengths and weaknesses of the four most popular filaments, a side-by-side table, a tip most beginners never hear about, and a simple decision guide.\n\n⏱️ Chapters\n0:00 Which filament, and when?\n0:32 Intro\n0:56 The big four\n1:14 PLA\n1:56 PETG\n2:46 ABS (and ASA)\n3:28 TPU\n4:04 Sid",
+   "views": 264,
+   "likes": 5,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=Jyy9UjGjKX0"
+  },
+  {
+   "id": "AVXAIOZxStg",
+   "title": "ESP32-C3: The REAL ESP8266 Replacement? (Specs, Power & Gotchas)",
+   "published": "2026-10-12T22:00:01+00:00",
+   "description": "Is the tiny ESP32-C3 the real replacement for the ESP8266? In this video I compare specs, power consumption and long-term support, show you how to port an old ESP8266 sketch, and cover the two gotchas that catch a lot of people off guard.\n\n⏱️ Chapters\n0:00 The real ESP8266 replacement?\n0:35 Intro\n1:07 What is the ESP32-C3?\n1:41 How tiny is the SuperMini?\n2:01 ESP32-C3 vs ESP8266\n2:57 ESP32-C3 vs c",
+   "views": 79,
+   "likes": 2,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=AVXAIOZxStg"
+  },
+  {
+   "id": "MdhyCsnu7wI",
+   "title": "ESP32 vs ESP8266 – Is the Old One Still Worth It in 2026?",
+   "published": "2026-10-11T15:22:43+00:00",
+   "description": "ESP32 or ESP8266 – which one should you actually use in 2026?\n\nIn this video I compare both Espressif boards side by side: CPU, RAM, pins, analog inputs, Bluetooth, power consumption and web server performance. Plus the big plot twist: why the ESP8266 is now officially \"Not Recommended for New Designs\" – and which board I'd pick for new projects.\n\n⏱️ Chapters\n0:00 One of them is retired\n0:23 Meet ",
+   "views": 283,
+   "likes": 5,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=MdhyCsnu7wI"
+  },
+  {
+   "id": "HC3msO2x6UU",
+   "title": "Your first Arduino Project – Easy LED Wave Project 🌊💡",
+   "published": "2025-10-17T18:44:54+00:00",
+   "description": "Create a cool LED wave effect with Arduino in just a few minutes! Press the button and watch 6 LEDs light up one by one, creating a smooth, flowing wave animation — perfect for beginners learning Arduino, timing, and button control.\n\n🔹 What You’ll Do:\n\nConnect LEDs with resistors to Arduino\nWire a push button with a 10 kΩ pull-down resistor\nCode the wave effect in the Arduino IDE\nSee it come aliv",
+   "views": 151,
+   "likes": 4,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=HC3msO2x6UU"
+  },
+  {
+   "id": "uuXsm8dpuPY",
+   "title": "How to Build a WiFi Weather Station with ESP32 & DHT11",
+   "published": "2024-10-30T14:21:33+00:00",
+   "description": "Learn how to build a DIY Weather Station using a DHT11 sensor and an ESP32 in this beginner-friendly project! Follow along to create a web interface that displays real-time temperature and humidity data.\n\nFor more information and the Code, visit my website: sites.google.com/view/beluci",
+   "views": 254,
+   "likes": 4,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=uuXsm8dpuPY"
+  },
+  {
+   "id": "2KSj6ueJqQ0",
+   "title": "Getting Started with ESP32: Control RGB LEDs over WiFi!",
+   "published": "2024-10-27T17:31:37+00:00",
+   "description": "Learn how to control RGB LEDs over WiFi with an ESP32 in this beginner-friendly project! Follow along to create a web interface for easy color selection. \nFor more information and the Code, visit my website: sites.google.com/view/beluci",
+   "views": 741,
+   "likes": 15,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=2KSj6ueJqQ0"
+  }
+ ]
+}
