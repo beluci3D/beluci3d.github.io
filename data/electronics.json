@@ -1,0 +1,73 @@
+[
+ {
+  "id": "led-wave",
+  "title": "LED Wave",
+  "board": "Arduino UNO",
+  "icon": "wave",
+  "desc": {
+   "de": "Ein Tastendruck startet eine Lauflicht-Welle über 6 LEDs – die LEDs leuchten nacheinander auf und erzeugen eine fließende Animation.",
+   "en": "A button-triggered LED wave across 6 LEDs on an Arduino UNO – each LED lights up in sequence, creating a sweeping animation."
+  },
+  "parts": [
+   "Arduino UNO",
+   "6× LED",
+   "6× Resistor",
+   "Push Button",
+   "10 kΩ Pull-down"
+  ],
+  "wiring": {
+   "de": "6 LEDs an D2–D7, jeweils mit Vorwiderstand gegen GND. Taster an D13 mit 10 kΩ Pull-down gegen GND, bei Druck über +5 V auf HIGH.",
+   "en": "6 LEDs on D2–D7, each with a current-limiting resistor to GND. Button on D13 with a 10 kΩ pull-down to GND, pulled HIGH via +5 V when pressed."
+  },
+  "img": "assets/img/schematic-1.jpg",
+  "code": "// LED Wave — Arduino UNO\n// 6 LEDs pins 2-7, Button pin 13\n\nconst byte LED1 = 2;\nconst byte LED2 = 3;\nconst byte LED3 = 4;\nconst byte LED4 = 5;\nconst byte LED5 = 6;\nconst byte LED6 = 7;\nconst byte BUTTON = 13;\n\nvoid setup() {\n  pinMode(LED1, OUTPUT);\n  pinMode(LED2, OUTPUT);\n  pinMode(LED3, OUTPUT);\n  pinMode(LED4, OUTPUT);\n  pinMode(LED5, OUTPUT);\n  pinMode(LED6, OUTPUT);\n  pinMode(BUTTON, INPUT);\n}\n\nvoid loop() {\n  if(digitalRead(BUTTON) == HIGH) {\n    digitalWrite(LED1, HIGH); delay(100); digitalWrite(LED1, LOW);\n    digitalWrite(LED2, HIGH); delay(100); digitalWrite(LED2, LOW);\n    digitalWrite(LED3, HIGH); delay(100); digitalWrite(LED3, LOW);\n    digitalWrite(LED4, HIGH); delay(100); digitalWrite(LED4, LOW);\n    digitalWrite(LED5, HIGH); delay(100); digitalWrite(LED5, LOW);\n    digitalWrite(LED6, HIGH); delay(100); digitalWrite(LED6, LOW);\n  }\n}",
+  "lang": "Arduino C++"
+ },
+ {
+  "id": "rgb-wifi",
+  "title": "RGB LED Control",
+  "board": "ESP32 + WiFi",
+  "icon": "rgb",
+  "desc": {
+   "de": "RGB-LED per WLAN steuern: Der ESP32 hostet ein Web-Interface mit Farbwähler und Presets – Steuerung aus jedem Browser im Netzwerk.",
+   "en": "WiFi-controlled RGB LED via a web interface hosted on the ESP32. Pick any colour or use presets – from any browser on your network."
+  },
+  "parts": [
+   "ESP32",
+   "RGB LED",
+   "3× 220 Ω",
+   "WiFi",
+   "WebServer"
+  ],
+  "wiring": {
+   "de": "RGB-LED → ESP32: Rot → GPIO 13, Grün → GPIO 12, Blau → GPIO 14, jeweils über 220 Ω. Gemeinsame Kathode an GND.",
+   "en": "RGB LED → ESP32: red → GPIO 13, green → GPIO 12, blue → GPIO 14, each through 220 Ω. Common cathode to GND."
+  },
+  "img": "assets/img/schematic-2.jpg",
+  "code": "// RGB LED WiFi Control — ESP32\n// Control LED color from any browser\n\n#include <WiFi.h>\n#include <WebServer.h>\n\nconst char* ssid     = \"YOUR_SSID\";\nconst char* password = \"YOUR_PASSWORD\";\n\nconst int redPin   = 13;\nconst int greenPin = 12;\nconst int bluePin  = 14;\n\nWebServer server(80);\n\nvoid setRGB(int r, int g, int b) {\n  analogWrite(redPin,   r);\n  analogWrite(greenPin, g);\n  analogWrite(bluePin,  b);\n}\n\nconst char html[] PROGMEM = R\"rawliteral(\n  <!DOCTYPE html><html>\n  <head><title>RGB LED Control</title></head>\n  <body>\n    <input type=\"color\" oninput=\"updateColor(this.value)\">\n    <button onclick=\"setColor(255,0,0)\">Red</button>\n    <button onclick=\"setColor(0,255,0)\">Green</button>\n    <button onclick=\"setColor(0,0,255)\">Blue</button>\n    <script>\n      function updateColor(c) {\n        fetch('/setColor?r='+parseInt(c.slice(1,3),16)\n          +'&g='+parseInt(c.slice(3,5),16)\n          +'&b='+parseInt(c.slice(5,7),16));\n      }\n      function setColor(r,g,b) {\n        fetch('/setColor?r='+r+'&g='+g+'&b='+b);\n      }\n    </script>\n  </body></html>\n)rawliteral\";\n\nvoid handleRoot()     { server.send(200, \"text/html\", html); }\nvoid handleSetColor() {\n  int r = server.arg(\"r\").toInt();\n  int g = server.arg(\"g\").toInt();\n  int b = server.arg(\"b\").toInt();\n  setRGB(r, g, b);\n  server.send(200, \"text/plain\", \"OK\");\n}\n\nvoid setup() {\n  Serial.begin(115200);\n  pinMode(redPin,   OUTPUT);\n  pinMode(greenPin, OUTPUT);\n  pinMode(bluePin,  OUTPUT);\n  setRGB(0, 0, 0);\n  WiFi.begin(ssid, password);\n  while(WiFi.status() != WL_CONNECTED)\n    delay(1000);\n  server.on(\"/\",         handleRoot);\n  server.on(\"/setColor\", handleSetColor);\n  server.begin();\n  Serial.println(WiFi.localIP());\n}\n\nvoid loop() { server.handleClient(); }",
+  "lang": "ESP32 C++"
+ },
+ {
+  "id": "dht11",
+  "title": "DHT11 Weather Station",
+  "board": "ESP32 + WiFi",
+  "icon": "temp",
+  "desc": {
+   "de": "WLAN-Wetterstation mit DHT11 und ESP32: misst Temperatur und Luftfeuchtigkeit und zeigt die Live-Werte auf einer Webseite im Heimnetz.",
+   "en": "A WiFi weather station with DHT11 and ESP32: reads temperature and humidity and serves the live values on a web page in your network."
+  },
+  "parts": [
+   "ESP32",
+   "DHT11",
+   "WiFi",
+   "Web Server"
+  ],
+  "wiring": {
+   "de": "DHT11-Modul → ESP32: VCC → 3,3 V, GND → GND, DATA → GPIO 15. Pull-up ist auf dem Modul bereits verbaut.",
+   "en": "DHT11 module → ESP32: VCC → 3.3 V, GND → GND, DATA → GPIO 15. The module already includes the pull-up resistor."
+  },
+  "img": "assets/img/schematic-3.jpg",
+  "code": "// DHT11 Weather Station — ESP32\n// Live temp + humidity over WiFi\n\n#include <WiFi.h>\n#include <DHT.h>\n\nconst char* ssid     = \"YOUR_WIFI_SSID\";\nconst char* password = \"YOUR_WIFI_PASSWORD\";\n\n#define DHTPIN  15\n#define DHTTYPE DHT11\n\nDHT dht(DHTPIN, DHTTYPE);\nWiFiServer server(80);\n\nvoid setup() {\n  Serial.begin(115200);\n  dht.begin();\n  WiFi.begin(ssid, password);\n  while(WiFi.status() != WL_CONNECTED)\n    delay(500);\n  Serial.println(WiFi.localIP());\n  server.begin();\n}\n\nvoid loop() {\n  WiFiClient client = server.available();\n  if(client) {\n    String req = client.readStringUntil('\\r');\n    client.flush();\n\n    float temp = dht.readTemperature();\n    float hum  = dht.readHumidity();\n\n    String html =\n      \"<!DOCTYPE html><html><head>\"\n      \"<title>Weather Station</title>\"\n      \"<style>body{font-family:Arial;display:flex;\"\n      \"justify-content:center;align-items:center;\"\n      \"height:100vh;background:#f0f4f8}\"\n      \".card{background:#fff;padding:2rem;\"\n      \"border-radius:1rem;text-align:center;\"\n      \"box-shadow:0 4px 20px rgba(0,0,0,.1)}\"\n      \"</style></head><body><div class='card'>\"\n      \"<h1>ESP32 Weather Station</h1>\"\n      \"<p>Temperature: \" + String(temp) + \" °C</p>\"\n      \"<p>Humidity: \"    + String(hum)  + \" %</p>\"\n      \"<button onclick='location.reload()'>\"\n      \"Refresh</button></div></body></html>\";\n\n    client.println(\"HTTP/1.1 200 OK\");\n    client.println(\"Content-type:text/html\");\n    client.println();\n    client.println(html);\n    delay(10);\n    client.stop();\n  }\n  delay(2000);\n}",
+  "lang": "ESP32 C++"
+ }
+]

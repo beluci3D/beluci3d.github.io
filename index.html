@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>beluci — 3D-Druck, CAD-Design & Elektronik</title>
+<meta name="description" content="beluci entwirft, konstruiert und druckt funktionale 3D-Teile – von der CAD-Idee bis zum fertigen Bauteil. Kostenlose Modelle auf MakerWorld, Elektronik-Projekte auf YouTube.">
+<meta name="theme-color" content="#08080a">
+<meta property="og:title" content="beluci — 3D-Druck, CAD-Design & Elektronik">
+<meta property="og:description" content="Funktionale 3D-Teile, präzises CAD-Design und Elektronik-Projekte. Von der Idee zum fertigen Bauteil.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }</script>
+</head>
+<body>
+
+<!-- ───────────── ICONS ───────────── -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M7 16h10M9 12h6M11 4h2v4h-2z"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><path d="M4 7.4l8 4.6 8-4.6M12 12v9.2"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17L17 3l4 4L7 21z"/><path d="M7 13l2 2M10 10l2 2M13 7l2 2"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<!-- ───────────── NAV ───────────── -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo" aria-label="beluci – Startseite">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="9" fill="#ff5b1f"/><path d="M9 22h14M10.5 18h11M12 14h8" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="9" r="2" fill="#0a0a0a"/></svg>
+      beluci
+    </a>
+    <ul class="nav-links">
+      <li><a href="#models" data-i18n="nav.models">Modelle</a></li>
+      <li><a href="#videos" data-i18n="nav.videos">Videos</a></li>
+      <li><a href="#electronics" data-i18n="nav.electronics">Elektronik</a></li>
+      <li><a href="#about" data-i18n="nav.about">Über mich</a></li>
+      <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+    </ul>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Sprache"><button data-lang="de">DE</button><button data-lang="en">EN</button></div>
+      <a href="services.html#quote" class="btn btn-primary btn-sm"><span data-i18n="nav.cta">Projekt anfragen</span><svg class="arr"><use href="#i-arrow"/></svg></a>
+      <button class="burger" aria-label="Menü"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mnav">
+    <a href="#models" data-i18n="nav.models">Modelle</a>
+    <a href="#videos" data-i18n="nav.videos">Videos</a>
+    <a href="#electronics" data-i18n="nav.electronics">Elektronik</a>
+    <a href="#about" data-i18n="nav.about">Über mich</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="services.html#quote" class="btn btn-primary"><span data-i18n="nav.cta">Projekt anfragen</span><svg class="arr"><use href="#i-arrow"/></svg></a>
+  </nav>
+</header>
+
+<main>
+<!-- ───────────── HERO ───────────── -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow rv"><span class="dot"></span><span data-i18n="hero.eyebrow">3D-Druck · CAD-Design · Elektronik</span></div>
+      <h1 class="split" data-i18n-html="hero.title">Ideen, die man <span class="serif">anfassen</span> kann.</h1>
+      <p class="lead rv" style="--d:.35s" data-i18n="hero.lead">Ich entwerfe, konstruiere und drucke funktionale Bauteile – vom ersten Sketch über präzises CAD bis zum fertigen Objekt in deiner Hand. Dazu Elektronik-Projekte, die wirklich funktionieren.</p>
+      <div class="hero-cta rv" style="--d:.45s">
+        <a href="services.html#quote" class="btn btn-primary"><span data-i18n="hero.cta1">Projekt starten</span><svg class="arr"><use href="#i-arrow"/></svg></a>
+        <a href="#models" class="btn btn-ghost"><svg><use href="#i-cube"/></svg><span data-i18n="hero.cta2">Modelle ansehen</span></a>
+      </div>
+      <div class="hero-stats rv" style="--d:.55s">
+        <div class="stat"><b data-count="models">—</b><span data-i18n="stat.models">Modelle</span></div>
+        <div class="stat"><b data-count="downloads">—</b><span data-i18n="stat.downloads">Downloads</span></div>
+        <div class="stat"><b data-count="videos">—</b><span data-i18n="stat.videos">Videos</span></div>
+      </div>
+    </div>
+    <div class="printer rv" style="--d:.2s" id="printer">
+      <div class="hud hud-tl">
+        <div class="live" data-i18n="hud.live">PRINTING</div>
+        <div>MAT <b id="hud-mat">PETG</b> · <b id="hud-temp">240</b>°C</div>
+      </div>
+      <div class="hud hud-br">
+        <div>LAYER <b id="hud-layer">000</b> / <b id="hud-total">000</b></div>
+        <div>Z <b id="hud-z">0.00</b> mm</div>
+        <div class="bar"><i id="hud-bar"></i></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL<i></i></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>FDM 3D-Druck</span><span>Autodesk Inventor</span><span>Fusion 360</span><span>PTC Creo</span><span>ESP32</span><span>Arduino</span><span>PCB Design</span><span>Rapid Prototyping</span><span>PLA · PETG · TPU</span><span>Gehäusebau</span>
+    <span>FDM 3D-Druck</span><span>Autodesk Inventor</span><span>Fusion 360</span><span>PTC Creo</span><span>ESP32</span><span>Arduino</span><span>PCB Design</span><span>Rapid Prototyping</span><span>PLA · PETG · TPU</span><span>Gehäusebau</span>
+  </div>
+</div>
+
+<!-- ───────────── MODELS ───────────── -->
+<section class="sec" id="models">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>MakerWorld</div>
+        <h2 class="h-sec split" data-i18n-html="models.title">Neueste <span class="serif">Modelle.</span></h2>
+      </div>
+      <div class="sec-head-r rv">
+        <span class="live-pill" id="mw-updated" data-i18n="live.synced">Live synchronisiert</span>
+        <div class="tabs" id="mw-tabs">
+          <button class="on" data-sort="new" data-i18n="sort.new">Neueste</button>
+          <button data-sort="popular" data-i18n="sort.popular">Beliebt</button>
+          <button data-sort="downloads" data-i18n="sort.downloads">Downloads</button>
+        </div>
+      </div>
+    </div>
+    <div class="models" id="models-grid">
+      <div class="mcard feat"><div class="img skeleton"></div><div class="body"><h3 class="skeleton" style="height:28px;width:60%;border-radius:8px"></h3></div></div>
+      <div class="mcard"><div class="img skeleton"></div><div class="body"><h3 class="skeleton" style="height:20px;width:70%;border-radius:6px"></h3></div></div>
+      <div class="mcard"><div class="img skeleton"></div><div class="body"><h3 class="skeleton" style="height:20px;width:50%;border-radius:6px"></h3></div></div>
+    </div>
+    <div class="more-row">
+      <button class="btn btn-ghost" id="mw-more" hidden><span data-i18n="models.more">Mehr laden</span></button>
+      <a class="btn btn-ghost" href="https://makerworld.com/@beluci" target="_blank" rel="noopener"><span data-i18n="models.all">Alle auf MakerWorld</span><svg><use href="#i-up"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── YOUTUBE ───────────── -->
+<section class="sec" id="videos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>YouTube</div>
+        <h2 class="h-sec split" data-i18n-html="yt.title">Vom Sketch zum <span class="serif">fertigen Build.</span></h2>
+      </div>
+      <a class="channel rv" href="https://www.youtube.com/@Belutschy" target="_blank" rel="noopener" id="yt-channel">
+        <span class="av">B</span>
+        <span><b>@Belutschy</b><small data-i18n="yt.sub">Kanal abonnieren →</small></span>
+      </a>
+    </div>
+    <div id="yt-wrap">
+      <div class="yt-grid">
+        <div class="vcard big"><div class="thumb skeleton"></div></div>
+        <div class="yt-side"><div class="vcard"><div class="thumb skeleton"></div></div><div class="vcard"><div class="thumb skeleton"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── ELECTRONICS ───────────── -->
+<section class="sec" id="electronics" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span><span data-i18n="el.eyebrow">Code & Schaltpläne</span></div>
+        <h2 class="h-sec split" data-i18n-html="el.title">Elektronik-<span class="serif">Projekte.</span></h2>
+      </div>
+      <p class="lead rv" style="max-width:420px;margin:0" data-i18n="el.lead">Schaltplan und kompletter Quellcode zu meinen YouTube-Builds – zum Nachbauen, Lernen und Weiterentwickeln.</p>
+    </div>
+    <div class="ecards" id="el-grid"></div>
+  </div>
+</section>
+
+<!-- ───────────── ABOUT ───────────── -->
+<section class="sec" id="about" style="padding-top:0">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow rv"><span class="dot"></span><span data-i18n="about.eyebrow">Über mich</span></div>
+      <h2 class="h-sec split" style="margin:18px 0 34px" data-i18n-html="about.title">Wo Filament auf <span class="serif">Firmware</span> trifft.</h2>
+      <p class="rv" data-i18n-html="about.p1">Hi, ich bin <strong>Beluci</strong> – Maker aus Leidenschaft. Ich träume Ideen nicht nur, ich baue sie. In meiner Werkstatt wird aus einer CAD-Skizze ein echtes Bauteil, das man in der Hand halten kann.</p>
+      <p class="rv" data-i18n-html="about.p2">Auf <strong>MakerWorld</strong> veröffentliche ich durchdachte, druckoptimierte Designs – konstruiert in Inventor, Fusion 360 und Creo. Auf <strong>YouTube</strong> dokumentiere ich meine Elektronik-Projekte: Arduino, ESP32, Löten und alles dazwischen. Ehrlich, ungeschönt, echt.</p>
+      <div class="skills rv"><span>FDM Printing</span><span>Parametric CAD</span><span>Arduino</span><span>ESP32</span><span>Soldering</span><span>PCB Design</span><span>Prototyping</span><span>Open Source</span></div>
+    </div>
+    <div class="rv" style="--d:.15s">
+      <div class="eyebrow" style="margin-bottom:22px"><span data-i18n="about.tools">Werkzeuge</span></div>
+      <div class="tools">
+        <div class="tool"><div class="ic">Inv</div><div><b>Autodesk Inventor</b><small data-i18n="tool.inv">Mechanische Baugruppen & technische Zeichnungen</small></div><div class="lvl" title="Advanced"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+        <div class="tool"><div class="ic">F360</div><div><b>Fusion 360</b><small data-i18n="tool.fus">CAD/CAM für Produktdesign & Freiformflächen</small></div><div class="lvl" title="Advanced"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+        <div class="tool"><div class="ic">Creo</div><div><b>PTC Creo</b><small data-i18n="tool.creo">High-End-Parametrik aus Luftfahrt & Automotive</small></div><div class="lvl" title="Intermediate"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+        <div class="tool"><div class="ic">MCU</div><div><b>Arduino · ESP32</b><small data-i18n="tool.mcu">Mikrocontroller, Sensorik & WLAN-Projekte</small></div><div class="lvl" title="Advanced"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── SERVICES TEASER ───────────── -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Services</div>
+        <h2 class="h-sec split" data-i18n-html="svc.title">Dein Problem. <span class="serif">Mein Drucker.</span></h2>
+      </div>
+      <a href="services.html" class="btn btn-ghost rv"><span data-i18n="svc.all">Alle Leistungen</span><svg class="arr"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="svc">
+      <a href="services.html#offer" class="svc-card mini rv"><span class="num">01</span><span class="ico"><svg><use href="#i-print"/></svg></span><h3 data-i18n="svc.1t">3D-Druck</h3><p data-i18n="svc.1d">Du hast eine Datei – ich drucke sie. Sauber, maßhaltig, in PLA, PETG oder TPU.</p></a>
+      <a href="services.html#offer" class="svc-card mini rv" style="--d:.08s"><span class="num">02</span><span class="ico"><svg><use href="#i-ruler"/></svg></span><h3 data-i18n="svc.2t">CAD-Konstruktion</h3><p data-i18n="svc.2d">Aus Skizze, Foto oder Idee wird ein parametrisches, druckfertiges Modell.</p></a>
+      <a href="services.html#offer" class="svc-card mini hl rv" style="--d:.16s"><span class="num">03</span><span class="ico"><svg><use href="#i-chip"/></svg></span><h3 data-i18n="svc.3t">Design + Druck</h3><p data-i18n="svc.3d">Das Komplettpaket: Konstruktion, Testdruck, Feinschliff – Bauteil passt beim ersten Mal.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── CTA ───────────── -->
+<section class="wrap">
+  <div class="cta rv">
+    <div class="eyebrow"><span class="dot"></span><span data-i18n="cta.eyebrow">Antwort innerhalb von 24 h</span></div>
+    <h2 style="margin-top:22px" data-i18n-html="cta.title">Ein Teil, das es <span class="serif accent">noch nicht gibt?</span></h2>
+    <p data-i18n="cta.lead">Beschreib mir dein Problem – ich mache daraus ein gedrucktes Bauteil. Kein Technik-Wissen nötig.</p>
+    <div class="row">
+      <a href="services.html#quote" class="btn btn-primary"><span data-i18n="cta.btn">Kostenloses Angebot</span><svg class="arr"><use href="#i-arrow"/></svg></a>
+      <a href="services.html" class="btn btn-ghost"><span data-i18n="cta.btn2">Leistungen & Ablauf</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ───────────── FOOTER ───────────── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="9" fill="#ff5b1f"/><path d="M9 22h14M10.5 18h11M12 14h8" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="9" r="2" fill="#0a0a0a"/></svg>beluci</a>
+        <p data-i18n="foot.tag">3D-Druck, CAD-Design & Elektronik. Von der Idee zum fertigen Bauteil.</p>
+      </div>
+      <div><h4 data-i18n="foot.nav">Navigation</h4><ul><li><a href="#models" data-i18n="nav.models">Modelle</a></li><li><a href="#videos" data-i18n="nav.videos">Videos</a></li><li><a href="#electronics" data-i18n="nav.electronics">Elektronik</a></li><li><a href="services.html" data-i18n="nav.services">Services</a></li></ul></div>
+      <div><h4>Social</h4><ul><li><a href="https://www.youtube.com/@Belutschy" target="_blank" rel="noopener">YouTube ↗</a></li><li><a href="https://makerworld.com/@beluci" target="_blank" rel="noopener">MakerWorld ↗</a></li></ul></div>
+    </div>
+    <div class="big-word" aria-hidden="true">beluci</div>
+    <div class="foot-bot"><span>© <span class="yr">2026</span> beluci</span><span data-i18n="foot.made">Designed & built in-house</span></div>
+  </div>
+</footer>
+
+<!-- ───────────── MODALS ───────────── -->
+<div class="modal" id="video-modal" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-box video-box"><button class="modal-x" data-close aria-label="Schließen"><svg><use href="#i-x"/></svg></button><div class="ratio" id="video-slot"></div></div>
+</div>
+<div class="modal" id="proj-modal" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-box"><button class="modal-x" data-close aria-label="Schließen"><svg><use href="#i-x"/></svg></button><div id="proj-slot"></div></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/home.js"></script>
+<script type="module" src="assets/js/printer.js"></script>
+</body>
+</html>

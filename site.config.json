@@ -1,0 +1,15 @@
+{
+  "_info": "Zentrale Einstellungen. Das Update-Skript liest diese Datei automatisch (alle 3 Stunden).",
+
+  "youtubeHandle": "Belutschy",
+  "youtubeChannelId": "",
+
+  "makerworldHandle": "beluci",
+  "makerworldUid": "",
+  "makerworldAnyModelUrl": "",
+
+  "contactEmail": "",
+
+  "maxVideos": 12,
+  "maxModels": 48
+}
