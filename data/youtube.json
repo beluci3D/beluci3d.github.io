@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-20T08:35:19.426Z",
+ "updatedAt": "2026-10-20T14:20:01.821Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
@@ -15,7 +15,7 @@
    "title": "7 Common 3D Printing Problems and How to Fix Them",
    "published": "2026-10-19T22:00:16+00:00",
    "description": "Stringing, warping, elephant's foot, under-extrusion, layer shifts, no bed adhesion and wet filament – here are 7 of the most common 3D printing problems, what causes them and how to fix each one.\n\n⏱️ Chapters\n0:00 Sound familiar?\n0:24 Intro: one setting at a time\n0:37 #1 Stringing\n1:17 #2 Warping\n1:43 #3 Elephant's foot\n2:05 #4 Under-extrusion\n2:36 #5 Layer shifting\n3:07 #6 No bed adhesion\n3:22 #",
-   "views": 2,
+   "views": 3,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=_asR6Gg5XLc"
@@ -25,7 +25,7 @@
    "title": "ESP32 Deep Sleep Explained: Power Modes, Wake-Up Sources & RTC Memory",
    "published": "2026-10-18T22:00:17+00:00",
    "description": "Your ESP32 can draw 20–68 mA just sitting idle – or about 10 µA in deep sleep. In this video you'll learn how the ESP32 power modes work, what stays on in deep sleep, the 4 common ways to wake it up, and the #1 gotcha that confuses almost every beginner.\n\n⏱️ Chapters\n0:00 More than 1000× less power\n0:25 Intro\n0:40 ESP32 power modes\n1:21 What stays on in deep sleep?\n1:41 The #1 beginner gotcha (RTC",
-   "views": 10,
+   "views": 12,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=KWv-i0rt8LM"
@@ -35,7 +35,7 @@
    "title": "Infill vs Walls: How to Make 3D Prints Stronger (Without Wasting Filament)",
    "published": "2026-10-17T22:00:18+00:00",
    "description": "100 % infill is NOT the way to stronger 3D prints. In this video you'll learn where the strength of a print really comes from: walls vs infill, how much infill you actually need, which infill pattern to use, top layers, layer height and the setting that's not even in your slicer menu – print orientation. Plus my three starting recipes.\n\n⏱️ Chapters\n0:00 100 % infill?\n0:26 Intro\n0:41 Inside a 3D pr",
-   "views": 303,
+   "views": 337,
    "likes": 3,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU"
@@ -55,7 +55,7 @@
    "title": "What Happens When You Press Upload? #shorts",
    "published": "2026-10-17T07:18:58+00:00",
    "description": "One line of code, one LED. In between: a compiler, a bootloader, flash memory, a 16 MHz clock and one single bit in a register called PORT B. This is what really happens inside your Arduino.\n\n▶️ Full video on my channel: What happens inside a microcontroller\n\n#shorts #arduino #microcontroller #electronics #programming",
-   "views": 493,
+   "views": 494,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/WEQjMZO3Er8"
@@ -65,7 +65,7 @@
    "title": "The $5 Chip That's Probably in Your Home #shorts",
    "published": "2026-10-17T07:17:55+00:00",
    "description": "In 2014 a tiny $5 Wi-Fi module appeared online with documentation only in Chinese. Makers translated it, hacked it, and started a revolution. Today Espressif says it has shipped over one billion chips.\n\n▶️ Full documentary on my channel: The ESP8266 & ESP32 Story\n\n#shorts #esp32 #esp8266 #iot #smarthome #electronics",
-   "views": 736,
+   "views": 739,
    "likes": 15,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/2ThP3sJ8j08"
@@ -85,7 +85,7 @@
    "title": "Can an ESP32 Run 1 Year on One Battery? (The Real Math)",
    "published": "2026-10-16T22:00:01+00:00",
    "description": "Can a Wi-Fi sensor with an ESP32 really run for a year on a single battery? Instead of guessing, we do the real math: from a typical setup that lasts 71 days to a design that reaches just over a year – and the one factor that surprises most people.\n\n⏱️ Chapters\n0:00 1 year on one battery?\n0:23 Intro\n0:46 The project: ESP32-C3 + BME280 + 18650\n1:11 The math: average current\n1:39 Why a LiFePO4 cell?",
-   "views": 28,
+   "views": 29,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=luzxKA9FLJE"
@@ -95,7 +95,7 @@
    "title": "Perfect First Layer Every Time – 7 Fixes That Actually Work",
    "published": "2026-10-15T22:00:22+00:00",
    "description": "Most 3D print failures start in the very first layer. In this video: what a too high, too low and perfect first layer looks like, and 7 fixes in the order I'd check them – from nozzle height and a clean print sheet to temperature, speed, brims, glue stick and elephant's foot.\n\n⏱️ Chapters\n0:00 The spaghetti moment\n0:24 Intro\n0:39 Why the first layer matters\n0:59 Fix #1: Nozzle height\n1:33 Fine-tun",
-   "views": 22,
+   "views": 23,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=sw9QcQZghsw"
@@ -115,7 +115,7 @@
    "title": "PLA vs PETG vs ABS vs TPU – Which Filament Should You Use?",
    "published": "2026-10-13T22:00:26+00:00",
    "description": "PLA, PETG, ABS or TPU – which 3D printing filament should you actually use? In this video you get the real temperatures, strengths and weaknesses of the four most popular filaments, a side-by-side table, a tip most beginners never hear about, and a simple decision guide.\n\n⏱️ Chapters\n0:00 Which filament, and when?\n0:32 Intro\n0:56 The big four\n1:14 PLA\n1:56 PETG\n2:46 ABS (and ASA)\n3:28 TPU\n4:04 Sid",
-   "views": 278,
+   "views": 279,
    "likes": 5,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Jyy9UjGjKX0"
@@ -125,7 +125,7 @@
    "title": "ESP32-C3: The REAL ESP8266 Replacement? (Specs, Power & Gotchas)",
    "published": "2026-10-12T22:00:01+00:00",
    "description": "Is the tiny ESP32-C3 the real replacement for the ESP8266? In this video I compare specs, power consumption and long-term support, show you how to port an old ESP8266 sketch, and cover the two gotchas that catch a lot of people off guard.\n\n⏱️ Chapters\n0:00 The real ESP8266 replacement?\n0:35 Intro\n1:07 What is the ESP32-C3?\n1:41 How tiny is the SuperMini?\n2:01 ESP32-C3 vs ESP8266\n2:57 ESP32-C3 vs c",
-   "views": 88,
+   "views": 89,
    "likes": 2,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=AVXAIOZxStg"
