@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-20T19:18:57.939Z",
+ "updatedAt": "2026-10-20T23:54:51.123Z",
  "profile": {
   "uid": "3937368763",
   "handle": "beluci",
@@ -10,9 +10,9 @@
  },
  "totals": {
   "models": 8,
-  "downloads": 340,
+  "downloads": 341,
   "likes": 83,
-  "prints": 201
+  "prints": 203
  },
  "models": [
   {
@@ -47,7 +47,7 @@
    "cover": "https://makerworld.bblmw.com/makerworld/model/USce147a5b0893e5/design/49ac18706f9891e5.png",
    "likes": 4,
    "downloads": 24,
-   "prints": 19,
+   "prints": 20,
    "collects": 17,
    "comments": 0,
    "boosts": 0,
@@ -123,7 +123,7 @@
    "likes": 44,
    "downloads": 201,
    "prints": 97,
-   "collects": 156,
+   "collects": 155,
    "comments": 2,
    "boosts": 0,
    "created": "2025-08-31T15:59:54Z",
@@ -170,8 +170,8 @@
    "url": "https://makerworld.com/en/models/1739461-universal-desk-hook-for-25-mm-tabletops",
    "cover": "https://makerworld.bblmw.com/makerworld/model/US4ccc5533dfc47f/design/1c496e14db484dae.png",
    "likes": 17,
-   "downloads": 43,
-   "prints": 28,
+   "downloads": 44,
+   "prints": 29,
    "collects": 36,
    "comments": 0,
    "boosts": 2,
