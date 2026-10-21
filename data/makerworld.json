@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-21T11:52:05.871Z",
+ "updatedAt": "2026-10-21T17:14:50.929Z",
  "profile": {
   "uid": "3937368763",
   "handle": "beluci",
@@ -10,9 +10,9 @@
  },
  "totals": {
   "models": 8,
-  "downloads": 341,
+  "downloads": 342,
   "likes": 83,
-  "prints": 203
+  "prints": 204
  },
  "models": [
   {
@@ -195,8 +195,8 @@
    "url": "https://makerworld.com/en/models/1317644-philips-sonicare-gunk-stopper",
    "cover": "https://makerworld.bblmw.com/makerworld/model/USf734122a1096c2/design/600a81dcd8bd31d0.png",
    "likes": 4,
-   "downloads": 46,
-   "prints": 38,
+   "downloads": 47,
+   "prints": 39,
    "collects": 51,
    "comments": 0,
    "boosts": 0,

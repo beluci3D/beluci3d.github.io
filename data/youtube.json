@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-21T11:52:05.917Z",
+ "updatedAt": "2026-10-21T17:14:50.614Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
@@ -35,7 +35,7 @@
    "title": "ESP32 Deep Sleep Explained: Power Modes, Wake-Up Sources & RTC Memory",
    "published": "2026-10-18T22:00:17+00:00",
    "description": "Your ESP32 can draw 20–68 mA just sitting idle – or about 10 µA in deep sleep. In this video you'll learn how the ESP32 power modes work, what stays on in deep sleep, the 4 common ways to wake it up, and the #1 gotcha that confuses almost every beginner.\n\n⏱️ Chapters\n0:00 More than 1000× less power\n0:25 Intro\n0:40 ESP32 power modes\n1:21 What stays on in deep sleep?\n1:41 The #1 beginner gotcha (RTC",
-   "views": 16,
+   "views": 18,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=KWv-i0rt8LM"
@@ -45,7 +45,7 @@
    "title": "Infill vs Walls: How to Make 3D Prints Stronger (Without Wasting Filament)",
    "published": "2026-10-17T22:00:18+00:00",
    "description": "100 % infill is NOT the way to stronger 3D prints. In this video you'll learn where the strength of a print really comes from: walls vs infill, how much infill you actually need, which infill pattern to use, top layers, layer height and the setting that's not even in your slicer menu – print orientation. Plus my three starting recipes.\n\n⏱️ Chapters\n0:00 100 % infill?\n0:26 Intro\n0:41 Inside a 3D pr",
-   "views": 637,
+   "views": 678,
    "likes": 4,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU"
