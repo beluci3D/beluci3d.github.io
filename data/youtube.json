@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-20T23:54:50.956Z",
+ "updatedAt": "2026-10-21T11:52:05.917Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
@@ -15,7 +15,7 @@
    "title": "ESP32 Pinout Explained: Which Pins Are Safe to Use?",
    "published": "2026-10-20T22:00:19+00:00",
    "description": "The ESP32 DevKit has 38 pins – but not all of them are safe. In this video we go through the entire pinout, group by group: power pins, flash pins you should never touch, strapping pins, serial pins, input-only pins, ADC1 vs ADC2, DAC, touch pins and the default I2C and SPI pins. At the end there's a cheat sheet you can screenshot.\n\n⏱️ Chapters\n0:00 38 pins – which are safe?\n0:24 Intro\n0:50 Power ",
-   "views": 0,
+   "views": 2,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Dgk_vTjZJ7M"
@@ -25,7 +25,7 @@
    "title": "7 Common 3D Printing Problems and How to Fix Them",
    "published": "2026-10-19T22:00:16+00:00",
    "description": "Stringing, warping, elephant's foot, under-extrusion, layer shifts, no bed adhesion and wet filament – here are 7 of the most common 3D printing problems, what causes them and how to fix each one.\n\n⏱️ Chapters\n0:00 Sound familiar?\n0:24 Intro: one setting at a time\n0:37 #1 Stringing\n1:17 #2 Warping\n1:43 #3 Elephant's foot\n2:05 #4 Under-extrusion\n2:36 #5 Layer shifting\n3:07 #6 No bed adhesion\n3:22 #",
-   "views": 7,
+   "views": 9,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=_asR6Gg5XLc"
@@ -35,7 +35,7 @@
    "title": "ESP32 Deep Sleep Explained: Power Modes, Wake-Up Sources & RTC Memory",
    "published": "2026-10-18T22:00:17+00:00",
    "description": "Your ESP32 can draw 20–68 mA just sitting idle – or about 10 µA in deep sleep. In this video you'll learn how the ESP32 power modes work, what stays on in deep sleep, the 4 common ways to wake it up, and the #1 gotcha that confuses almost every beginner.\n\n⏱️ Chapters\n0:00 More than 1000× less power\n0:25 Intro\n0:40 ESP32 power modes\n1:21 What stays on in deep sleep?\n1:41 The #1 beginner gotcha (RTC",
-   "views": 14,
+   "views": 16,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=KWv-i0rt8LM"
@@ -45,7 +45,7 @@
    "title": "Infill vs Walls: How to Make 3D Prints Stronger (Without Wasting Filament)",
    "published": "2026-10-17T22:00:18+00:00",
    "description": "100 % infill is NOT the way to stronger 3D prints. In this video you'll learn where the strength of a print really comes from: walls vs infill, how much infill you actually need, which infill pattern to use, top layers, layer height and the setting that's not even in your slicer menu – print orientation. Plus my three starting recipes.\n\n⏱️ Chapters\n0:00 100 % infill?\n0:26 Intro\n0:41 Inside a 3D pr",
-   "views": 540,
+   "views": 637,
    "likes": 4,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU"
@@ -55,7 +55,7 @@
    "title": "Why 3D Printers Suddenly Got So Fast #shorts",
    "published": "2026-10-17T07:20:21+00:00",
    "description": "A benchy used to take over an hour, now many home printers do it in under 20 minutes. Not because of stronger motors: acceleration, input shaping, high-flow hotends and strong cooling fans.\n\n▶️ Full video on my channel: Why 3D printers got so fast\n\n#shorts #3dprinting #klipper #inputshaping #bambulab",
-   "views": 5,
+   "views": 8,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/oguqPJfqER4"
@@ -65,7 +65,7 @@
    "title": "3D Printing Started With a Toy Frog 🐸 #shorts #entrepreneur #tech",
    "published": "2026-10-17T07:19:43+00:00",
    "description": "In 1988 Scott Crump made a toy frog for his daughter with a hot glue gun full of plastic and candle wax. That idea became FDM, the most common kind of 3D printing. When the key patent expired in 2009, prices fell from around $20,000 to under $1,000.\n\n▶️ Full documentary on my channel: The History of 3D Printing\n\n#shorts #3dprinting #history #stratasys #maker",
-   "views": 13,
+   "views": 14,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/0GMkmIcnXjc"
@@ -75,7 +75,7 @@
    "title": "What Happens When You Press Upload? #shorts",
    "published": "2026-10-17T07:18:58+00:00",
    "description": "One line of code, one LED. In between: a compiler, a bootloader, flash memory, a 16 MHz clock and one single bit in a register called PORT B. This is what really happens inside your Arduino.\n\n▶️ Full video on my channel: What happens inside a microcontroller\n\n#shorts #arduino #microcontroller #electronics #programming",
-   "views": 499,
+   "views": 500,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/WEQjMZO3Er8"
@@ -85,7 +85,7 @@
    "title": "The $5 Chip That's Probably in Your Home #shorts",
    "published": "2026-10-17T07:17:55+00:00",
    "description": "In 2014 a tiny $5 Wi-Fi module appeared online with documentation only in Chinese. Makers translated it, hacked it, and started a revolution. Today Espressif says it has shipped over one billion chips.\n\n▶️ Full documentary on my channel: The ESP8266 & ESP32 Story\n\n#shorts #esp32 #esp8266 #iot #smarthome #electronics",
-   "views": 747,
+   "views": 751,
    "likes": 16,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/2ThP3sJ8j08"
@@ -105,7 +105,7 @@
    "title": "Can an ESP32 Run 1 Year on One Battery? (The Real Math)",
    "published": "2026-10-16T22:00:01+00:00",
    "description": "Can a Wi-Fi sensor with an ESP32 really run for a year on a single battery? Instead of guessing, we do the real math: from a typical setup that lasts 71 days to a design that reaches just over a year – and the one factor that surprises most people.\n\n⏱️ Chapters\n0:00 1 year on one battery?\n0:23 Intro\n0:46 The project: ESP32-C3 + BME280 + 18650\n1:11 The math: average current\n1:39 Why a LiFePO4 cell?",
-   "views": 32,
+   "views": 36,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=luzxKA9FLJE"
@@ -115,7 +115,7 @@
    "title": "Perfect First Layer Every Time – 7 Fixes That Actually Work",
    "published": "2026-10-15T22:00:22+00:00",
    "description": "Most 3D print failures start in the very first layer. In this video: what a too high, too low and perfect first layer looks like, and 7 fixes in the order I'd check them – from nozzle height and a clean print sheet to temperature, speed, brims, glue stick and elephant's foot.\n\n⏱️ Chapters\n0:00 The spaghetti moment\n0:24 Intro\n0:39 Why the first layer matters\n0:59 Fix #1: Nozzle height\n1:33 Fine-tun",
-   "views": 26,
+   "views": 27,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=sw9QcQZghsw"
@@ -125,7 +125,7 @@
    "title": "5 ESP32 Mistakes Beginners Make (and How to Fix Them)",
    "published": "2026-10-14T22:00:29+00:00",
    "description": "Your ESP32 won't boot, analogRead() returns 0, or it keeps resetting when Wi-Fi turns on? It's almost always one of these 5 beginner mistakes. Here's what goes wrong and how to fix each one.\n\n⏱️ Chapters\n0:00 Sound familiar?\n0:28 Intro\n0:46 Mistake #1: Using the wrong pins (strapping & flash pins)\n2:00 Mistake #2: ADC2 + Wi-Fi\n2:51 Mistake #3: Power supply too weak (brownout)\n3:32 Mistake #4: 5 V ",
-   "views": 63,
+   "views": 64,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=4C2RwchM2oc"
