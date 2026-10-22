@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-22T11:55:56.122Z",
+ "updatedAt": "2026-10-22T17:13:05.049Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
@@ -55,7 +55,7 @@
    "title": "Infill vs Walls: How to Make 3D Prints Stronger (Without Wasting Filament)",
    "published": "2026-10-17T22:00:18+00:00",
    "description": "100 % infill is NOT the way to stronger 3D prints. In this video you'll learn where the strength of a print really comes from: walls vs infill, how much infill you actually need, which infill pattern to use, top layers, layer height and the setting that's not even in your slicer menu – print orientation. Plus my three starting recipes.\n\n⏱️ Chapters\n0:00 100 % infill?\n0:26 Intro\n0:41 Inside a 3D pr",
-   "views": 722,
+   "views": 729,
    "likes": 4,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU"
@@ -65,7 +65,7 @@
    "title": "3D Printed Rockets, Houses… and a Heart #shorts",
    "published": "2026-10-17T07:21:25+00:00",
    "description": "A jet engine fuel nozzle printed as one part, a rocket that was about 85% 3D printed, a neighborhood of printed homes, and a tiny heart made with human cells. Same idea as the printer on your desk: one layer at a time.\n\n▶️ Full video on my channel: How far can 3D printing go?\n\n#shorts #3dprinting #engineering #space #science",
-   "views": 9,
+   "views": 10,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/gqooC_PiATw"
@@ -105,7 +105,7 @@
    "title": "The $5 Chip That's Probably in Your Home #shorts",
    "published": "2026-10-17T07:17:55+00:00",
    "description": "In 2014 a tiny $5 Wi-Fi module appeared online with documentation only in Chinese. Makers translated it, hacked it, and started a revolution. Today Espressif says it has shipped over one billion chips.\n\n▶️ Full documentary on my channel: The ESP8266 & ESP32 Story\n\n#shorts #esp32 #esp8266 #iot #smarthome #electronics",
-   "views": 756,
+   "views": 758,
    "likes": 16,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/2ThP3sJ8j08"
@@ -125,7 +125,7 @@
    "title": "Can an ESP32 Run 1 Year on One Battery? (The Real Math)",
    "published": "2026-10-16T22:00:01+00:00",
    "description": "Can a Wi-Fi sensor with an ESP32 really run for a year on a single battery? Instead of guessing, we do the real math: from a typical setup that lasts 71 days to a design that reaches just over a year – and the one factor that surprises most people.\n\n⏱️ Chapters\n0:00 1 year on one battery?\n0:23 Intro\n0:46 The project: ESP32-C3 + BME280 + 18650\n1:11 The math: average current\n1:39 Why a LiFePO4 cell?",
-   "views": 37,
+   "views": 38,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=luzxKA9FLJE"
