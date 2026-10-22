@@ -1,22 +1,32 @@
 {
- "updatedAt": "2026-10-21T21:44:55.531Z",
+ "updatedAt": "2026-10-22T11:55:56.122Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "19",
-  "videoCount": "18",
+  "videoCount": "20",
   "avatar": "https://yt3.googleusercontent.com/mo_npURdrSlf6RxR5hrYZsUDRhWLNw3Y0omklgkmmPp8e15JpI9_mbqaKlS3pyrT_P_3EuqOtlY=s900-c-k-c0x00ffffff-no-rj"
  },
  "videos": [
+  {
+   "id": "GtL8i_gbGJk",
+   "title": "Should You Buy a 3D Printer in 2026? (Honest Answer)",
+   "published": "2026-10-21T22:00:37+00:00",
+   "description": "Should you buy a 3D printer in 2026? Everyone online says yes, but nobody talks about the real costs, the time it takes, or who should NOT buy one. Here's the honest answer: real prices, a real cost-per-print calculation and a clear verdict.\n\n⏱️ Chapters\n0:00 Should you buy one?\n0:25 Intro\n0:43 What you can make\n1:19 What it costs\n1:54 Cost per print\n2:25 Time & learning curve\n2:53 Buy it if…\n3:15",
+   "views": 2,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=GtL8i_gbGJk"
+  },
   {
    "id": "Dgk_vTjZJ7M",
    "title": "ESP32 Pinout Explained: Which Pins Are Safe to Use?",
    "published": "2026-10-20T22:00:19+00:00",
    "description": "The ESP32 DevKit has 38 pins – but not all of them are safe. In this video we go through the entire pinout, group by group: power pins, flash pins you should never touch, strapping pins, serial pins, input-only pins, ADC1 vs ADC2, DAC, touch pins and the default I2C and SPI pins. At the end there's a cheat sheet you can screenshot.\n\n⏱️ Chapters\n0:00 38 pins – which are safe?\n0:24 Intro\n0:50 Power ",
-   "views": 5,
-   "likes": 0,
+   "views": 10,
+   "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Dgk_vTjZJ7M"
   },
@@ -25,7 +35,7 @@
    "title": "7 Common 3D Printing Problems and How to Fix Them",
    "published": "2026-10-19T22:00:16+00:00",
    "description": "Stringing, warping, elephant's foot, under-extrusion, layer shifts, no bed adhesion and wet filament – here are 7 of the most common 3D printing problems, what causes them and how to fix each one.\n\n⏱️ Chapters\n0:00 Sound familiar?\n0:24 Intro: one setting at a time\n0:37 #1 Stringing\n1:17 #2 Warping\n1:43 #3 Elephant's foot\n2:05 #4 Under-extrusion\n2:36 #5 Layer shifting\n3:07 #6 No bed adhesion\n3:22 #",
-   "views": 10,
+   "views": 12,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=_asR6Gg5XLc"
@@ -45,17 +55,27 @@
    "title": "Infill vs Walls: How to Make 3D Prints Stronger (Without Wasting Filament)",
    "published": "2026-10-17T22:00:18+00:00",
    "description": "100 % infill is NOT the way to stronger 3D prints. In this video you'll learn where the strength of a print really comes from: walls vs infill, how much infill you actually need, which infill pattern to use, top layers, layer height and the setting that's not even in your slicer menu – print orientation. Plus my three starting recipes.\n\n⏱️ Chapters\n0:00 100 % infill?\n0:26 Intro\n0:41 Inside a 3D pr",
-   "views": 687,
+   "views": 722,
    "likes": 4,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU"
+  },
+  {
+   "id": "gqooC_PiATw",
+   "title": "3D Printed Rockets, Houses… and a Heart #shorts",
+   "published": "2026-10-17T07:21:25+00:00",
+   "description": "A jet engine fuel nozzle printed as one part, a rocket that was about 85% 3D printed, a neighborhood of printed homes, and a tiny heart made with human cells. Same idea as the printer on your desk: one layer at a time.\n\n▶️ Full video on my channel: How far can 3D printing go?\n\n#shorts #3dprinting #engineering #space #science",
+   "views": 9,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/gqooC_PiATw"
   },
   {
    "id": "oguqPJfqER4",
    "title": "Why 3D Printers Suddenly Got So Fast #shorts",
    "published": "2026-10-17T07:20:21+00:00",
    "description": "A benchy used to take over an hour, now many home printers do it in under 20 minutes. Not because of stronger motors: acceleration, input shaping, high-flow hotends and strong cooling fans.\n\n▶️ Full video on my channel: Why 3D printers got so fast\n\n#shorts #3dprinting #klipper #inputshaping #bambulab",
-   "views": 10,
+   "views": 11,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/oguqPJfqER4"
@@ -65,7 +85,7 @@
    "title": "3D Printing Started With a Toy Frog 🐸 #shorts #entrepreneur #tech",
    "published": "2026-10-17T07:19:43+00:00",
    "description": "In 1988 Scott Crump made a toy frog for his daughter with a hot glue gun full of plastic and candle wax. That idea became FDM, the most common kind of 3D printing. When the key patent expired in 2009, prices fell from around $20,000 to under $1,000.\n\n▶️ Full documentary on my channel: The History of 3D Printing\n\n#shorts #3dprinting #history #stratasys #maker",
-   "views": 14,
+   "views": 15,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/0GMkmIcnXjc"
@@ -85,7 +105,7 @@
    "title": "The $5 Chip That's Probably in Your Home #shorts",
    "published": "2026-10-17T07:17:55+00:00",
    "description": "In 2014 a tiny $5 Wi-Fi module appeared online with documentation only in Chinese. Makers translated it, hacked it, and started a revolution. Today Espressif says it has shipped over one billion chips.\n\n▶️ Full documentary on my channel: The ESP8266 & ESP32 Story\n\n#shorts #esp32 #esp8266 #iot #smarthome #electronics",
-   "views": 753,
+   "views": 756,
    "likes": 16,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/2ThP3sJ8j08"
@@ -105,30 +125,10 @@
    "title": "Can an ESP32 Run 1 Year on One Battery? (The Real Math)",
    "published": "2026-10-16T22:00:01+00:00",
    "description": "Can a Wi-Fi sensor with an ESP32 really run for a year on a single battery? Instead of guessing, we do the real math: from a typical setup that lasts 71 days to a design that reaches just over a year – and the one factor that surprises most people.\n\n⏱️ Chapters\n0:00 1 year on one battery?\n0:23 Intro\n0:46 The project: ESP32-C3 + BME280 + 18650\n1:11 The math: average current\n1:39 Why a LiFePO4 cell?",
-   "views": 36,
+   "views": 37,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=luzxKA9FLJE"
-  },
-  {
-   "id": "sw9QcQZghsw",
-   "title": "Perfect First Layer Every Time – 7 Fixes That Actually Work",
-   "published": "2026-10-15T22:00:22+00:00",
-   "description": "Most 3D print failures start in the very first layer. In this video: what a too high, too low and perfect first layer looks like, and 7 fixes in the order I'd check them – from nozzle height and a clean print sheet to temperature, speed, brims, glue stick and elephant's foot.\n\n⏱️ Chapters\n0:00 The spaghetti moment\n0:24 Intro\n0:39 Why the first layer matters\n0:59 Fix #1: Nozzle height\n1:33 Fine-tun",
-   "views": 30,
-   "likes": 1,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=sw9QcQZghsw"
-  },
-  {
-   "id": "4C2RwchM2oc",
-   "title": "5 ESP32 Mistakes Beginners Make (and How to Fix Them)",
-   "published": "2026-10-14T22:00:29+00:00",
-   "description": "Your ESP32 won't boot, analogRead() returns 0, or it keeps resetting when Wi-Fi turns on? It's almost always one of these 5 beginner mistakes. Here's what goes wrong and how to fix each one.\n\n⏱️ Chapters\n0:00 Sound familiar?\n0:28 Intro\n0:46 Mistake #1: Using the wrong pins (strapping & flash pins)\n2:00 Mistake #2: ADC2 + Wi-Fi\n2:51 Mistake #3: Power supply too weak (brownout)\n3:32 Mistake #4: 5 V ",
-   "views": 69,
-   "likes": 0,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=4C2RwchM2oc"
   }
  ]
 }
