@@ -1,9 +1,9 @@
 {
- "at": "2026-10-21T21:44:55.592Z",
+ "at": "2026-10-22T04:50:30.202Z",
  "log": [
   "uid über Modell-Link: 3937368763",
   "MakerWorld API ✓ 8 Designs (uid 3937368763)",
-  "YouTube ✓ 12 Videos (UCKCNgGTK-LnKHSqhgwfvYyA)",
-  "MakerWorld ✓ 8 Modelle gespeichert"
+  "MakerWorld ✓ 8 Modelle gespeichert",
+  "YouTube ✗ 500 Internal Server Error @ https://www.youtube.com/feeds/videos.xml?channel_id=UCKCNgGTK-LnKHSqhgwfvYyA"
  ]
 }
