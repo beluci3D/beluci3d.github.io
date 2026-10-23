@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-23T17:10:20.725Z",
+ "updatedAt": "2026-10-23T21:26:20.194Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
@@ -15,7 +15,7 @@
    "title": "ESP-NOW Tutorial: ESP32 Boards Talking Without a Router",
    "published": "2026-10-22T22:00:38+00:00",
    "description": "ESP-NOW lets two ESP32 boards talk directly – no router, no internet, no cloud. In this video: what ESP-NOW is, its limits, when to use it, and the code for your first sender and receiver.\n\n⏱️ Chapters\n0:00 No router needed\n0:19 Intro\n0:31 What is ESP-NOW?\n0:59 Limits you should know\n1:33 When is ESP-NOW a good fit?\n1:46 Step 1: Find the MAC address\n1:57 Step 2: The sender\n2:08 Step 3: The receive",
-   "views": 16,
+   "views": 25,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=CUUSO4PeCJ0"
@@ -25,7 +25,7 @@
    "title": "Should You Buy a 3D Printer in 2026? (Honest Answer)",
    "published": "2026-10-21T22:00:37+00:00",
    "description": "Should you buy a 3D printer in 2026? Everyone online says yes, but nobody talks about the real costs, the time it takes, or who should NOT buy one. Here's the honest answer: real prices, a real cost-per-print calculation and a clear verdict.\n\n⏱️ Chapters\n0:00 Should you buy one?\n0:25 Intro\n0:43 What you can make\n1:19 What it costs\n1:54 Cost per print\n2:25 Time & learning curve\n2:53 Buy it if…\n3:15",
-   "views": 49,
+   "views": 69,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=GtL8i_gbGJk"
@@ -65,7 +65,7 @@
    "title": "Infill vs Walls: How to Make 3D Prints Stronger (Without Wasting Filament)",
    "published": "2026-10-17T22:00:18+00:00",
    "description": "100 % infill is NOT the way to stronger 3D prints. In this video you'll learn where the strength of a print really comes from: walls vs infill, how much infill you actually need, which infill pattern to use, top layers, layer height and the setting that's not even in your slicer menu – print orientation. Plus my three starting recipes.\n\n⏱️ Chapters\n0:00 100 % infill?\n0:26 Intro\n0:41 Inside a 3D pr",
-   "views": 739,
+   "views": 738,
    "likes": 4,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU"
@@ -75,7 +75,7 @@
    "title": "The Free Trick That Removes Layer Lines #shorts",
    "published": "2026-10-17T07:22:24+00:00",
    "description": "Z anti-aliasing lets the nozzle move up and down inside a single layer, so curved top surfaces lose their staircase look. In CNC Kitchen's test, roughness on shallow slopes dropped from about 80 to about 25 micrometers. In OrcaSlicer it's called Z contouring.\n\n▶️ Full video on my channel: Z anti-aliasing explained\n\n#shorts #3dprinting #orcaslicer #3dprintingtips",
-   "views": 1,
+   "views": 4,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/55VcYzxO6Cw"
@@ -115,7 +115,7 @@
    "title": "What Happens When You Press Upload? #shorts",
    "published": "2026-10-17T07:18:58+00:00",
    "description": "One line of code, one LED. In between: a compiler, a bootloader, flash memory, a 16 MHz clock and one single bit in a register called PORT B. This is what really happens inside your Arduino.\n\n▶️ Full video on my channel: What happens inside a microcontroller\n\n#shorts #arduino #microcontroller #electronics #programming",
-   "views": 501,
+   "views": 502,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/WEQjMZO3Er8"
@@ -125,7 +125,7 @@
    "title": "The $5 Chip That's Probably in Your Home #shorts",
    "published": "2026-10-17T07:17:55+00:00",
    "description": "In 2014 a tiny $5 Wi-Fi module appeared online with documentation only in Chinese. Makers translated it, hacked it, and started a revolution. Today Espressif says it has shipped over one billion chips.\n\n▶️ Full documentary on my channel: The ESP8266 & ESP32 Story\n\n#shorts #esp32 #esp8266 #iot #smarthome #electronics",
-   "views": 760,
+   "views": 761,
    "likes": 17,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/2ThP3sJ8j08"
