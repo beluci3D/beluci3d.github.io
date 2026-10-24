@@ -1,13 +1,12 @@
 {
- "updatedAt": "2026-10-24T11:04:13.886Z",
+ "updatedAt": "2026-10-24T11:45:37.125Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "19",
-  "videoCount": "24",
-  "avatar": "https://yt3.googleusercontent.com/mo_npURdrSlf6RxR5hrYZsUDRhWLNw3Y0omklgkmmPp8e15JpI9_mbqaKlS3pyrT_P_3EuqOtlY=s900-c-k-c0x00ffffff-no-rj"
+  "videoCount": "24"
  },
  "videos": [
   {
@@ -18,7 +17,8 @@
    "views": 4,
    "likes": 0,
    "isShort": false,
-   "url": "https://www.youtube.com/watch?v=GeqaQzObBzA"
+   "url": "https://www.youtube.com/watch?v=GeqaQzObBzA",
+   "thumb": "assets/yt/GeqaQzObBzA.webp"
   },
   {
    "id": "CUUSO4PeCJ0",
@@ -28,7 +28,8 @@
    "views": 43,
    "likes": 0,
    "isShort": false,
-   "url": "https://www.youtube.com/watch?v=CUUSO4PeCJ0"
+   "url": "https://www.youtube.com/watch?v=CUUSO4PeCJ0",
+   "thumb": "assets/yt/CUUSO4PeCJ0.webp"
   },
   {
    "id": "GtL8i_gbGJk",
@@ -38,7 +39,8 @@
    "views": 104,
    "likes": 0,
    "isShort": false,
-   "url": "https://www.youtube.com/watch?v=GtL8i_gbGJk"
+   "url": "https://www.youtube.com/watch?v=GtL8i_gbGJk",
+   "thumb": "assets/yt/GtL8i_gbGJk.webp"
   },
   {
    "id": "Dgk_vTjZJ7M",
@@ -48,7 +50,8 @@
    "views": 15,
    "likes": 1,
    "isShort": false,
-   "url": "https://www.youtube.com/watch?v=Dgk_vTjZJ7M"
+   "url": "https://www.youtube.com/watch?v=Dgk_vTjZJ7M",
+   "thumb": "assets/yt/Dgk_vTjZJ7M.webp"
   },
   {
    "id": "_asR6Gg5XLc",
@@ -58,7 +61,8 @@
    "views": 14,
    "likes": 1,
    "isShort": false,
-   "url": "https://www.youtube.com/watch?v=_asR6Gg5XLc"
+   "url": "https://www.youtube.com/watch?v=_asR6Gg5XLc",
+   "thumb": "assets/yt/_asR6Gg5XLc.webp"
   },
   {
    "id": "KWv-i0rt8LM",
@@ -68,7 +72,8 @@
    "views": 26,
    "likes": 2,
    "isShort": false,
-   "url": "https://www.youtube.com/watch?v=KWv-i0rt8LM"
+   "url": "https://www.youtube.com/watch?v=KWv-i0rt8LM",
+   "thumb": "assets/yt/KWv-i0rt8LM.webp"
   },
   {
    "id": "Eun_8FbvTFU",
@@ -78,7 +83,8 @@
    "views": 746,
    "likes": 4,
    "isShort": false,
-   "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU"
+   "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU",
+   "thumb": "assets/yt/Eun_8FbvTFU.webp"
   },
   {
    "id": "uDHbWv_RS-o",
@@ -88,7 +94,8 @@
    "views": 4,
    "likes": 1,
    "isShort": true,
-   "url": "https://www.youtube.com/shorts/uDHbWv_RS-o"
+   "url": "https://www.youtube.com/shorts/uDHbWv_RS-o",
+   "thumb": "assets/yt/uDHbWv_RS-o.webp"
   },
   {
    "id": "55VcYzxO6Cw",
@@ -98,7 +105,8 @@
    "views": 8,
    "likes": 1,
    "isShort": true,
-   "url": "https://www.youtube.com/shorts/55VcYzxO6Cw"
+   "url": "https://www.youtube.com/shorts/55VcYzxO6Cw",
+   "thumb": "assets/yt/55VcYzxO6Cw.webp"
   },
   {
    "id": "gqooC_PiATw",
@@ -108,7 +116,8 @@
    "views": 11,
    "likes": 1,
    "isShort": true,
-   "url": "https://www.youtube.com/shorts/gqooC_PiATw"
+   "url": "https://www.youtube.com/shorts/gqooC_PiATw",
+   "thumb": "assets/yt/gqooC_PiATw.webp"
   },
   {
    "id": "oguqPJfqER4",
@@ -118,7 +127,8 @@
    "views": 12,
    "likes": 1,
    "isShort": true,
-   "url": "https://www.youtube.com/shorts/oguqPJfqER4"
+   "url": "https://www.youtube.com/shorts/oguqPJfqER4",
+   "thumb": "assets/yt/oguqPJfqER4.webp"
   },
   {
    "id": "0GMkmIcnXjc",
@@ -128,7 +138,8 @@
    "views": 16,
    "likes": 2,
    "isShort": true,
-   "url": "https://www.youtube.com/shorts/0GMkmIcnXjc"
+   "url": "https://www.youtube.com/shorts/0GMkmIcnXjc",
+   "thumb": "assets/yt/0GMkmIcnXjc.webp"
   }
  ]
 }
