@@ -74,7 +74,7 @@
     const meta = [v.published ? ago(v.published) : "", v.views ? `${fmt(v.views)} ${t("views")}` : ""].filter(Boolean).join(" · ");
     const tag = i === 0 && isNew(v.published) ? `<span class="tag new">${t("newest")}</span>` : v.isShort ? `<span class="tag">${t("short")}</span>` : "";
     return `<button class="vc" data-vid="${esc(v.id)}" aria-label="${esc(v.title)}">
-      <div class="vc-img"><img src="https://i.ytimg.com/vi/${esc(v.id)}/${i < 3 ? "maxresdefault" : "hqdefault"}.jpg" alt="" loading="${i < 4 ? "eager" : "lazy"}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/${esc(v.id)}/hqdefault.jpg'}">${tag}<span class="pl">${svg("i-play")}</span></div>
+      <div class="vc-img${v.thumb ? "" : " skeleton"}">${v.thumb ? `<img src="${esc(v.thumb)}" alt="" loading="${i < 4 ? "eager" : "lazy"}" onerror="this.parentNode.classList.add('skeleton');this.remove()">` : ""}${tag}<span class="pl">${svg("i-play")}</span></div>
       <h3>${esc(v.title)}</h3>${meta ? `<div class="meta">${meta}</div>` : ""}
     </button>`;
   }
@@ -90,7 +90,28 @@
   }
   document.addEventListener("click", (e) => {
     const v = e.target.closest("[data-vid]"); if (!v) return;
-    $("#video-slot").innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.dataset.vid)}?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" title="YouTube"></iframe>`;
+    const id = v.dataset.vid;
+    const vid = (YT?.videos || []).find((x) => x.id === id) || {};
+    const play = () => {
+      $("#video-slot").innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" title="YouTube"></iframe>`;
+    };
+    let ok = false; try { ok = sessionStorage.getItem("yt-ok") === "1"; } catch {}
+    if (ok) play();
+    else {
+      // 2-Klick-Lösung: YouTube wird erst nach Zustimmung geladen (DSGVO)
+      const en = window.B.lang === "en";
+      $("#video-slot").innerHTML = `<div class="yt-consent" style="${vid.thumb ? `--bg:url('${esc(vid.thumb)}')` : ""}">
+        <div class="yc-in">
+          <span class="yc-ic">${svg("i-yt")}</span>
+          <h3>${en ? "Load YouTube video?" : "YouTube-Video laden?"}</h3>
+          <p>${en ? "When you play the video, data (e.g. your IP address) is sent to YouTube/Google." : "Beim Abspielen werden Daten (z. B. deine IP-Adresse) an YouTube/Google übertragen."} <a href="datenschutz.html#youtube">${en ? "Privacy policy" : "Datenschutzerklärung"}</a></p>
+          <div class="yc-btns">
+            <button class="btn btn-primary" id="yc-play">${svg("i-play")}${en ? "Play video" : "Video abspielen"}</button>
+            <a class="btn btn-ghost" href="https://www.youtube.com/watch?v=${encodeURIComponent(id)}" target="_blank" rel="noopener">${en ? "Open on YouTube" : "Auf YouTube öffnen"}${svg("i-up")}</a>
+          </div>
+        </div></div>`;
+      $("#yc-play").addEventListener("click", () => { try { sessionStorage.setItem("yt-ok", "1"); } catch {} play(); });
+    }
     openModal("video-modal");
   });
   $("#video-modal").addEventListener("closed", () => ($("#video-slot").innerHTML = ""));

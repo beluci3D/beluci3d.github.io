@@ -43,6 +43,8 @@
     const bad = ["name", "email", "message"].filter((k) => !String(d[k] || "").trim() || (k === "email" && !/^\S+@\S+\.\S+$/.test(d[k])));
     form.querySelectorAll("input,textarea").forEach((el) => (el.style.borderColor = bad.includes(el.name) ? "#c6f432" : ""));
     if (bad.length) { form.querySelector(`[name="${bad[0]}"]`).focus(); return; }
+    const cb = document.getElementById("f-consent");
+    if (cb && !cb.checked) { cb.closest(".consent-row").style.color = "#ffb4a0"; cb.focus(); return; }
 
     const subject = `Neue Anfrage: ${d.type} – ${d.name}`;
     const btn = form.querySelector('button[type="submit"]');

@@ -44,6 +44,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data || true
           [ -d assets/mw ] && git add assets/mw || true
+          [ -d assets/yt ] && git add assets/yt || true
           if ! git diff --cached --quiet; then
             git commit -m "Auto-Update: MakerWorld & YouTube"
             git push || echo "Push übersprungen"

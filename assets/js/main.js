@@ -30,7 +30,8 @@
     "cta.eyebrow": "Reply within 24 h", "cta.title": 'A part that <span class="serif accent">doesn\'t exist yet?</span>',
     "cta.lead": "Describe your problem – I'll turn it into a printed part. No technical knowledge needed.",
     "cta.btn": "Free quote", "cta.btn2": "Services & process",
-    "foot.tag": "3D printing, CAD design & electronics. From idea to finished part.", "foot.nav": "Navigation", "foot.made": "Designed & built in-house",
+    "foot.tag": "3D printing, CAD design & electronics. From idea to finished part.", "foot.nav": "Navigation", "foot.made": "Designed & built in-house", "foot.imp": "Legal notice", "foot.priv": "Privacy",
+    "f.consent": 'I agree that my details are processed to handle my request and forwarded by email via the service FormSubmit. More in the <a href="datenschutz.html#kontakt">privacy policy</a>.',
     // services page
     "s.eyebrow": "Custom 3D printing & CAD services",
     "s.title": 'Your idea. <span class="serif">Real</span> parts.',

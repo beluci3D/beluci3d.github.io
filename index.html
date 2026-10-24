@@ -10,11 +10,9 @@
 <meta property="og:description" content="Funktionale 3D-Teile, präzises CAD-Design und Elektronik-Projekte. Von der Idee zum fertigen Bauteil.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=4">
-<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }</script>
+<link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css?v=5">
+<script type="importmap">{ "imports": { "three": "./assets/vendor/three/three.module.js", "three/addons/": "./assets/vendor/three/" } }</script>
 </head>
 <body>
 
@@ -234,7 +232,7 @@
       <div><h4>Social</h4><ul><li><a href="https://www.youtube.com/@Belutschy" target="_blank" rel="noopener">YouTube ↗</a></li><li><a href="https://makerworld.com/@beluci" target="_blank" rel="noopener">MakerWorld ↗</a></li></ul></div>
     </div>
     <div class="big-word" aria-hidden="true">beluci</div>
-    <div class="foot-bot"><span>© <span class="yr">2026</span> beluci</span><span data-i18n="foot.made">Designed & built in-house</span></div>
+    <div class="foot-bot"><span>© <span class="yr">2026</span> beluci</span><span class="foot-legal"><a href="impressum.html" data-i18n="foot.imp">Impressum</a><a href="datenschutz.html" data-i18n="foot.priv">Datenschutz</a></span></div>
   </div>
 </footer>
 
@@ -249,8 +247,8 @@
 </div>
 <div class="toast" id="toast"></div>
 
-<script src="assets/js/main.js?v=4"></script>
-<script src="assets/js/home.js?v=4"></script>
-<script type="module" src="assets/js/printer.js?v=4"></script>
+<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/home.js?v=5"></script>
+<script type="module" src="assets/js/printer.js?v=5"></script>
 </body>
 </html>

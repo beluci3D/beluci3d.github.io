@@ -74,6 +74,23 @@ async function resolveChannel(handle) {
   return { id, subs, avatar, videoCount };
 }
 
+async function saveThumb(id) {
+  const rel = `assets/yt/${id}.webp`, abs = path.join(ROOT, rel);
+  try { await fs.access(abs); return rel; } catch {}
+  for (const q of ["maxresdefault", "sddefault", "hqdefault"]) {
+    try {
+      const buf = Buffer.from(await (await get(`https://i.ytimg.com/vi/${id}/${q}.jpg`)).arrayBuffer());
+      let outBuf = buf;
+      try { const sharp = (await import("sharp")).default; outBuf = await sharp(buf).resize({ width: 640, height: 360, fit: "cover" }).webp({ quality: 78 }).toBuffer(); } catch {}
+      await fs.mkdir(path.dirname(abs), { recursive: true });
+      await fs.writeFile(abs, outBuf);
+      return rel;
+    } catch {}
+  }
+  log("Thumbnail fehlgeschlagen:", id);
+  return "";
+}
+
 async function updateYouTube() {
   const prev = await readJson("data/youtube.json", null);
   let channelId = cfg.youtubeChannelId || prev?.channel?.id || "";
@@ -86,6 +103,9 @@ async function updateYouTube() {
 
   const xml = await (await get(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`)).text();
   const { channelTitle, videos } = parseYouTubeRss(xml);
+  // Vorschaubilder lokal speichern (Datenschutz: Besucher laden nichts von Google)
+  const vids = videos.slice(0, cfg.maxVideos || 12);
+  for (const v of vids) v.thumb = await saveThumb(v.id);
   const out = {
     updatedAt: new Date().toISOString(),
     channel: {
@@ -95,9 +115,8 @@ async function updateYouTube() {
       url: `https://www.youtube.com/@${cfg.youtubeHandle}`,
       subscribers: extra.subs || prev?.channel?.subscribers || "",
       videoCount: extra.videoCount || prev?.channel?.videoCount || "",
-      avatar: extra.avatar || prev?.channel?.avatar || "",
     },
-    videos: videos.slice(0, cfg.maxVideos || 12),
+    videos: vids,
   };
   await writeJson("data/youtube.json", out);
   log(`YouTube ✓ ${out.videos.length} Videos (${channelId})`);

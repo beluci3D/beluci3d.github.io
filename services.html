@@ -9,10 +9,8 @@
 <meta property="og:title" content="beluci Services — 3D-Druck & CAD-Konstruktion">
 <meta property="og:description" content="Von der Idee zum fertigen Bauteil. Angebot innerhalb von 24 Stunden.">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=4">
+<link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
 
@@ -226,6 +224,7 @@
         <div class="field"><label for="f-qty" data-i18n="f.qty">Stückzahl</label><input id="f-qty" name="qty" type="number" min="1" value="1" inputmode="numeric"></div>
       </div>
       <div class="field"><label for="f-msg" data-i18n="f.msg">Dein Projekt</label><textarea id="f-msg" name="message" required data-i18n-ph="f.msgph" placeholder="Was soll das Teil können? Maße, Einsatzort, Deadline …"></textarea></div>
+      <label class="consent-row"><input type="checkbox" name="consent" id="f-consent" required><span data-i18n-html="f.consent">Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet und dafür über den Dienst FormSubmit per E-Mail weitergeleitet werden. Mehr in der <a href="datenschutz.html#kontakt">Datenschutzerklärung</a>.</span></label>
       <button class="btn btn-primary" type="submit" style="width:100%"><span data-i18n="f.send">Anfrage senden</span><svg class="arr"><use href="#i-arrow"/></svg></button>
       <p class="note" data-i18n="f.note">Öffnet dein E-Mail-Programm mit der vorbereiteten Anfrage. Fotos oder Dateien kannst du dort direkt anhängen.</p>
     </form>
@@ -244,12 +243,12 @@
       <div><h4>Social</h4><ul><li><a href="https://www.youtube.com/@Belutschy" target="_blank" rel="noopener">YouTube ↗</a></li><li><a href="https://makerworld.com/@beluci" target="_blank" rel="noopener">MakerWorld ↗</a></li></ul></div>
     </div>
     <div class="big-word" aria-hidden="true">beluci</div>
-    <div class="foot-bot"><span>© <span class="yr">2026</span> beluci</span><span data-i18n="foot.made">Designed & built in-house</span></div>
+    <div class="foot-bot"><span>© <span class="yr">2026</span> beluci</span><span class="foot-legal"><a href="impressum.html" data-i18n="foot.imp">Impressum</a><a href="datenschutz.html" data-i18n="foot.priv">Datenschutz</a></span></div>
   </div>
 </footer>
 <div class="toast" id="toast"></div>
 
-<script src="assets/js/main.js?v=4"></script>
-<script src="assets/js/services.js?v=4"></script>
+<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/services.js?v=5"></script>
 </body>
 </html>
