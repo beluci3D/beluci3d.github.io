@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-10-24T20:52:13.856Z",
+ "updatedAt": "2026-10-24T23:17:27.146Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "19",
-  "videoCount": "24"
+  "videoCount": "26"
  },
  "videos": [
   {
@@ -14,7 +14,7 @@
    "title": "FDM vs Resin vs SLS vs Metal: Every 3D Printer Type Explained",
    "published": "2026-10-23T22:00:33+00:00",
    "description": "FDM vs resin vs SLS vs metal – which 3D printer type is actually right for you? We go through every major type of 3D printer (FDM, SLA, MSLA, DLP, SLS and metal): how each one works, what it's good at, what it costs, and which one you should buy for home use.\n\n⏱️ Chapters\n0:00 More than melted plastic\n0:27 Intro\n0:41 FDM / FFF\n1:34 Resin: SLA\n2:04 MSLA & DLP\n2:27 Resin pros & cons\n2:56 SLS (powder",
-   "views": 6,
+   "views": 7,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=GeqaQzObBzA",
@@ -25,8 +25,8 @@
    "title": "ESP-NOW Tutorial: Connect Two ESP32s Without a WiFi Router",
    "published": "2026-10-22T22:00:38+00:00",
    "description": "ESP-NOW lets two ESP32 boards talk directly – no router, no internet, no cloud. In this video: what ESP-NOW is, its limits, when to use it, and the code for your first sender and receiver.\n\n⏱️ Chapters\n0:00 No router needed\n0:19 Intro\n0:31 What is ESP-NOW?\n0:59 Limits you should know\n1:33 When is ESP-NOW a good fit?\n1:46 Step 1: Find the MAC address\n1:57 Step 2: The sender\n2:08 Step 3: The receive",
-   "views": 56,
-   "likes": 0,
+   "views": 62,
+   "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=CUUSO4PeCJ0",
    "thumb": "assets/yt/CUUSO4PeCJ0.webp"
@@ -36,7 +36,7 @@
    "title": "Should You Buy a 3D Printer in 2026? (Honest Answer)",
    "published": "2026-10-21T22:00:37+00:00",
    "description": "Should you buy a 3D printer in 2026? Everyone online says yes, but nobody talks about the real costs, the time it takes, or who should NOT buy one. Here's the honest answer: real prices, a real cost-per-print calculation and a clear verdict.\n\n⏱️ Chapters\n0:00 Should you buy one?\n0:25 Intro\n0:43 What you can make\n1:19 What it costs\n1:54 Cost per print\n2:25 Time & learning curve\n2:53 Buy it if…\n3:15",
-   "views": 108,
+   "views": 110,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=GtL8i_gbGJk",
@@ -47,7 +47,7 @@
    "title": "ESP32 Pinout: Which Pins Are Safe? (Avoid These Pins!)",
    "published": "2026-10-20T22:00:19+00:00",
    "description": "The ESP32 DevKit has 38 pins – but not all of them are safe. In this video we go through the entire pinout, group by group: power pins, flash pins you should never touch, strapping pins, serial pins, input-only pins, ADC1 vs ADC2, DAC, touch pins and the default I2C and SPI pins. At the end there's a cheat sheet you can screenshot.\n\n⏱️ Chapters\n0:00 38 pins – which are safe?\n0:24 Intro\n0:50 Power ",
-   "views": 15,
+   "views": 16,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Dgk_vTjZJ7M",
@@ -85,6 +85,17 @@
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=Eun_8FbvTFU",
    "thumb": "assets/yt/Eun_8FbvTFU.webp"
+  },
+  {
+   "id": "Iw5o-k30K4Y",
+   "title": "Can an ESP32 Run 1 Year on One Battery? #shorts",
+   "published": "2026-10-17T07:24:09+00:00",
+   "description": "A Wi-Fi sensor with a standard setup lasts about 71 days. Connect faster, ditch the dev board, send a little less often, and the math says 372 days. These are calculations, so measure your own!\n\n▶️ Full video on my channel: Can an ESP32 run for one year on a battery?\n\n#shorts #esp32 #lowpower #iot #battery",
+   "views": 1,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/Iw5o-k30K4Y",
+   "thumb": "assets/yt/Iw5o-k30K4Y.webp"
   },
   {
    "id": "uDHbWv_RS-o",
@@ -129,17 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/oguqPJfqER4",
    "thumb": "assets/yt/oguqPJfqER4.webp"
-  },
-  {
-   "id": "0GMkmIcnXjc",
-   "title": "3D Printing Started With a Toy Frog 🐸",
-   "published": "2026-10-17T07:19:43+00:00",
-   "description": "In 1988 Scott Crump made a toy frog for his daughter with a hot glue gun full of plastic and candle wax. That idea became FDM, the most common kind of 3D printing. When the key patent expired in 2009, prices fell from around $20,000 to under $1,000.\n\n▶️ Full documentary on my channel: The History of 3D Printing\n\n#shorts #3dprinting #history",
-   "views": 17,
-   "likes": 2,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/0GMkmIcnXjc",
-   "thumb": "assets/yt/0GMkmIcnXjc.webp"
   }
  ]
 }
