@@ -1,9 +1,9 @@
 {
- "at": "2026-10-23T21:26:20.262Z",
+ "at": "2026-10-24T04:39:39.219Z",
  "log": [
   "uid über Modell-Link: 3937368763",
   "MakerWorld API ✓ 8 Designs (uid 3937368763)",
-  "YouTube ✓ 12 Videos (UCKCNgGTK-LnKHSqhgwfvYyA)",
-  "MakerWorld ✓ 8 Modelle gespeichert"
+  "MakerWorld ✓ 8 Modelle gespeichert",
+  "YouTube ✗ 404 Not Found @ https://www.youtube.com/feeds/videos.xml?channel_id=UCKCNgGTK-LnKHSqhgwfvYyA"
  ]
 }
