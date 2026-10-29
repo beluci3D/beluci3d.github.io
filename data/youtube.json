@@ -1,14 +1,36 @@
 {
- "updatedAt": "2026-10-29T10:00:34.704Z",
+ "updatedAt": "2026-10-29T18:30:00.320Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "23",
-  "videoCount": "35"
+  "videoCount": "37"
  },
  "videos": [
+  {
+   "id": "MQzDeVo1ixA",
+   "title": "Crypto Explained in 45 Seconds #shorts",
+   "published": "2026-10-29T17:00:20+00:00",
+   "description": "What is cryptocurrency? Instead of a bank keeping the list of who owns what, the list – the blockchain – is shared and copied on thousands of computers. Bitcoin, Ethereum, stablecoins and Dogecoin explained in seconds.\n\n⚠️ Not financial advice. Crypto prices are extremely volatile – never invest money you can't afford to lose.\n\n#shorts #crypto #bitcoin #blockchain #explained",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/MQzDeVo1ixA",
+   "thumb": "assets/yt/MQzDeVo1ixA.webp"
+  },
+  {
+   "id": "4MAFwk1EM8c",
+   "title": "This Steak Was 3D Printed 🥩 #shorts",
+   "published": "2026-10-29T11:00:38+00:00",
+   "description": "Redefine Meat 3D prints plant-based steaks layer by layer, with a \"muscle\" and a \"fat\" part to copy the texture of real meat – made from soy and pea protein, chickpeas, beets and coconut fat. It has been served in restaurants in cities like London, Berlin and Amsterdam. Would you try it?\n\nSource: https://www.techbrew.com/stories/2021/11/17/3d-printed-steaks-are-now-being-served-at-restaurants-acro",
+   "views": 651,
+   "likes": 7,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/4MAFwk1EM8c",
+   "thumb": "assets/yt/4MAFwk1EM8c.webp"
+  },
   {
    "id": "zUjJD_YrJLQ",
    "title": "Z Anti-Aliasing: The Free Slicer Setting That Removes Layer Lines",
@@ -25,8 +47,8 @@
    "title": "Strangers 3D Print Hands for Kids – For Free ❤️ #shorts",
    "published": "2026-10-28T17:00:07+00:00",
    "description": "e-NABLE is a global network of volunteers who 3D print prosthetic hands for kids and adults, for free. Many designs are powered by the wrist, and the materials for one hand can cost around $35 – so when kids grow, a new one is simply printed bigger.\n\nSource: https://enablingthefuture.org/learn/faq/\n\n#shorts #3dprinting #enable #prosthetics #wholesome",
-   "views": 92,
-   "likes": 1,
+   "views": 94,
+   "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/__V4Ln-J3pk",
    "thumb": "assets/yt/__V4Ln-J3pk.webp"
@@ -36,7 +58,7 @@
    "title": "Why Everyone 3D Prints This Little Boat #shorts",
    "published": "2026-10-28T11:00:35+00:00",
    "description": "Meet 3DBenchy, the \"jolly 3D printing torture test\" from 2015. The hull, the roof, the arched doors and the tiny name on the back each test something different. It's believed to be the most printed 3D model in the world – and since 2025 it's in the public domain.\n\nSource: https://en.wikipedia.org/wiki/3DBenchy\n\n#shorts #3dprinting #benchy #3dbenchy #3dprinter",
-   "views": 1108,
+   "views": 1116,
    "likes": 14,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/T2JkacWeKgw",
@@ -47,7 +69,7 @@
    "title": "Is 3D Printing Safe? Fumes, Resin & Fire Risks Explained",
    "published": "2026-10-27T23:00:12+00:00",
    "description": "A nozzle at over 200 °C, plastic fumes, liquid chemicals, and a machine that runs for hours. So is 3D printing actually safe? Short answer: yes, if you know the risks. This video covers the four big ones (air quality, resin, fire and burns) and ends with a simple safety checklist.\n\n⏱️ Chapters\n0:00 Is it safe?\n0:27 Intro\n0:40 The air you breathe (UFPs & VOCs)\n1:13 ABS & styrene\n1:23 How to protect",
-   "views": 7,
+   "views": 11,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=VNYfaBccuDs",
@@ -80,7 +102,7 @@
    "title": "Arduino vs ESP32 vs Raspberry Pi Pico: Which Should You Buy First?",
    "published": "2026-10-26T23:00:29+00:00",
    "description": "Arduino Uno, ESP32 or Raspberry Pi Pico 2 – which microcontroller should you buy first? In this video I compare all three side by side: specs, the 5 V vs 3.3 V gotcha, programming (Arduino IDE, MicroPython, ESP-IDF, Pico SDK), wireless and price. At the end you get a clear recommendation, plus my personal pick.\n\n⏱️ Chapters\n0:00 Three boards, one question\n0:32 Intro\n0:48 Wait, a Raspberry Pi?\n1:12",
-   "views": 20,
+   "views": 23,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=dQ5cPWNI5GY",
@@ -113,33 +135,11 @@
    "title": "ESP-NOW Tutorial: Connect Two ESP32s Without a WiFi Router",
    "published": "2026-10-22T22:00:38+00:00",
    "description": "ESP-NOW lets two ESP32 boards talk directly – no router, no internet, no cloud. In this video: what ESP-NOW is, its limits, when to use it, and the code for your first sender and receiver.\n\n⏱️ Chapters\n0:00 No router needed\n0:19 Intro\n0:31 What is ESP-NOW?\n0:59 Limits you should know\n1:33 When is ESP-NOW a good fit?\n1:46 Step 1: Find the MAC address\n1:57 Step 2: The sender\n2:08 Step 3: The receive",
-   "views": 215,
+   "views": 223,
    "likes": 3,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=CUUSO4PeCJ0",
    "thumb": "assets/yt/CUUSO4PeCJ0.webp"
-  },
-  {
-   "id": "GtL8i_gbGJk",
-   "title": "Should You Buy a 3D Printer in 2026? (Honest Answer)",
-   "published": "2026-10-21T22:00:37+00:00",
-   "description": "Should you buy a 3D printer in 2026? Everyone online says yes, but nobody talks about the real costs, the time it takes, or who should NOT buy one. Here's the honest answer: real prices, a real cost-per-print calculation and a clear verdict.\n\n⏱️ Chapters\n0:00 Should you buy one?\n0:25 Intro\n0:43 What you can make\n1:19 What it costs\n1:54 Cost per print\n2:25 Time & learning curve\n2:53 Buy it if…\n3:15",
-   "views": 121,
-   "likes": 0,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=GtL8i_gbGJk",
-   "thumb": "assets/yt/GtL8i_gbGJk.webp"
-  },
-  {
-   "id": "Dgk_vTjZJ7M",
-   "title": "ESP32 Pinout: Which Pins Are Safe? (Avoid These Pins!)",
-   "published": "2026-10-20T22:00:19+00:00",
-   "description": "The ESP32 DevKit has 38 pins – but not all of them are safe. In this video we go through the entire pinout, group by group: power pins, flash pins you should never touch, strapping pins, serial pins, input-only pins, ADC1 vs ADC2, DAC, touch pins and the default I2C and SPI pins. At the end there's a cheat sheet you can screenshot.\n\n⏱️ Chapters\n0:00 38 pins – which are safe?\n0:24 Intro\n0:50 Power ",
-   "views": 27,
-   "likes": 1,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=Dgk_vTjZJ7M",
-   "thumb": "assets/yt/Dgk_vTjZJ7M.webp"
   }
  ]
 }
