@@ -1,20 +1,31 @@
 {
- "updatedAt": "2026-11-01T13:28:09.249Z",
+ "updatedAt": "2026-11-01T19:42:32.924Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "23",
-  "videoCount": "42"
+  "videoCount": "43"
  },
  "videos": [
+  {
+   "id": "aQU1pp4BP4A",
+   "title": "This Computer Costs 3 Cents #shorts",
+   "published": "2026-11-01T17:00:17+00:00",
+   "description": "The Padauk PMS150C is a complete microcontroller for about 3 cents each (at 100 pieces). It has just 64 bytes of RAM and can be programmed only once – perfect for cheap gadgets made by the million, like blinking toys and simple lights.\n\nSource: https://jaycarlson.net/2019/09/06/whats-up-with-these-3-cent-microcontrollers/\n\n#shorts #microcontroller #electronics #padauk #embedded",
+   "views": 2,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/aQU1pp4BP4A",
+   "thumb": "assets/yt/aQU1pp4BP4A.webp"
+  },
   {
    "id": "wfOyqRzgujo",
    "title": "The Moon Computer Was Weaker Than a $5 Chip 🌕 #shorts",
    "published": "2026-11-01T11:00:18+00:00",
    "description": "The Apollo Guidance Computer weighed 32 kg, ran at about 1 MHz and had around 4 KB of working memory – its programs were literally woven into wire (core rope memory). A $5 ESP32 has two cores at 240 MHz, 520 KB of RAM, Wi-Fi and Bluetooth. What will you build with yours?\n\nSource: https://en.wikipedia.org/wiki/Apollo_Guidance_Computer\n\n#shorts #esp32 #apollo #nasa #microcontroller",
-   "views": 0,
+   "views": 17,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/wfOyqRzgujo",
@@ -25,8 +36,8 @@
    "title": "He Threw Away 8,000 Bitcoin 😱 #shorts",
    "published": "2026-10-31T17:00:11+00:00",
    "description": "In 2013, James Howells threw out an old hard drive holding the keys to 8,000 bitcoin. For over ten years he asked the city of Newport, Wales, to let him dig through the landfill. In 2025 the courts rejected his case. At today's prices, that drive would be worth over $650 million.\n\nSource: https://en.wikipedia.org/wiki/Bitcoin_buried_in_Newport_landfill\n\n#shorts #bitcoin #crypto #lostbitcoin #story",
-   "views": 18,
-   "likes": 2,
+   "views": 23,
+   "likes": 3,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/aw157M6zKsE",
    "thumb": "assets/yt/aw157M6zKsE.webp"
@@ -36,7 +47,7 @@
    "title": "Who Is Satoshi Nakamoto? The $90 Billion Mystery #shorts",
    "published": "2026-10-31T11:00:14+00:00",
    "description": "On October 31, 2008, someone called Satoshi Nakamoto published the Bitcoin white paper. The first block contained a newspaper headline about bank bailouts. In 2011 Satoshi wrote he had \"moved on to other things\" and disappeared. An estimated 1.1 million bitcoin linked to Satoshi have never moved.\n\nSource: https://en.wikipedia.org/wiki/Satoshi_Nakamoto\n\n#shorts #bitcoin #satoshi #crypto #mystery",
-   "views": 17,
+   "views": 20,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/HG_3RTKKDXI",
@@ -91,7 +102,7 @@
    "title": "Z Anti-Aliasing: The Free Slicer Setting That Removes Layer Lines",
    "published": "2026-10-28T23:00:38+00:00",
    "description": "Every 3D printer prints flat layers – that's why curved and sloped surfaces look like a staircase. Z anti-aliasing (ZAA) is an open-source trick where the nozzle moves up and down inside a single layer and follows the real surface. No new hardware, just one setting. In this video: why the staircase happens, how ZAA works, real test results, the open-source story behind it, how to try it in OrcaSli",
-   "views": 45,
+   "views": 47,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=zUjJD_YrJLQ",
@@ -113,7 +124,7 @@
    "title": "Why Everyone 3D Prints This Little Boat #shorts",
    "published": "2026-10-28T11:00:35+00:00",
    "description": "Meet 3DBenchy, the \"jolly 3D printing torture test\" from 2015. The hull, the roof, the arched doors and the tiny name on the back each test something different. It's believed to be the most printed 3D model in the world – and since 2025 it's in the public domain.\n\nSource: https://en.wikipedia.org/wiki/3DBenchy\n\n#shorts #3dprinting #benchy #3dbenchy #3dprinter",
-   "views": 1128,
+   "views": 1129,
    "likes": 14,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/T2JkacWeKgw",
@@ -129,17 +140,6 @@
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=VNYfaBccuDs",
    "thumb": "assets/yt/VNYfaBccuDs.webp"
-  },
-  {
-   "id": "WFslWD_auKQ",
-   "title": "NASA Emailed a Wrench to Space 🚀 #shorts",
-   "published": "2026-10-27T17:00:13+00:00",
-   "description": "In December 2014, Commander Barry Wilmore needed a ratchet wrench on the International Space Station. Instead of waiting months for a rocket, engineers sent the design file up to the 3D printer on board – and about four hours later he had a brand new wrench.\n\nSource: https://www.csoonline.com/article/2861865/iss-3d-printed-ratchet-after-nasa-emailed-the-wrench-to-space.html\n\n#shorts #nasa #space #",
-   "views": 3,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/WFslWD_auKQ",
-   "thumb": "assets/yt/WFslWD_auKQ.webp"
   }
  ]
 }
