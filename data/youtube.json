@@ -1,21 +1,32 @@
 {
- "updatedAt": "2026-10-31T19:19:11.329Z",
+ "updatedAt": "2026-11-01T13:28:09.249Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "23",
-  "videoCount": "41"
+  "videoCount": "42"
  },
  "videos": [
+  {
+   "id": "wfOyqRzgujo",
+   "title": "The Moon Computer Was Weaker Than a $5 Chip 🌕 #shorts",
+   "published": "2026-11-01T11:00:18+00:00",
+   "description": "The Apollo Guidance Computer weighed 32 kg, ran at about 1 MHz and had around 4 KB of working memory – its programs were literally woven into wire (core rope memory). A $5 ESP32 has two cores at 240 MHz, 520 KB of RAM, Wi-Fi and Bluetooth. What will you build with yours?\n\nSource: https://en.wikipedia.org/wiki/Apollo_Guidance_Computer\n\n#shorts #esp32 #apollo #nasa #microcontroller",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/wfOyqRzgujo",
+   "thumb": "assets/yt/wfOyqRzgujo.webp"
+  },
   {
    "id": "aw157M6zKsE",
    "title": "He Threw Away 8,000 Bitcoin 😱 #shorts",
    "published": "2026-10-31T17:00:11+00:00",
    "description": "In 2013, James Howells threw out an old hard drive holding the keys to 8,000 bitcoin. For over ten years he asked the city of Newport, Wales, to let him dig through the landfill. In 2025 the courts rejected his case. At today's prices, that drive would be worth over $650 million.\n\nSource: https://en.wikipedia.org/wiki/Bitcoin_buried_in_Newport_landfill\n\n#shorts #bitcoin #crypto #lostbitcoin #story",
-   "views": 4,
-   "likes": 1,
+   "views": 18,
+   "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/aw157M6zKsE",
    "thumb": "assets/yt/aw157M6zKsE.webp"
@@ -25,7 +36,7 @@
    "title": "Who Is Satoshi Nakamoto? The $90 Billion Mystery #shorts",
    "published": "2026-10-31T11:00:14+00:00",
    "description": "On October 31, 2008, someone called Satoshi Nakamoto published the Bitcoin white paper. The first block contained a newspaper headline about bank bailouts. In 2011 Satoshi wrote he had \"moved on to other things\" and disappeared. An estimated 1.1 million bitcoin linked to Satoshi have never moved.\n\nSource: https://en.wikipedia.org/wiki/Satoshi_Nakamoto\n\n#shorts #bitcoin #satoshi #crypto #mystery",
-   "views": 7,
+   "views": 17,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/HG_3RTKKDXI",
@@ -36,7 +47,7 @@
    "title": "The $800 Million Pizza 🍕 #shorts",
    "published": "2026-10-30T17:00:04+00:00",
    "description": "On May 22, 2010, programmer Laszlo Hanyecz paid 10,000 bitcoin for two pizzas – worth about $41 back then. At around $82,000 per bitcoin (October 2026), those coins would be worth over $800 million. That's why May 22 is Bitcoin Pizza Day.\n\nSource: https://www.coindesk.com/learn/what-is-bitcoin-pizza-day/\n⚠️ Not financial advice.\n\n#shorts #bitcoin #crypto #pizza #history",
-   "views": 44,
+   "views": 41,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/pnl9AVZHHDM",
@@ -58,7 +69,7 @@
    "title": "Crypto Explained in 45 Seconds #shorts",
    "published": "2026-10-29T17:00:20+00:00",
    "description": "What is cryptocurrency? Instead of a bank keeping the list of who owns what, the list – the blockchain – is shared and copied on thousands of computers. Bitcoin, Ethereum, stablecoins and Dogecoin explained in seconds.\n\n⚠️ Not financial advice. Crypto prices are extremely volatile – never invest money you can't afford to lose.\n\n#shorts #crypto #bitcoin #blockchain #explained",
-   "views": 55,
+   "views": 56,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/MQzDeVo1ixA",
@@ -69,7 +80,7 @@
    "title": "This Steak Was 3D Printed 🥩 #shorts",
    "published": "2026-10-29T11:00:38+00:00",
    "description": "Redefine Meat 3D prints plant-based steaks layer by layer, with a \"muscle\" and a \"fat\" part to copy the texture of real meat – made from soy and pea protein, chickpeas, beets and coconut fat. It has been served in restaurants in cities like London, Berlin and Amsterdam. Would you try it?\n\nSource: https://www.techbrew.com/stories/2021/11/17/3d-printed-steaks-are-now-being-served-at-restaurants-acro",
-   "views": 995,
+   "views": 996,
    "likes": 9,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/4MAFwk1EM8c",
@@ -80,7 +91,7 @@
    "title": "Z Anti-Aliasing: The Free Slicer Setting That Removes Layer Lines",
    "published": "2026-10-28T23:00:38+00:00",
    "description": "Every 3D printer prints flat layers – that's why curved and sloped surfaces look like a staircase. Z anti-aliasing (ZAA) is an open-source trick where the nozzle moves up and down inside a single layer and follows the real surface. No new hardware, just one setting. In this video: why the staircase happens, how ZAA works, real test results, the open-source story behind it, how to try it in OrcaSli",
-   "views": 36,
+   "views": 45,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=zUjJD_YrJLQ",
@@ -129,17 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/WFslWD_auKQ",
    "thumb": "assets/yt/WFslWD_auKQ.webp"
-  },
-  {
-   "id": "XBagD7neuK0",
-   "title": "This Dragon Came Out of a 3D Printer Already Moving 🐉 #shorts",
-   "published": "2026-10-27T11:00:10+00:00",
-   "description": "No glue, no assembly: print-in-place models come off the printer in one piece, with every joint already free. The trick is a tiny gap of less than half a millimeter between the parts. Hinges, chains, even gears – all printed in one go.\n\n#shorts #3dprinting #printinplace #articulateddragon #3dprinted",
-   "views": 646,
-   "likes": 7,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/XBagD7neuK0",
-   "thumb": "assets/yt/XBagD7neuK0.webp"
   }
  ]
 }
