@@ -1,21 +1,32 @@
 {
- "updatedAt": "2026-11-01T19:42:32.924Z",
+ "updatedAt": "2026-11-02T11:11:51.514Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "23",
-  "videoCount": "43"
+  "videoCount": "44"
  },
  "videos": [
+  {
+   "id": "eUYteTlf8Gc",
+   "title": "Your Car Has Up to 150 Computers 🚗 #shorts",
+   "published": "2026-11-02T11:00:37+00:00",
+   "description": "Modern cars can have up to 150 ECUs – electronic control units, most with a microcontroller inside. One runs the engine, others the brakes, gearbox, doors, seats and the battery in EVs. And they constantly talk to each other over a network inside the car.\n\nSource: https://en.wikipedia.org/wiki/Electronic_control_unit\n\n#shorts #cars #microcontroller #automotive #tech",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/eUYteTlf8Gc",
+   "thumb": "assets/yt/eUYteTlf8Gc.webp"
+  },
   {
    "id": "aQU1pp4BP4A",
    "title": "This Computer Costs 3 Cents #shorts",
    "published": "2026-11-01T17:00:17+00:00",
    "description": "The Padauk PMS150C is a complete microcontroller for about 3 cents each (at 100 pieces). It has just 64 bytes of RAM and can be programmed only once – perfect for cheap gadgets made by the million, like blinking toys and simple lights.\n\nSource: https://jaycarlson.net/2019/09/06/whats-up-with-these-3-cent-microcontrollers/\n\n#shorts #microcontroller #electronics #padauk #embedded",
-   "views": 2,
-   "likes": 0,
+   "views": 51,
+   "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/aQU1pp4BP4A",
    "thumb": "assets/yt/aQU1pp4BP4A.webp"
@@ -25,7 +36,7 @@
    "title": "The Moon Computer Was Weaker Than a $5 Chip 🌕 #shorts",
    "published": "2026-11-01T11:00:18+00:00",
    "description": "The Apollo Guidance Computer weighed 32 kg, ran at about 1 MHz and had around 4 KB of working memory – its programs were literally woven into wire (core rope memory). A $5 ESP32 has two cores at 240 MHz, 520 KB of RAM, Wi-Fi and Bluetooth. What will you build with yours?\n\nSource: https://en.wikipedia.org/wiki/Apollo_Guidance_Computer\n\n#shorts #esp32 #apollo #nasa #microcontroller",
-   "views": 17,
+   "views": 28,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/wfOyqRzgujo",
@@ -36,7 +47,7 @@
    "title": "He Threw Away 8,000 Bitcoin 😱 #shorts",
    "published": "2026-10-31T17:00:11+00:00",
    "description": "In 2013, James Howells threw out an old hard drive holding the keys to 8,000 bitcoin. For over ten years he asked the city of Newport, Wales, to let him dig through the landfill. In 2025 the courts rejected his case. At today's prices, that drive would be worth over $650 million.\n\nSource: https://en.wikipedia.org/wiki/Bitcoin_buried_in_Newport_landfill\n\n#shorts #bitcoin #crypto #lostbitcoin #story",
-   "views": 23,
+   "views": 29,
    "likes": 3,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/aw157M6zKsE",
@@ -47,7 +58,7 @@
    "title": "Who Is Satoshi Nakamoto? The $90 Billion Mystery #shorts",
    "published": "2026-10-31T11:00:14+00:00",
    "description": "On October 31, 2008, someone called Satoshi Nakamoto published the Bitcoin white paper. The first block contained a newspaper headline about bank bailouts. In 2011 Satoshi wrote he had \"moved on to other things\" and disappeared. An estimated 1.1 million bitcoin linked to Satoshi have never moved.\n\nSource: https://en.wikipedia.org/wiki/Satoshi_Nakamoto\n\n#shorts #bitcoin #satoshi #crypto #mystery",
-   "views": 20,
+   "views": 23,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/HG_3RTKKDXI",
@@ -91,7 +102,7 @@
    "title": "This Steak Was 3D Printed 🥩 #shorts",
    "published": "2026-10-29T11:00:38+00:00",
    "description": "Redefine Meat 3D prints plant-based steaks layer by layer, with a \"muscle\" and a \"fat\" part to copy the texture of real meat – made from soy and pea protein, chickpeas, beets and coconut fat. It has been served in restaurants in cities like London, Berlin and Amsterdam. Would you try it?\n\nSource: https://www.techbrew.com/stories/2021/11/17/3d-printed-steaks-are-now-being-served-at-restaurants-acro",
-   "views": 996,
+   "views": 983,
    "likes": 9,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/4MAFwk1EM8c",
@@ -102,7 +113,7 @@
    "title": "Z Anti-Aliasing: The Free Slicer Setting That Removes Layer Lines",
    "published": "2026-10-28T23:00:38+00:00",
    "description": "Every 3D printer prints flat layers – that's why curved and sloped surfaces look like a staircase. Z anti-aliasing (ZAA) is an open-source trick where the nozzle moves up and down inside a single layer and follows the real surface. No new hardware, just one setting. In this video: why the staircase happens, how ZAA works, real test results, the open-source story behind it, how to try it in OrcaSli",
-   "views": 47,
+   "views": 50,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=zUjJD_YrJLQ",
@@ -129,17 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/T2JkacWeKgw",
    "thumb": "assets/yt/T2JkacWeKgw.webp"
-  },
-  {
-   "id": "VNYfaBccuDs",
-   "title": "Is 3D Printing Safe? Fumes, Resin & Fire Risks Explained",
-   "published": "2026-10-27T23:00:12+00:00",
-   "description": "A nozzle at over 200 °C, plastic fumes, liquid chemicals, and a machine that runs for hours. So is 3D printing actually safe? Short answer: yes, if you know the risks. This video covers the four big ones (air quality, resin, fire and burns) and ends with a simple safety checklist.\n\n⏱️ Chapters\n0:00 Is it safe?\n0:27 Intro\n0:40 The air you breathe (UFPs & VOCs)\n1:13 ABS & styrene\n1:23 How to protect",
-   "views": 13,
-   "likes": 0,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=VNYfaBccuDs",
-   "thumb": "assets/yt/VNYfaBccuDs.webp"
   }
  ]
 }
