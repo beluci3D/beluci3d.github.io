@@ -1,21 +1,43 @@
 {
- "updatedAt": "2026-11-12T11:15:05.711Z",
+ "updatedAt": "2026-11-12T19:56:13.921Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "36",
-  "videoCount": "52"
+  "videoCount": "54"
  },
  "videos": [
+  {
+   "id": "0o6f9iSspk0",
+   "title": "Your USB-C Cable Has a Secret Chip 🔌 #shorts",
+   "published": "2026-11-12T17:00:25+00:00",
+   "description": "Many USB-C cables hide a tiny e-marker chip in the plug. It tells the charger what the cable can safely handle – current, voltage and data speed. Without one, a cable is treated as 3 A, so 60 W at most. With an e-marker it can carry 5 A: up to 100 W, and up to 240 W with the newest USB Power Delivery standard.\n\nSource: https://us.ktcplay.com/blogs/technology-hub/usb-c-cable-e-marker-chips\n\n#shorts",
+   "views": 1,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/0o6f9iSspk0",
+   "thumb": "assets/yt/0o6f9iSspk0.webp"
+  },
+  {
+   "id": "BYVo3_jfhcs",
+   "title": "Which PLA Should You Buy? PLA vs PLA+ vs Silk vs Matte vs PLA-CF",
+   "published": "2026-11-12T15:00:10+00:00",
+   "description": "PLA, PLA+, Silk, Matte or Carbon Fiber PLA? I compare all 5 types of PLA filament: strength, toughness, looks and price, so you know exactly which spool to buy for your 3D printer.\n\nChapters:\n0:00 Intro\n0:20 What PLA is\n0:51 1 · Standard PLA\n1:23 2 · PLA+\n1:56 3 · Silk PLA\n2:29 4 · Matte PLA\n3:03 5 · PLA-CF\n3:33 Comparison\n3:50 Which to buy\n4:12 Outro\n\nSources: Material data: manufacturer technica",
+   "views": 5,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=BYVo3_jfhcs",
+   "thumb": "assets/yt/BYVo3_jfhcs.webp"
+  },
   {
    "id": "k0pam6ISiGA",
    "title": "Your Bank Card Is a Computer (With No Battery) 💳 #shorts",
    "published": "2026-11-12T11:00:19+00:00",
    "description": "That golden square on your bank card is a secure microcontroller – a tiny computer with its own processor and memory. A contactless card has no battery: an antenna coil inside picks up power from the reader's field, typically within about 4 cm. And for every payment the chip creates a unique one-time code, so copied data can't simply be reused.\n\nSource: https://www.analog.com/en/resources/app-note",
-   "views": 0,
-   "likes": 0,
+   "views": 6,
+   "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/k0pam6ISiGA",
    "thumb": "assets/yt/k0pam6ISiGA.webp"
@@ -25,7 +47,7 @@
    "title": "What Happens When the Last Bitcoin Is Mined? #shorts",
    "published": "2026-11-05T17:00:12+00:00",
    "description": "The last bitcoin is expected around the year 2140. After that, miners will be paid only through transaction fees. And bitcoin won't run out of small change: one bitcoin is 100 million satoshis. Will fees alone keep the network secure? That's one of Bitcoin's biggest open questions.\n\nSource: https://river.com/learn/what-will-happen-after-all-bitcoin-mined/\n⚠️ Not financial advice.\n\n#shorts #bitcoin",
-   "views": 11,
+   "views": 12,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/XejU0SdrqiM",
@@ -47,7 +69,7 @@
    "title": "$1 of Bitcoin in 2009 = $100 Million Today? #shorts",
    "published": "2026-11-04T17:00:22+00:00",
    "description": "In October 2009, one of the first exchange rates valued bitcoin at about 1,309 BTC per dollar. At ~$82,000 per bitcoin (Oct 2026), that's over $100 million. But almost nobody cared back then – many early coins were lost, forgotten or spent on almost nothing.\n\nSource: https://bitcoin.zorinaq.com/price/\n⚠️ Not financial advice. Past prices say nothing about the future.\n\n#shorts #bitcoin #crypto #his",
-   "views": 48,
+   "views": 49,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/78sLiU_2VtQ",
@@ -69,7 +91,7 @@
    "title": "Adidas 3D Printed the Sole of This Shoe 👟 #shorts",
    "published": "2026-11-03T17:00:14+00:00",
    "description": "The Adidas Futurecraft 4D (2017) has a 3D printed lattice midsole made with Carbon's light-based process: light hardens a liquid resin and the part grows out of the liquid. A lattice lets every zone feel different – softer in the heel, firmer in the front – all in one part.\n\nSource: https://techcrunch.com/2017/04/07/adidas-latest-3d-printed-shoe-puts-mass-production-within-sight/\n\n#shorts #3dprint",
-   "views": 115,
+   "views": 117,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/Dsj_VKRBXII",
@@ -80,7 +102,7 @@
    "title": "Robots 3D Printed a Steel Bridge #shorts",
    "published": "2026-11-03T11:00:08+00:00",
    "description": "Welding robots built this bridge layer by layer out of molten steel – about 12 meters long and around 6 tonnes. Sensors measured how it moved as people walked across, and Queen Máxima opened it over a canal in Amsterdam in July 2021.\n\nSources: https://www.euronews.com/2021/07/16/the-world-s-first-3d-printed-steel-bridge-has-opened-in-amsterdam · https://www.guinnessworldrecords.com/world-records/6",
-   "views": 98,
+   "views": 101,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/Ltm1XVrT__8",
@@ -118,28 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/aQU1pp4BP4A",
    "thumb": "assets/yt/aQU1pp4BP4A.webp"
-  },
-  {
-   "id": "wfOyqRzgujo",
-   "title": "The Moon Computer Was Weaker Than a $5 Chip 🌕 #shorts",
-   "published": "2026-11-01T11:00:18+00:00",
-   "description": "The Apollo Guidance Computer weighed 32 kg, ran at about 1 MHz and had around 4 KB of working memory – its programs were literally woven into wire (core rope memory). A $5 ESP32 has two cores at 240 MHz, 520 KB of RAM, Wi-Fi and Bluetooth. What will you build with yours?\n\nSource: https://en.wikipedia.org/wiki/Apollo_Guidance_Computer\n\n#shorts #esp32 #apollo #nasa #microcontroller",
-   "views": 43,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/wfOyqRzgujo",
-   "thumb": "assets/yt/wfOyqRzgujo.webp"
-  },
-  {
-   "id": "aw157M6zKsE",
-   "title": "He Threw Away 8,000 Bitcoin 😱 #shorts",
-   "published": "2026-10-31T17:00:11+00:00",
-   "description": "In 2013, James Howells threw out an old hard drive holding the keys to 8,000 bitcoin. For over ten years he asked the city of Newport, Wales, to let him dig through the landfill. In 2025 the courts rejected his case. At today's prices, that drive would be worth over $650 million.\n\nSource: https://en.wikipedia.org/wiki/Bitcoin_buried_in_Newport_landfill\n\n#shorts #bitcoin #crypto #lostbitcoin #story",
-   "views": 34,
-   "likes": 3,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/aw157M6zKsE",
-   "thumb": "assets/yt/aw157M6zKsE.webp"
   }
  ]
 }
