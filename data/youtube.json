@@ -1,14 +1,25 @@
 {
- "updatedAt": "2026-11-12T00:46:12.823Z",
+ "updatedAt": "2026-11-12T11:15:05.711Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "36",
-  "videoCount": "51"
+  "videoCount": "52"
  },
  "videos": [
+  {
+   "id": "k0pam6ISiGA",
+   "title": "Your Bank Card Is a Computer (With No Battery) 💳 #shorts",
+   "published": "2026-11-12T11:00:19+00:00",
+   "description": "That golden square on your bank card is a secure microcontroller – a tiny computer with its own processor and memory. A contactless card has no battery: an antenna coil inside picks up power from the reader's field, typically within about 4 cm. And for every payment the chip creates a unique one-time code, so copied data can't simply be reused.\n\nSource: https://www.analog.com/en/resources/app-note",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/k0pam6ISiGA",
+   "thumb": "assets/yt/k0pam6ISiGA.webp"
+  },
   {
    "id": "XejU0SdrqiM",
    "title": "What Happens When the Last Bitcoin Is Mined? #shorts",
@@ -58,7 +69,7 @@
    "title": "Adidas 3D Printed the Sole of This Shoe 👟 #shorts",
    "published": "2026-11-03T17:00:14+00:00",
    "description": "The Adidas Futurecraft 4D (2017) has a 3D printed lattice midsole made with Carbon's light-based process: light hardens a liquid resin and the part grows out of the liquid. A lattice lets every zone feel different – softer in the heel, firmer in the front – all in one part.\n\nSource: https://techcrunch.com/2017/04/07/adidas-latest-3d-printed-shoe-puts-mass-production-within-sight/\n\n#shorts #3dprint",
-   "views": 114,
+   "views": 115,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/Dsj_VKRBXII",
@@ -129,17 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/aw157M6zKsE",
    "thumb": "assets/yt/aw157M6zKsE.webp"
-  },
-  {
-   "id": "HG_3RTKKDXI",
-   "title": "Who Is Satoshi Nakamoto? The $90 Billion Mystery #shorts",
-   "published": "2026-10-31T11:00:14+00:00",
-   "description": "On October 31, 2008, someone called Satoshi Nakamoto published the Bitcoin white paper. The first block contained a newspaper headline about bank bailouts. In 2011 Satoshi wrote he had \"moved on to other things\" and disappeared. An estimated 1.1 million bitcoin linked to Satoshi have never moved.\n\nSource: https://en.wikipedia.org/wiki/Satoshi_Nakamoto\n\n#shorts #bitcoin #satoshi #crypto #mystery",
-   "views": 30,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/HG_3RTKKDXI",
-   "thumb": "assets/yt/HG_3RTKKDXI.webp"
   }
  ]
 }
