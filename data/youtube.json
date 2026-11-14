@@ -1,21 +1,54 @@
 {
- "updatedAt": "2026-11-14T10:28:58.010Z",
+ "updatedAt": "2026-11-14T18:04:36.048Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "40",
-  "videoCount": "57"
+  "videoCount": "60"
  },
  "videos": [
+  {
+   "id": "Rf7YTykx6Ac",
+   "title": "Invisible Braces Start in a 3D Printer 🦷 #shorts",
+   "published": "2026-11-14T17:00:21+00:00",
+   "description": "Clear aligners like Invisalign start with a scan of your teeth. Each stage of the treatment is 3D printed as a model of your teeth, then clear plastic is heated and formed over it – so every single aligner is unique. Back in 2018, Align Technology made over 320,000 custom aligners per day, and more than 20 million people have been treated.\n\nSources: https://www.tctmagazine.com/align-3d-systems-3d-",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/Rf7YTykx6Ac",
+   "thumb": "assets/yt/Rf7YTykx6Ac.webp"
+  },
+  {
+   "id": "W5WcM5bzsGM",
+   "title": "Is 0.4 mm the Best Nozzle? 0.2 vs 0.4 vs 0.6 vs 0.8 Explained",
+   "published": "2026-11-14T15:00:10+00:00",
+   "description": "Almost every 3D printer ships with a 0.4 mm nozzle, but is it the best? I explain when to use 0.2, 0.6 and 0.8 mm nozzles, why a 0.6 can print up to 2× faster, and brass vs hardened steel.\n\nChapters:\n0:00 Intro\n0:24 Two simple rules\n0:59 0.2 mm: tiny details\n1:23 0.6 mm: the secret weapon\n2:02 0.8 mm: big and fast\n2:27 The hotend limit\n3:06 Brass or steel?\n3:40 Comparison\n3:56 Before you swap\n4:18",
+   "views": 0,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=W5WcM5bzsGM",
+   "thumb": "assets/yt/W5WcM5bzsGM.webp"
+  },
+  {
+   "id": "-Vmz33lxNyk",
+   "title": "This 3D Print Is Thinner Than a Human Hair 🔬 #shorts",
+   "published": "2026-11-14T11:00:37+00:00",
+   "description": "In 2020, physicists at Leiden University 3D printed a 3DBenchy just 30 micrometers long – thinner than a human hair. They used a laser 3D printer (two-photon printing), where the liquid only hardens at the laser's tiny focus point, and used printed shapes like this to study how microswimmers move.\n\nSource: https://www.engadget.com/researchers-3-dprinted-a-microscopic-boat-to-see-how-bacteria-swim-",
+   "views": 52,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/-Vmz33lxNyk",
+   "thumb": "assets/yt/-Vmz33lxNyk.webp"
+  },
   {
    "id": "y92qbQYHMv8",
    "title": "This Filament Destroys Your 3D Printer Nozzle ⚠️ #shorts",
    "published": "2026-11-13T17:00:04+00:00",
    "description": "Glow-in-the-dark filament is packed with strontium aluminate particles – that's what makes it glow, but it's also abrasive. Print after print it grinds away a normal brass nozzle: the hole gets wider and you get under-extrusion and messy prints. The fix: a hardened steel nozzle for glow, carbon fiber and other abrasive filaments.\n\nSource: https://qidi3d.com/blogs/print-lab/glow-in-dark-filament-ti",
-   "views": 14,
-   "likes": 0,
+   "views": 96,
+   "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/y92qbQYHMv8",
    "thumb": "assets/yt/y92qbQYHMv8.webp"
@@ -25,7 +58,7 @@
    "title": "Layer Height Explained: Do Thinner Layers Really Print Better?",
    "published": "2026-11-13T15:00:00+00:00",
    "description": "Is 0.1 mm always better than 0.3 mm? Layer height changes print time, detail and even strength. Here's the golden rule, the settings I actually use, and the trick that gives you the best of both.\n\nChapters:\n0:00 Intro\n0:26 What it is\n0:51 The golden rule\n1:19 Print time\n1:51 Where you see it\n2:17 Which to use\n2:46 The best of both\n3:09 The first layer\n3:38 The hidden limit\n4:17 Outro\n\nSources: Pru",
-   "views": 16,
+   "views": 17,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=nf2ms_RTb3Y",
@@ -36,7 +69,7 @@
    "title": "This 90s Toy Ran on a 4-Bit Computer 🥚 #shorts",
    "published": "2026-11-13T11:00:35+00:00",
    "description": "The Tamagotchi launched in Japan on November 23, 1996 – and over 98 million have been sold. Inside the original was a tiny 4-bit microcontroller from Epson. Today makers even emulate the original Tamagotchi on an Arduino Uno. Did you keep yours alive?\n\nSources: https://en.wikipedia.org/wiki/Tamagotchi · https://hackaday.com/2022/01/27/reject-modernity-return-to-tamagotchi/\n\n#shorts #tamagotchi #ar",
-   "views": 52,
+   "views": 56,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/oBbsz8ELHi0",
@@ -47,7 +80,7 @@
    "title": "Your USB-C Cable Has a Secret Chip 🔌 #shorts",
    "published": "2026-11-12T17:00:25+00:00",
    "description": "Many USB-C cables hide a tiny e-marker chip in the plug. It tells the charger what the cable can safely handle – current, voltage and data speed. Without one, a cable is treated as 3 A, so 60 W at most. With an e-marker it can carry 5 A: up to 100 W, and up to 240 W with the newest USB Power Delivery standard.\n\nSource: https://us.ktcplay.com/blogs/technology-hub/usb-c-cable-e-marker-chips\n\n#shorts",
-   "views": 17,
+   "views": 18,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/0o6f9iSspk0",
@@ -58,7 +91,7 @@
    "title": "Which PLA Should You Buy? PLA vs PLA+ vs Silk vs Matte vs PLA-CF",
    "published": "2026-11-12T15:00:10+00:00",
    "description": "PLA, PLA+, Silk, Matte or Carbon Fiber PLA? I compare all 5 types of PLA filament: strength, toughness, looks and price, so you know exactly which spool to buy for your 3D printer.\n\nChapters:\n0:00 Intro\n0:20 What PLA is\n0:51 1 · Standard PLA\n1:23 2 · PLA+\n1:56 3 · Silk PLA\n2:29 4 · Matte PLA\n3:03 5 · PLA-CF\n3:33 Comparison\n3:50 Which to buy\n4:12 Outro\n\nSources: Material data: manufacturer technica",
-   "views": 72,
+   "views": 82,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=BYVo3_jfhcs",
@@ -69,7 +102,7 @@
    "title": "Your Bank Card Is a Computer (With No Battery) 💳 #shorts",
    "published": "2026-11-12T11:00:19+00:00",
    "description": "That golden square on your bank card is a secure microcontroller – a tiny computer with its own processor and memory. A contactless card has no battery: an antenna coil inside picks up power from the reader's field, typically within about 4 cm. And for every payment the chip creates a unique one-time code, so copied data can't simply be reused.\n\nSource: https://www.analog.com/en/resources/app-note",
-   "views": 10,
+   "views": 11,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/k0pam6ISiGA",
@@ -107,39 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/78sLiU_2VtQ",
    "thumb": "assets/yt/78sLiU_2VtQ.webp"
-  },
-  {
-   "id": "SAOgtZzj3Lw",
-   "title": "She Got a 3D Printed Titanium Jaw #shorts",
-   "published": "2026-11-04T11:00:26+00:00",
-   "description": "In 2011 in the Netherlands, an 83-year-old woman received a new lower jaw printed from titanium powder – a laser fused it layer by layer, 33 layers per millimeter. Designed from her scans, it's recognized as the first 3D printed complete lower jaw implant.\n\nSource: https://www.guinnessworldrecords.com/world-records/107376-first-3d-printed-complete-lower-jaw-implant\n\n#shorts #3dprinting #medicine #",
-   "views": 16,
-   "likes": 1,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/SAOgtZzj3Lw",
-   "thumb": "assets/yt/SAOgtZzj3Lw.webp"
-  },
-  {
-   "id": "Dsj_VKRBXII",
-   "title": "Adidas 3D Printed the Sole of This Shoe 👟 #shorts",
-   "published": "2026-11-03T17:00:14+00:00",
-   "description": "The Adidas Futurecraft 4D (2017) has a 3D printed lattice midsole made with Carbon's light-based process: light hardens a liquid resin and the part grows out of the liquid. A lattice lets every zone feel different – softer in the heel, firmer in the front – all in one part.\n\nSource: https://techcrunch.com/2017/04/07/adidas-latest-3d-printed-shoe-puts-mass-production-within-sight/\n\n#shorts #3dprint",
-   "views": 118,
-   "likes": 1,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/Dsj_VKRBXII",
-   "thumb": "assets/yt/Dsj_VKRBXII.webp"
-  },
-  {
-   "id": "Ltm1XVrT__8",
-   "title": "Robots 3D Printed a Steel Bridge #shorts",
-   "published": "2026-11-03T11:00:08+00:00",
-   "description": "Welding robots built this bridge layer by layer out of molten steel – about 12 meters long and around 6 tonnes. Sensors measured how it moved as people walked across, and Queen Máxima opened it over a canal in Amsterdam in July 2021.\n\nSources: https://www.euronews.com/2021/07/16/the-world-s-first-3d-printed-steel-bridge-has-opened-in-amsterdam · https://www.guinnessworldrecords.com/world-records/6",
-   "views": 101,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/Ltm1XVrT__8",
-   "thumb": "assets/yt/Ltm1XVrT__8.webp"
   }
  ]
 }
