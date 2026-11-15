@@ -1,14 +1,25 @@
 {
- "updatedAt": "2026-11-15T16:23:02.776Z",
+ "updatedAt": "2026-11-15T22:50:02.653Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "41",
-  "videoCount": "62"
+  "subscribers": "45",
+  "videoCount": "63"
  },
  "videos": [
+  {
+   "id": "eCvfJBTPD4U",
+   "title": "2 Guesses Left to Unlock $500 Million in Bitcoin 🔒 #shorts",
+   "published": "2026-11-15T17:00:30+00:00",
+   "description": "Programmer Stefan Thomas has 7,002 bitcoin locked on an IronKey drive. He wrote the password on a piece of paper – and lost it. After 10 wrong guesses the IronKey wipes itself, and he has already used 8. At around $82,000 per bitcoin (October 2026), that's more than half a billion dollars.\n\nSources: https://www.techspot.com/news/88290-programmer-has-two-password-guesses-left-save-240.html · https:",
+   "views": 7,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/eCvfJBTPD4U",
+   "thumb": "assets/yt/eCvfJBTPD4U.webp"
+  },
   {
    "id": "sMb25nC4V9I",
    "title": "6 Ways to 3D Print Without Supports (Easy Design Tricks)",
@@ -25,7 +36,7 @@
    "title": "Why Does My 3D Printer Poop Plastic? 💩 #shorts",
    "published": "2026-11-15T11:00:21+00:00",
    "description": "When a multicolor 3D printer switches filament, the old color is still in the nozzle – so it purges plastic until the new color comes out clean. That's roughly 0.3 to 1.5 g per color change, and a model with a few hundred changes can waste 40–90 g, sometimes more than the model itself. Tips: fewer colors per layer, flush into the infill, or print colored parts separately.\n\nSource: https://evezone.",
-   "views": 39,
+   "views": 52,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/iei0aaQLoag",
@@ -36,7 +47,7 @@
    "title": "Invisible Braces Start in a 3D Printer 🦷 #shorts",
    "published": "2026-11-14T17:00:21+00:00",
    "description": "Clear aligners like Invisalign start with a scan of your teeth. Each stage of the treatment is 3D printed as a model of your teeth, then clear plastic is heated and formed over it – so every single aligner is unique. Back in 2018, Align Technology made over 320,000 custom aligners per day, and more than 20 million people have been treated.\n\nSources: https://www.tctmagazine.com/align-3d-systems-3d-",
-   "views": 17,
+   "views": 23,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/Rf7YTykx6Ac",
@@ -69,7 +80,7 @@
    "title": "This Filament Destroys Your 3D Printer Nozzle ⚠️ #shorts",
    "published": "2026-11-13T17:00:04+00:00",
    "description": "Glow-in-the-dark filament is packed with strontium aluminate particles – that's what makes it glow, but it's also abrasive. Print after print it grinds away a normal brass nozzle: the hole gets wider and you get under-extrusion and messy prints. The fix: a hardened steel nozzle for glow, carbon fiber and other abrasive filaments.\n\nSource: https://qidi3d.com/blogs/print-lab/glow-in-dark-filament-ti",
-   "views": 113,
+   "views": 115,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/y92qbQYHMv8",
@@ -80,7 +91,7 @@
    "title": "Layer Height Explained: Do Thinner Layers Really Print Better?",
    "published": "2026-11-13T15:00:00+00:00",
    "description": "Is 0.1 mm always better than 0.3 mm? Layer height changes print time, detail and even strength. Here's the golden rule, the settings I actually use, and the trick that gives you the best of both.\n\nChapters:\n0:00 Intro\n0:26 What it is\n0:51 The golden rule\n1:19 Print time\n1:51 Where you see it\n2:17 Which to use\n2:46 The best of both\n3:09 The first layer\n3:38 The hidden limit\n4:17 Outro\n\nSources: Pru",
-   "views": 22,
+   "views": 23,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=nf2ms_RTb3Y",
@@ -91,7 +102,7 @@
    "title": "This 90s Toy Ran on a 4-Bit Computer 🥚 #shorts",
    "published": "2026-11-13T11:00:35+00:00",
    "description": "The Tamagotchi launched in Japan on November 23, 1996 – and over 98 million have been sold. Inside the original was a tiny 4-bit microcontroller from Epson. Today makers even emulate the original Tamagotchi on an Arduino Uno. Did you keep yours alive?\n\nSources: https://en.wikipedia.org/wiki/Tamagotchi · https://hackaday.com/2022/01/27/reject-modernity-return-to-tamagotchi/\n\n#shorts #tamagotchi #ar",
-   "views": 69,
+   "views": 70,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/oBbsz8ELHi0",
@@ -113,7 +124,7 @@
    "title": "Which PLA Should You Buy? PLA vs PLA+ vs Silk vs Matte vs PLA-CF",
    "published": "2026-11-12T15:00:10+00:00",
    "description": "PLA, PLA+, Silk, Matte or Carbon Fiber PLA? I compare all 5 types of PLA filament: strength, toughness, looks and price, so you know exactly which spool to buy for your 3D printer.\n\nChapters:\n0:00 Intro\n0:20 What PLA is\n0:51 1 · Standard PLA\n1:23 2 · PLA+\n1:56 3 · Silk PLA\n2:29 4 · Matte PLA\n3:03 5 · PLA-CF\n3:33 Comparison\n3:50 Which to buy\n4:12 Outro\n\nSources: Material data: manufacturer technica",
-   "views": 90,
+   "views": 92,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=BYVo3_jfhcs",
@@ -124,22 +135,11 @@
    "title": "Your Bank Card Is a Computer (With No Battery) 💳 #shorts",
    "published": "2026-11-12T11:00:19+00:00",
    "description": "That golden square on your bank card is a secure microcontroller – a tiny computer with its own processor and memory. A contactless card has no battery: an antenna coil inside picks up power from the reader's field, typically within about 4 cm. And for every payment the chip creates a unique one-time code, so copied data can't simply be reused.\n\nSource: https://www.analog.com/en/resources/app-note",
-   "views": 11,
+   "views": 12,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/k0pam6ISiGA",
    "thumb": "assets/yt/k0pam6ISiGA.webp"
-  },
-  {
-   "id": "XejU0SdrqiM",
-   "title": "What Happens When the Last Bitcoin Is Mined? #shorts",
-   "published": "2026-11-05T17:00:12+00:00",
-   "description": "The last bitcoin is expected around the year 2140. After that, miners will be paid only through transaction fees. And bitcoin won't run out of small change: one bitcoin is 100 million satoshis. Will fees alone keep the network secure? That's one of Bitcoin's biggest open questions.\n\nSource: https://river.com/learn/what-will-happen-after-all-bitcoin-mined/\n⚠️ Not financial advice.\n\n#shorts #bitcoin",
-   "views": 13,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/XejU0SdrqiM",
-   "thumb": "assets/yt/XejU0SdrqiM.webp"
   }
  ]
 }
