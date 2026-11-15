@@ -1,20 +1,42 @@
 {
- "updatedAt": "2026-11-14T22:26:26.851Z",
+ "updatedAt": "2026-11-15T16:23:02.776Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "40",
-  "videoCount": "60"
+  "subscribers": "41",
+  "videoCount": "62"
  },
  "videos": [
+  {
+   "id": "sMb25nC4V9I",
+   "title": "6 Ways to 3D Print Without Supports (Easy Design Tricks)",
+   "published": "2026-11-15T15:00:31+00:00",
+   "description": "Supports waste filament, time and leave ugly marks. Here are 6 simple tricks to avoid them: the 45° rule, rotating, chamfers, teardrop holes, bridges and splitting your model, plus cooling and tree supports.\n\nChapters:\n0:00 Intro\n0:16 1 · The 45° rule\n0:47 2 · Rotate it first\n1:13 3 · Chamfer, don't fillet\n1:34 4 · Teardrop holes\n1:55 5 · Bridges\n2:20 Bonus · Cooling\n2:50 If you do need supports\n3",
+   "views": 1,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=sMb25nC4V9I",
+   "thumb": "assets/yt/sMb25nC4V9I.webp"
+  },
+  {
+   "id": "iei0aaQLoag",
+   "title": "Why Does My 3D Printer Poop Plastic? 💩 #shorts",
+   "published": "2026-11-15T11:00:21+00:00",
+   "description": "When a multicolor 3D printer switches filament, the old color is still in the nozzle – so it purges plastic until the new color comes out clean. That's roughly 0.3 to 1.5 g per color change, and a model with a few hundred changes can waste 40–90 g, sometimes more than the model itself. Tips: fewer colors per layer, flush into the infill, or print colored parts separately.\n\nSource: https://evezone.",
+   "views": 39,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/iei0aaQLoag",
+   "thumb": "assets/yt/iei0aaQLoag.webp"
+  },
   {
    "id": "Rf7YTykx6Ac",
    "title": "Invisible Braces Start in a 3D Printer 🦷 #shorts",
    "published": "2026-11-14T17:00:21+00:00",
    "description": "Clear aligners like Invisalign start with a scan of your teeth. Each stage of the treatment is 3D printed as a model of your teeth, then clear plastic is heated and formed over it – so every single aligner is unique. Back in 2018, Align Technology made over 320,000 custom aligners per day, and more than 20 million people have been treated.\n\nSources: https://www.tctmagazine.com/align-3d-systems-3d-",
-   "views": 4,
+   "views": 17,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/Rf7YTykx6Ac",
@@ -25,7 +47,7 @@
    "title": "Is 0.4 mm the Best Nozzle? 0.2 vs 0.4 vs 0.6 vs 0.8 Explained",
    "published": "2026-11-14T15:00:10+00:00",
    "description": "Almost every 3D printer ships with a 0.4 mm nozzle, but is it the best? I explain when to use 0.2, 0.6 and 0.8 mm nozzles, why a 0.6 can print up to 2× faster, and brass vs hardened steel.\n\nChapters:\n0:00 Intro\n0:24 Two simple rules\n0:59 0.2 mm: tiny details\n1:23 0.6 mm: the secret weapon\n2:02 0.8 mm: big and fast\n2:27 The hotend limit\n3:06 Brass or steel?\n3:40 Comparison\n3:56 Before you swap\n4:18",
-   "views": 1,
+   "views": 8,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=W5WcM5bzsGM",
@@ -36,7 +58,7 @@
    "title": "This 3D Print Is Thinner Than a Human Hair 🔬 #shorts",
    "published": "2026-11-14T11:00:37+00:00",
    "description": "In 2020, physicists at Leiden University 3D printed a 3DBenchy just 30 micrometers long – thinner than a human hair. They used a laser 3D printer (two-photon printing), where the liquid only hardens at the laser's tiny focus point, and used printed shapes like this to study how microswimmers move.\n\nSource: https://www.engadget.com/researchers-3-dprinted-a-microscopic-boat-to-see-how-bacteria-swim-",
-   "views": 55,
+   "views": 59,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/-Vmz33lxNyk",
@@ -47,7 +69,7 @@
    "title": "This Filament Destroys Your 3D Printer Nozzle ⚠️ #shorts",
    "published": "2026-11-13T17:00:04+00:00",
    "description": "Glow-in-the-dark filament is packed with strontium aluminate particles – that's what makes it glow, but it's also abrasive. Print after print it grinds away a normal brass nozzle: the hole gets wider and you get under-extrusion and messy prints. The fix: a hardened steel nozzle for glow, carbon fiber and other abrasive filaments.\n\nSource: https://qidi3d.com/blogs/print-lab/glow-in-dark-filament-ti",
-   "views": 104,
+   "views": 113,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/y92qbQYHMv8",
@@ -58,7 +80,7 @@
    "title": "Layer Height Explained: Do Thinner Layers Really Print Better?",
    "published": "2026-11-13T15:00:00+00:00",
    "description": "Is 0.1 mm always better than 0.3 mm? Layer height changes print time, detail and even strength. Here's the golden rule, the settings I actually use, and the trick that gives you the best of both.\n\nChapters:\n0:00 Intro\n0:26 What it is\n0:51 The golden rule\n1:19 Print time\n1:51 Where you see it\n2:17 Which to use\n2:46 The best of both\n3:09 The first layer\n3:38 The hidden limit\n4:17 Outro\n\nSources: Pru",
-   "views": 17,
+   "views": 22,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=nf2ms_RTb3Y",
@@ -69,7 +91,7 @@
    "title": "This 90s Toy Ran on a 4-Bit Computer 🥚 #shorts",
    "published": "2026-11-13T11:00:35+00:00",
    "description": "The Tamagotchi launched in Japan on November 23, 1996 – and over 98 million have been sold. Inside the original was a tiny 4-bit microcontroller from Epson. Today makers even emulate the original Tamagotchi on an Arduino Uno. Did you keep yours alive?\n\nSources: https://en.wikipedia.org/wiki/Tamagotchi · https://hackaday.com/2022/01/27/reject-modernity-return-to-tamagotchi/\n\n#shorts #tamagotchi #ar",
-   "views": 57,
+   "views": 69,
    "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/oBbsz8ELHi0",
@@ -80,7 +102,7 @@
    "title": "Your USB-C Cable Has a Secret Chip 🔌 #shorts",
    "published": "2026-11-12T17:00:25+00:00",
    "description": "Many USB-C cables hide a tiny e-marker chip in the plug. It tells the charger what the cable can safely handle – current, voltage and data speed. Without one, a cable is treated as 3 A, so 60 W at most. With an e-marker it can carry 5 A: up to 100 W, and up to 240 W with the newest USB Power Delivery standard.\n\nSource: https://us.ktcplay.com/blogs/technology-hub/usb-c-cable-e-marker-chips\n\n#shorts",
-   "views": 18,
+   "views": 19,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/0o6f9iSspk0",
@@ -91,7 +113,7 @@
    "title": "Which PLA Should You Buy? PLA vs PLA+ vs Silk vs Matte vs PLA-CF",
    "published": "2026-11-12T15:00:10+00:00",
    "description": "PLA, PLA+, Silk, Matte or Carbon Fiber PLA? I compare all 5 types of PLA filament: strength, toughness, looks and price, so you know exactly which spool to buy for your 3D printer.\n\nChapters:\n0:00 Intro\n0:20 What PLA is\n0:51 1 · Standard PLA\n1:23 2 · PLA+\n1:56 3 · Silk PLA\n2:29 4 · Matte PLA\n3:03 5 · PLA-CF\n3:33 Comparison\n3:50 Which to buy\n4:12 Outro\n\nSources: Material data: manufacturer technica",
-   "views": 84,
+   "views": 90,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=BYVo3_jfhcs",
@@ -118,28 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/XejU0SdrqiM",
    "thumb": "assets/yt/XejU0SdrqiM.webp"
-  },
-  {
-   "id": "piwQ_F6BLrM",
-   "title": "12 Words That Control All Your Crypto 🔐 #shorts",
-   "published": "2026-11-05T11:00:35+00:00",
-   "description": "A seed phrase is 12 or 24 words from a list of exactly 2,048 words. Your coins live on the blockchain – the seed phrase creates the keys that control them. Guessing it is practically impossible, but anyone who sees it owns your coins. Write it on paper or metal, never type it into a website, and never share it.\n\nSource: https://btc.network/learn/what-is-a-seed-phrase\n\n#shorts #crypto #bitcoin #sec",
-   "views": 63,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/piwQ_F6BLrM",
-   "thumb": "assets/yt/piwQ_F6BLrM.webp"
-  },
-  {
-   "id": "78sLiU_2VtQ",
-   "title": "$1 of Bitcoin in 2009 = $100 Million Today? #shorts",
-   "published": "2026-11-04T17:00:22+00:00",
-   "description": "In October 2009, one of the first exchange rates valued bitcoin at about 1,309 BTC per dollar. At ~$82,000 per bitcoin (Oct 2026), that's over $100 million. But almost nobody cared back then – many early coins were lost, forgotten or spent on almost nothing.\n\nSource: https://bitcoin.zorinaq.com/price/\n⚠️ Not financial advice. Past prices say nothing about the future.\n\n#shorts #bitcoin #crypto #his",
-   "views": 55,
-   "likes": 2,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/78sLiU_2VtQ",
-   "thumb": "assets/yt/78sLiU_2VtQ.webp"
   }
  ]
 }
