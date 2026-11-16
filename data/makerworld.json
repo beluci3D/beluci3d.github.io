@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-15T22:50:02.714Z",
+ "updatedAt": "2026-11-16T06:32:39.074Z",
  "profile": {
   "uid": "3937368763",
   "handle": "beluci",
@@ -11,7 +11,7 @@
  "totals": {
   "models": 8,
   "downloads": 349,
-  "likes": 83,
+  "likes": 84,
   "prints": 211
  },
  "models": [
@@ -45,10 +45,10 @@
    "title": "Custom Shim & Spacer Plate – Fully Parametric",
    "url": "https://makerworld.com/en/models/3035529-custom-shim-spacer-plate-fully-parametric",
    "cover": "https://makerworld.bblmw.com/makerworld/model/USce147a5b0893e5/design/49ac18706f9891e5.png",
-   "likes": 4,
+   "likes": 5,
    "downloads": 29,
    "prints": 26,
-   "collects": 21,
+   "collects": 22,
    "comments": 0,
    "boosts": 0,
    "created": "2026-07-10T17:10:56Z",
