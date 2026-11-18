@@ -1,20 +1,31 @@
 {
- "updatedAt": "2026-11-18T01:04:17.995Z",
+ "updatedAt": "2026-11-18T11:45:04.354Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "49",
-  "videoCount": "69"
+  "subscribers": "50",
+  "videoCount": "70"
  },
  "videos": [
+  {
+   "id": "Vy-eSSWgmHE",
+   "title": "Kids' Code Runs on the Space Station 🛰️ #shorts",
+   "published": "2026-11-18T11:00:01+00:00",
+   "description": "With Astro Pi, young people write Python code that actually runs on Raspberry Pi computers aboard the ISS, for free.\n\nSource: astro-pi.org (ESA & Raspberry Pi Foundation)\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #raspberrypi #iss #coding #python",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/Vy-eSSWgmHE",
+   "thumb": "assets/yt/Vy-eSSWgmHE.webp"
+  },
   {
    "id": "uEAb48Kqz88",
    "title": "This 1977 Computer Is Still Working in Space 🚀 #shorts",
    "published": "2026-11-17T17:00:34+00:00",
    "description": "Voyager 1 runs on computers from 1977 with only 69.63 KB of memory, and it's over 15 billion miles away. Your $5 ESP32 has more memory.\n\nSource: NASA JPL Voyager mission facts\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #voyager #space #nasa #esp32",
-   "views": 5,
+   "views": 9,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/uEAb48Kqz88",
@@ -25,7 +36,7 @@
    "title": "Arduino vs Raspberry Pi: Which One Should You Buy in 2026?",
    "published": "2026-11-17T15:00:23+00:00",
    "description": "Arduino and Raspberry Pi look similar but are completely different: a microcontroller vs a full computer. Specs, prices, where each one wins, the confusing Raspberry Pi Pico, and a simple rule for which one to buy.\n\nChapters:\n0:00 Intro\n0:23 The big difference\n0:53 Specs\n1:25 Where Arduino wins\n1:58 Where the Pi wins\n2:29 Price\n3:06 The confusing one\n3:30 Which one to buy\n4:01 Outro\n\nSources: ardu",
-   "views": 5,
+   "views": 11,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=2egk72kP1A0",
@@ -36,7 +47,7 @@
    "title": "Your SIM Card Is Secretly a Computer 🤯 #shorts",
    "published": "2026-11-17T11:00:15+00:00",
    "description": "Your SIM card has its own CPU, memory and runs Java apps, and your carrier can update it over the air. In 2013 a researcher showed some old SIMs could be hacked this way.\n\nSource: Karsten Nohl / SRLabs, Black Hat 2013\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #tech #simcard #smartphone #funfacts",
-   "views": 16,
+   "views": 23,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/_yuQM1T0gWQ",
@@ -47,7 +58,7 @@
    "title": "This Crypto Scam Took $5.8 Billion in One Year 🚨 #shorts",
    "published": "2026-11-16T17:00:36+00:00",
    "description": "Crypto investment scams cost victims $5.8 billion in 2024, according to the FBI's IC3 report – total reported crypto fraud losses reached $9.3 billion. It often starts with a \"wrong number\" text and weeks of friendly chat, then a fake trading app that shows big profits. When you try to withdraw, suddenly there are \"fees\" or \"taxes\" to pay first. If a stranger wants to teach you crypto investing, i",
-   "views": 12,
+   "views": 13,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/FXWBI2j9WaQ",
@@ -58,7 +69,7 @@
    "title": "4 Ways to 3D Print in Color (Manual, AMS, IDEX & Tool Changer)",
    "published": "2026-11-16T15:00:10+00:00",
    "description": "Want multicolor 3D prints? I compare all 4 methods: a free manual filament swap, automatic filament changers like the AMS, dual nozzles / IDEX and tool changers, including the hidden cost of waste.\n\nChapters:\n0:00 Intro\n0:20 1 · Manual swap\n0:54 2 · Filament changer\n1:27 The catch: waste\n2:09 3 · Two nozzles\n2:44 4 · Tool changer\n3:17 Comparison\n3:37 Which one?\n4:06 Outro\n\nSources: Manufacturer do",
-   "views": 15,
+   "views": 16,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=KkYqkR_cQRc",
@@ -80,7 +91,7 @@
    "title": "2 Guesses Left to Unlock $500 Million in Bitcoin 🔒 #shorts",
    "published": "2026-11-15T17:00:30+00:00",
    "description": "Programmer Stefan Thomas has 7,002 bitcoin locked on an IronKey drive. He wrote the password on a piece of paper – and lost it. After 10 wrong guesses the IronKey wipes itself, and he has already used 8. At around $82,000 per bitcoin (October 2026), that's more than half a billion dollars.\n\nSources: https://www.techspot.com/news/88290-programmer-has-two-password-guesses-left-save-240.html · https:",
-   "views": 15,
+   "views": 16,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/eCvfJBTPD4U",
@@ -102,7 +113,7 @@
    "title": "Why Does My 3D Printer Poop Plastic? 💩 #shorts",
    "published": "2026-11-15T11:00:21+00:00",
    "description": "When a multicolor 3D printer switches filament, the old color is still in the nozzle – so it purges plastic until the new color comes out clean. That's roughly 0.3 to 1.5 g per color change, and a model with a few hundred changes can waste 40–90 g, sometimes more than the model itself. Tips: fewer colors per layer, flush into the infill, or print colored parts separately.\n\nSource: https://evezone.",
-   "views": 60,
+   "views": 61,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/iei0aaQLoag",
@@ -124,22 +135,11 @@
    "title": "Is 0.4 mm the Best Nozzle? 0.2 vs 0.4 vs 0.6 vs 0.8 Explained",
    "published": "2026-11-14T15:00:10+00:00",
    "description": "Almost every 3D printer ships with a 0.4 mm nozzle, but is it the best? I explain when to use 0.2, 0.6 and 0.8 mm nozzles, why a 0.6 can print up to 2× faster, and brass vs hardened steel.\n\nChapters:\n0:00 Intro\n0:24 Two simple rules\n0:59 0.2 mm: tiny details\n1:23 0.6 mm: the secret weapon\n2:02 0.8 mm: big and fast\n2:27 The hotend limit\n3:06 Brass or steel?\n3:40 Comparison\n3:56 Before you swap\n4:18",
-   "views": 17,
+   "views": 18,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=W5WcM5bzsGM",
    "thumb": "assets/yt/W5WcM5bzsGM.webp"
-  },
-  {
-   "id": "-Vmz33lxNyk",
-   "title": "This 3D Print Is Thinner Than a Human Hair 🔬 #shorts",
-   "published": "2026-11-14T11:00:37+00:00",
-   "description": "In 2020, physicists at Leiden University 3D printed a 3DBenchy just 30 micrometers long – thinner than a human hair. They used a laser 3D printer (two-photon printing), where the liquid only hardens at the laser's tiny focus point, and used printed shapes like this to study how microswimmers move.\n\nSource: https://www.engadget.com/researchers-3-dprinted-a-microscopic-boat-to-see-how-bacteria-swim-",
-   "views": 64,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/-Vmz33lxNyk",
-   "thumb": "assets/yt/-Vmz33lxNyk.webp"
   }
  ]
 }
