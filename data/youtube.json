@@ -1,20 +1,31 @@
 {
- "updatedAt": "2026-11-20T02:20:29.093Z",
+ "updatedAt": "2026-11-20T11:42:45.482Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "51",
-  "videoCount": "75"
+  "subscribers": "52",
+  "videoCount": "76"
  },
  "videos": [
+  {
+   "id": "rKgVfvWjw_U",
+   "title": "Why Do Bitcoin Addresses Start With 1, 3 or bc1? #shorts",
+   "published": "2026-11-20T11:00:04+00:00",
+   "description": "1 = legacy, 3 = script/multisig, bc1q = SegWit, bc1p = Taproot. Which one does your wallet use? Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #crypto #btc #wallet",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/rKgVfvWjw_U",
+   "thumb": "assets/yt/rKgVfvWjw_U.webp"
+  },
   {
    "id": "zHqAyZOepJ0",
    "title": "One Vase, One Single Line 🏺 (Vase Mode) #shorts",
    "published": "2026-11-19T17:00:35+00:00",
    "description": "Vase mode prints your model as one continuous spiral: no layer changes, no seam. Fast and beautiful, especially with silk PLA.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #vasemode #silkpla #satisfying",
-   "views": 80,
+   "views": 81,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/zHqAyZOepJ0",
@@ -25,7 +36,7 @@
    "title": "5 Easy ESP32 Projects for Beginners (WiFi Light, Weather Station & More)",
    "published": "2026-11-19T15:00:00+00:00",
    "description": "Just bought an ESP32 and no idea what to build? Here are 5 easy beginner projects that are actually useful and cost only a few dollars: WiFi LED, weather station, WiFi clock, motion alarm and a plant that texts you.\n\nChapters:\n0:00 Intro\n0:21 1 · WiFi light\n1:17 2 · Weather station\n1:48 3 · WiFi clock\n2:19 4 · Motion alarm\n2:48 5 · Plant monitor\n3:21 What you learn\n3:40 Shopping list\n4:09 Outro\n\nS",
-   "views": 17,
+   "views": 35,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=klNiiY7mYpA",
@@ -36,8 +47,8 @@
    "title": "This 3D Printer Printed a Whole Boat ⛵ #shorts",
    "published": "2026-11-19T11:00:00+00:00",
    "description": "The University of Maine's giant printer made 3Dirigo: a 25 ft, 5,000 lb boat printed in 72 hours, setting 3 Guinness World Records. And it floated.\n\nSource: University of Maine ASCC, 2019\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #worldrecord #engineering #boat",
-   "views": 644,
-   "likes": 3,
+   "views": 789,
+   "likes": 4,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/j3zmP20N-ug",
    "thumb": "assets/yt/j3zmP20N-ug.webp"
@@ -47,7 +58,7 @@
    "title": "Your 3D Printer Can Play Music 🎵 (No Speaker) #shorts",
    "published": "2026-11-18T17:00:11+00:00",
    "description": "Every stepper motor step makes a click. 440 steps per second = the note A. That's how 3D printers play songs from G-code.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #3dprinter #music #gcode",
-   "views": 472,
+   "views": 542,
    "likes": 7,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/ogVPkYIE-Fs",
@@ -69,7 +80,7 @@
    "title": "Kids' Code Runs on the Space Station 🛰️ #shorts",
    "published": "2026-11-18T11:00:01+00:00",
    "description": "With Astro Pi, young people write Python code that actually runs on Raspberry Pi computers aboard the ISS, for free.\n\nSource: astro-pi.org (ESA & Raspberry Pi Foundation)\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #raspberrypi #iss #coding #python",
-   "views": 9,
+   "views": 10,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/Vy-eSSWgmHE",
@@ -102,8 +113,8 @@
    "title": "Your SIM Card Is Secretly a Computer 🤯 #shorts",
    "published": "2026-11-17T11:00:15+00:00",
    "description": "Your SIM card has its own CPU, memory and runs Java apps, and your carrier can update it over the air. In 2013 a researcher showed some old SIMs could be hacked this way.\n\nSource: Karsten Nohl / SRLabs, Black Hat 2013\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #tech #simcard #smartphone #funfacts",
-   "views": 51,
-   "likes": 0,
+   "views": 63,
+   "likes": 1,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/_yuQM1T0gWQ",
    "thumb": "assets/yt/_yuQM1T0gWQ.webp"
@@ -124,22 +135,11 @@
    "title": "4 Ways to 3D Print in Color (Manual, AMS, IDEX & Tool Changer)",
    "published": "2026-11-16T15:00:10+00:00",
    "description": "Want multicolor 3D prints? I compare all 4 methods: a free manual filament swap, automatic filament changers like the AMS, dual nozzles / IDEX and tool changers, including the hidden cost of waste.\n\nChapters:\n0:00 Intro\n0:20 1 · Manual swap\n0:54 2 · Filament changer\n1:27 The catch: waste\n2:09 3 · Two nozzles\n2:44 4 · Tool changer\n3:17 Comparison\n3:37 Which one?\n4:06 Outro\n\nSources: Manufacturer do",
-   "views": 19,
+   "views": 20,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=KkYqkR_cQRc",
    "thumb": "assets/yt/KkYqkR_cQRc.webp"
-  },
-  {
-   "id": "uYROsKv5riU",
-   "title": "The First Person Ever to Receive Bitcoin #shorts",
-   "published": "2026-11-16T11:00:29+00:00",
-   "description": "Hal Finney was one of the first people to run the Bitcoin software – in January 2009 he posted \"Running bitcoin\". On January 12, 2009, Satoshi Nakamoto sent him 10 BTC in block 170: the first bitcoin transaction ever. Later that year Hal was diagnosed with ALS, and he kept programming until he passed away in 2014.\n\nSources: https://guinnessworldrecords.com/world-records/696243-first-bitcoin-transa",
-   "views": 12,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/uYROsKv5riU",
-   "thumb": "assets/yt/uYROsKv5riU.webp"
   }
  ]
 }
