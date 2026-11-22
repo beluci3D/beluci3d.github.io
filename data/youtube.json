@@ -1,20 +1,31 @@
 {
- "updatedAt": "2026-11-22T01:21:30.834Z",
+ "updatedAt": "2026-11-22T11:27:48.505Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
   "subscribers": "53",
-  "videoCount": "81"
+  "videoCount": "82"
  },
  "videos": [
+  {
+   "id": "-yQTcSIPl9M",
+   "title": "Break 30% of a QR Code and It Still Works 🤯 #shorts",
+   "published": "2026-11-22T11:00:20+00:00",
+   "description": "QR codes have built-in error correction (Reed-Solomon). At level H, about 30% of the code can be damaged and it still scans, which is why logos in the middle work.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #tech #qrcode #funfacts",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/-yQTcSIPl9M",
+   "thumb": "assets/yt/-yQTcSIPl9M.webp"
+  },
   {
    "id": "m_rpqXkGbws",
    "title": "A Free Computer on a Magazine Cover 🤯 #shorts",
    "published": "2026-11-21T17:00:34+00:00",
    "description": "In November 2015 the $5 Raspberry Pi Zero launched, and The MagPi issue 40 gave one away free on its cover. A world first.\n\nSource: raspberrypi.com, The MagPi #40\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #raspberrypi #tech #history #maker",
-   "views": 129,
+   "views": 163,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/m_rpqXkGbws",
@@ -25,7 +36,7 @@
    "title": "How Bitcoin Actually Works (Explained Simply in 7 Steps)",
    "published": "2026-11-21T15:00:02+00:00",
    "description": "What actually happens when you send bitcoin? The ledger, keys and wallets, transactions, mining, difficulty, the 21 million limit and why you can't cheat, explained simply in 7 steps.\n\nChapters:\n0:00 Intro\n0:21 1 · The ledger\n0:51 2 · Keys & wallets\n1:20 3 · Sending bitcoin\n1:42 4 · Mining\n2:11 5 · Difficulty\n2:35 6 · 21 million\n3:11 7 · Why you can't cheat\n3:44 Recap\n3:57 Outro\n\nSources: Bitcoin ",
-   "views": 0,
+   "views": 5,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=GOS9gW6hQEs",
@@ -58,7 +69,7 @@
    "title": "Can a $5 ESP32 Mine Bitcoin? NerdMiner Explained",
    "published": "2026-11-20T15:00:22+00:00",
    "description": "NerdMiner turns a cheap ESP32 into a solo bitcoin miner. But how fast is it, and what are your real chances of finding a block? Spoiler: about 300 billion years. Plus: what about a Bitaxe?\n\nChapters:\n0:00 Intro\n0:21 What is NerdMiner?\n0:51 How mining works\n1:16 How fast is it?\n1:37 The whole network\n1:59 The real math\n2:29 What about a Bitaxe?\n2:57 So why do it?\n3:25 Outro\n\nSources: NerdMiner_v2 (",
-   "views": 18,
+   "views": 20,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=VYtOL6NMrKU",
@@ -69,7 +80,7 @@
    "title": "Why Do Bitcoin Addresses Start With 1, 3 or bc1? #shorts",
    "published": "2026-11-20T11:00:04+00:00",
    "description": "1 = legacy, 3 = script/multisig, bc1q = SegWit, bc1p = Taproot. Which one does your wallet use? Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #crypto #btc #wallet",
-   "views": 6,
+   "views": 10,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/rKgVfvWjw_U",
@@ -91,7 +102,7 @@
    "title": "5 Easy ESP32 Projects for Beginners (WiFi Light, Weather Station & More)",
    "published": "2026-11-19T15:00:00+00:00",
    "description": "Just bought an ESP32 and no idea what to build? Here are 5 easy beginner projects that are actually useful and cost only a few dollars: WiFi LED, weather station, WiFi clock, motion alarm and a plant that texts you.\n\nChapters:\n0:00 Intro\n0:21 1 · WiFi light\n1:17 2 · Weather station\n1:48 3 · WiFi clock\n2:19 4 · Motion alarm\n2:48 5 · Plant monitor\n3:21 What you learn\n3:40 Shopping list\n4:09 Outro\n\nS",
-   "views": 77,
+   "views": 82,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=klNiiY7mYpA",
@@ -102,7 +113,7 @@
    "title": "This 3D Printer Printed a Whole Boat ⛵ #shorts",
    "published": "2026-11-19T11:00:00+00:00",
    "description": "The University of Maine's giant printer made 3Dirigo: a 25 ft, 5,000 lb boat printed in 72 hours, setting 3 Guinness World Records. And it floated.\n\nSource: University of Maine ASCC, 2019\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #worldrecord #engineering #boat",
-   "views": 872,
+   "views": 874,
    "likes": 5,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/j3zmP20N-ug",
@@ -113,7 +124,7 @@
    "title": "Your 3D Printer Can Play Music 🎵 (No Speaker) #shorts",
    "published": "2026-11-18T17:00:11+00:00",
    "description": "Every stepper motor step makes a click. 440 steps per second = the note A. That's how 3D printers play songs from G-code.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #3dprinter #music #gcode",
-   "views": 651,
+   "views": 650,
    "likes": 7,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/ogVPkYIE-Fs",
@@ -124,22 +135,11 @@
    "title": "Which ESP32 Should You Buy? ESP32 vs S3 vs C3 vs C6 (2026)",
    "published": "2026-11-18T15:00:04+00:00",
    "description": "There are so many ESP32 chips now! Classic ESP32, S3, C3, C6, H2 and P4, and some don't even have WiFi. Here's what each one is good at, a full cheat sheet, and which one you should buy.\n\nChapters:\n0:00 Intro\n0:22 The classic ESP32\n1:01 ESP32-S3\n1:39 ESP32-C3\n2:12 ESP32-C6\n2:47 No WiFi?!\n3:26 Cheat sheet\n3:48 Which one to buy\n4:13 Outro\n\nSources: Espressif datasheets & product selector (espressif.",
-   "views": 25,
+   "views": 27,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=DgMWRCOubwQ",
    "thumb": "assets/yt/DgMWRCOubwQ.webp"
-  },
-  {
-   "id": "Vy-eSSWgmHE",
-   "title": "Kids' Code Runs on the Space Station 🛰️ #shorts",
-   "published": "2026-11-18T11:00:01+00:00",
-   "description": "With Astro Pi, young people write Python code that actually runs on Raspberry Pi computers aboard the ISS, for free.\n\nSource: astro-pi.org (ESA & Raspberry Pi Foundation)\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #raspberrypi #iss #coding #python",
-   "views": 13,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/Vy-eSSWgmHE",
-   "thumb": "assets/yt/Vy-eSSWgmHE.webp"
   }
  ]
 }
