@@ -1,20 +1,42 @@
 {
- "updatedAt": "2026-11-24T13:45:51.701Z",
+ "updatedAt": "2026-11-24T23:55:04.143Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "59",
-  "videoCount": "88"
+  "subscribers": "68",
+  "videoCount": "90"
  },
  "videos": [
+  {
+   "id": "QcLjJ5qI654",
+   "title": "This 3D Print Pattern Is Math From 1970 🌀 #shorts",
+   "published": "2026-11-24T17:00:34+00:00",
+   "description": "The gyroid infill was described by NASA scientist Alan Schoen in 1970. It's strong in every direction and prints smoothly.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #math #infill",
+   "views": 136,
+   "likes": 2,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/QcLjJ5qI654",
+   "thumb": "assets/yt/QcLjJ5qI654.webp"
+  },
+  {
+   "id": "JZecvYKi3CY",
+   "title": "How to Stop Stringing in 3D Prints (6 Fixes That Work)",
+   "published": "2026-11-24T15:00:32+00:00",
+   "description": "Thin hairs all over your prints? Here are 6 fixes for stringing, from the most likely cause to the least: dry filament, temperature, retraction, travel, wipe & z-hop, and your nozzle.\n\nChapters:\n0:00 Intro\n0:15 Why it happens\n0:34 1 · Dry your filament\n0:58 2 · Lower the temperature\n1:15 3 · Tune retraction\n1:38 4 · Faster travel\n2:02 5 · Wipe & z-hop\n2:24 6 · Check the nozzle\n2:39 Quick cleanup\n2",
+   "views": 2,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=JZecvYKi3CY",
+   "thumb": "assets/yt/JZecvYKi3CY.webp"
+  },
   {
    "id": "5uszb2VlDj8",
    "title": "The 3D Printer That Prints Itself 🤖 #shorts",
    "published": "2026-11-24T11:00:06+00:00",
    "description": "RepRap, started in 2005 by Adrian Bowyer at the University of Bath, was designed to print many of its own parts, and it's why cheap home 3D printers exist.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #opensource #history",
-   "views": 0,
+   "views": 112,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/5uszb2VlDj8",
@@ -25,7 +47,7 @@
    "title": "3D Printing Was Invented in 1984 🤯 #shorts",
    "published": "2026-11-23T17:00:32+00:00",
    "description": "Chuck Hull filed the patent for stereolithography in 1984 (granted 1986). 3D printing is about 40 years old.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #history #tech",
-   "views": 65,
+   "views": 66,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/nhCdq6LMsmw",
@@ -36,7 +58,7 @@
    "title": "Infill Explained: Which Pattern Makes the Strongest 3D Prints?",
    "published": "2026-11-23T15:00:11+00:00",
    "description": "Your 3D prints are mostly empty inside. Grid, gyroid, cubic or adaptive cubic? How much infill do you really need? And the one setting that matters more than infill.\n\nChapters:\n0:00 Intro\n0:21 What infill is\n0:46 Grid & lines\n1:06 Gyroid\n1:27 Cubic & more\n1:47 How much infill?\n2:07 Walls beat infill\n2:27 My cheat sheet\n2:46 Top layers matter too\n3:15 Infill & print time\n3:38 Outro\n\nSources: Slicer",
-   "views": 8,
+   "views": 22,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=DNpBYp5CP_Y",
@@ -47,7 +69,7 @@
    "title": "This House Was 3D Printed in About 24 Hours 🏠 #shorts",
    "published": "2026-11-23T11:00:05+00:00",
    "description": "In 2017 Apis Cor printed the walls of a ~38 m² house on site in about a day, reported cost around $10,000.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #architecture #construction",
-   "views": 61,
+   "views": 62,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/etiI_-yLcws",
@@ -58,7 +80,7 @@
    "title": "Your Phone Camera Can See Invisible Light 📸 #shorts",
    "published": "2026-11-22T17:00:02+00:00",
    "description": "Point a TV remote at your phone camera and press a button: many cameras can see the infrared LED flash that your eyes can't.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #tech #infrared #lifehack",
-   "views": 51,
+   "views": 55,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/JJ8wNJo7dsQ",
@@ -69,7 +91,7 @@
    "title": "PLA vs PETG vs ABS vs TPU: Which Filament Should You Use?",
    "published": "2026-11-22T15:00:30+00:00",
    "description": "PLA, PETG, ABS or TPU? I compare the 4 most popular 3D printing filaments: how easy they are to print, heat resistance, toughness and what each one is best for, plus which one to buy first.\n\nChapters:\n0:00 Intro\n0:21 1 · PLA\n0:54 2 · PETG\n1:34 3 · ABS\n2:08 4 · TPU\n2:32 Comparison\n2:49 Bonus · Dry your filament\n3:14 Which one to buy\n3:35 Common mistakes\n4:11 Price & where they shine\n4:34 Outro\n\nSou",
-   "views": 48,
+   "views": 55,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=YizqC6ivwAs",
@@ -118,28 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/AX7OvusMyOc",
    "thumb": "assets/yt/AX7OvusMyOc.webp"
-  },
-  {
-   "id": "5Ym-AbxJmf4",
-   "title": "Bitcoin Started With Just 9 Pages 📄 #shorts",
-   "published": "2026-11-20T17:00:30+00:00",
-   "description": "On Oct 31, 2008, Satoshi Nakamoto published the Bitcoin whitepaper: 9 pages that created a new kind of money. Free to read at bitcoin.org/bitcoin.pdf\n\nSource: bitcoin.org/bitcoin.pdf\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #satoshi #crypto #history",
-   "views": 12,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/5Ym-AbxJmf4",
-   "thumb": "assets/yt/5Ym-AbxJmf4.webp"
-  },
-  {
-   "id": "VYtOL6NMrKU",
-   "title": "Can a $5 ESP32 Mine Bitcoin? NerdMiner Explained",
-   "published": "2026-11-20T15:00:22+00:00",
-   "description": "NerdMiner turns a cheap ESP32 into a solo bitcoin miner. But how fast is it, and what are your real chances of finding a block? Spoiler: about 300 billion years. Plus: what about a Bitaxe?\n\nChapters:\n0:00 Intro\n0:21 What is NerdMiner?\n0:51 How mining works\n1:16 How fast is it?\n1:37 The whole network\n1:59 The real math\n2:29 What about a Bitaxe?\n2:57 So why do it?\n3:25 Outro\n\nSources: NerdMiner_v2 (",
-   "views": 29,
-   "likes": 0,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=VYtOL6NMrKU",
-   "thumb": "assets/yt/VYtOL6NMrKU.webp"
   }
  ]
 }
