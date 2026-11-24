@@ -1,14 +1,25 @@
 {
- "updatedAt": "2026-11-24T02:14:29.486Z",
+ "updatedAt": "2026-11-24T13:45:51.701Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "58",
-  "videoCount": "87"
+  "subscribers": "59",
+  "videoCount": "88"
  },
  "videos": [
+  {
+   "id": "5uszb2VlDj8",
+   "title": "The 3D Printer That Prints Itself 🤖 #shorts",
+   "published": "2026-11-24T11:00:06+00:00",
+   "description": "RepRap, started in 2005 by Adrian Bowyer at the University of Bath, was designed to print many of its own parts, and it's why cheap home 3D printers exist.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #opensource #history",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/5uszb2VlDj8",
+   "thumb": "assets/yt/5uszb2VlDj8.webp"
+  },
   {
    "id": "nhCdq6LMsmw",
    "title": "3D Printing Was Invented in 1984 🤯 #shorts",
@@ -25,7 +36,7 @@
    "title": "Infill Explained: Which Pattern Makes the Strongest 3D Prints?",
    "published": "2026-11-23T15:00:11+00:00",
    "description": "Your 3D prints are mostly empty inside. Grid, gyroid, cubic or adaptive cubic? How much infill do you really need? And the one setting that matters more than infill.\n\nChapters:\n0:00 Intro\n0:21 What infill is\n0:46 Grid & lines\n1:06 Gyroid\n1:27 Cubic & more\n1:47 How much infill?\n2:07 Walls beat infill\n2:27 My cheat sheet\n2:46 Top layers matter too\n3:15 Infill & print time\n3:38 Outro\n\nSources: Slicer",
-   "views": 2,
+   "views": 8,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=DNpBYp5CP_Y",
@@ -47,7 +58,7 @@
    "title": "Your Phone Camera Can See Invisible Light 📸 #shorts",
    "published": "2026-11-22T17:00:02+00:00",
    "description": "Point a TV remote at your phone camera and press a button: many cameras can see the infrared LED flash that your eyes can't.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #tech #infrared #lifehack",
-   "views": 48,
+   "views": 51,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/JJ8wNJo7dsQ",
@@ -58,7 +69,7 @@
    "title": "PLA vs PETG vs ABS vs TPU: Which Filament Should You Use?",
    "published": "2026-11-22T15:00:30+00:00",
    "description": "PLA, PETG, ABS or TPU? I compare the 4 most popular 3D printing filaments: how easy they are to print, heat resistance, toughness and what each one is best for, plus which one to buy first.\n\nChapters:\n0:00 Intro\n0:21 1 · PLA\n0:54 2 · PETG\n1:34 3 · ABS\n2:08 4 · TPU\n2:32 Comparison\n2:49 Bonus · Dry your filament\n3:14 Which one to buy\n3:35 Common mistakes\n4:11 Price & where they shine\n4:34 Outro\n\nSou",
-   "views": 36,
+   "views": 48,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=YizqC6ivwAs",
@@ -124,22 +135,11 @@
    "title": "Can a $5 ESP32 Mine Bitcoin? NerdMiner Explained",
    "published": "2026-11-20T15:00:22+00:00",
    "description": "NerdMiner turns a cheap ESP32 into a solo bitcoin miner. But how fast is it, and what are your real chances of finding a block? Spoiler: about 300 billion years. Plus: what about a Bitaxe?\n\nChapters:\n0:00 Intro\n0:21 What is NerdMiner?\n0:51 How mining works\n1:16 How fast is it?\n1:37 The whole network\n1:59 The real math\n2:29 What about a Bitaxe?\n2:57 So why do it?\n3:25 Outro\n\nSources: NerdMiner_v2 (",
-   "views": 26,
+   "views": 29,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=VYtOL6NMrKU",
    "thumb": "assets/yt/VYtOL6NMrKU.webp"
-  },
-  {
-   "id": "rKgVfvWjw_U",
-   "title": "Why Do Bitcoin Addresses Start With 1, 3 or bc1? #shorts",
-   "published": "2026-11-20T11:00:04+00:00",
-   "description": "1 = legacy, 3 = script/multisig, bc1q = SegWit, bc1p = Taproot. Which one does your wallet use? Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #crypto #btc #wallet",
-   "views": 11,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/rKgVfvWjw_U",
-   "thumb": "assets/yt/rKgVfvWjw_U.webp"
   }
  ]
 }
