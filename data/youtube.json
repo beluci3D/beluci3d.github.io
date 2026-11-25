@@ -1,20 +1,53 @@
 {
- "updatedAt": "2026-11-25T08:37:28.329Z",
+ "updatedAt": "2026-11-25T19:18:33.297Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "68",
-  "videoCount": "90"
+  "subscribers": "69",
+  "videoCount": "93"
  },
  "videos": [
+  {
+   "id": "_uJ7Q98tOaI",
+   "title": "Millions of Bitcoin Are Lost Forever 💀 #shorts",
+   "published": "2026-11-25T17:00:03+00:00",
+   "description": "Chainalysis estimated around 3.7 million BTC may be lost: forgotten passwords, thrown away drives and lost seed phrases. Back up yours. Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #crypto #seedphrase",
+   "views": 1,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/_uJ7Q98tOaI",
+   "thumb": "assets/yt/_uJ7Q98tOaI.webp"
+  },
+  {
+   "id": "mxfvvKKlHYE",
+   "title": "First Layer Won't Stick? 7 Fixes for Bed Adhesion",
+   "published": "2026-11-25T15:00:21+00:00",
+   "description": "Prints letting go of the bed? These 7 fixes solve bed adhesion problems in almost every case: cleaning, z-offset, bed temperature, first layer speed, brim, build surface and drafts.\n\nChapters:\n0:00 Intro\n0:14 1 · Clean the bed\n0:37 2 · Level & z-offset\n0:58 3 · Bed temperature\n1:14 4 · Slow first layer\n1:33 5 · Brim & mouse ears\n1:53 6 · Build surface\n2:24 7 · No drafts\n2:41 Checklist\n2:52 Warping",
+   "views": 4,
+   "likes": 1,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=mxfvvKKlHYE",
+   "thumb": "assets/yt/mxfvvKKlHYE.webp"
+  },
+  {
+   "id": "4LxNpFRUHto",
+   "title": "Satoshi's 1.1 Million Bitcoin Have Never Moved #shorts",
+   "published": "2026-11-25T11:00:35+00:00",
+   "description": "Researcher Sergio Lerner found a pattern in the earliest blocks suggesting one miner, widely believed to be Satoshi, mined ~1.1 million BTC. They have never moved. Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #satoshi #crypto",
+   "views": 9,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/4LxNpFRUHto",
+   "thumb": "assets/yt/4LxNpFRUHto.webp"
+  },
   {
    "id": "QcLjJ5qI654",
    "title": "This 3D Print Pattern Is Math From 1970 🌀 #shorts",
    "published": "2026-11-24T17:00:34+00:00",
    "description": "The gyroid infill was described by NASA scientist Alan Schoen in 1970. It's strong in every direction and prints smoothly.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #math #infill",
-   "views": 243,
+   "views": 309,
    "likes": 2,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/QcLjJ5qI654",
@@ -25,7 +58,7 @@
    "title": "How to Stop Stringing in 3D Prints (6 Fixes That Work)",
    "published": "2026-11-24T15:00:32+00:00",
    "description": "Thin hairs all over your prints? Here are 6 fixes for stringing, from the most likely cause to the least: dry filament, temperature, retraction, travel, wipe & z-hop, and your nozzle.\n\nChapters:\n0:00 Intro\n0:15 Why it happens\n0:34 1 · Dry your filament\n0:58 2 · Lower the temperature\n1:15 3 · Tune retraction\n1:38 4 · Faster travel\n2:02 5 · Wipe & z-hop\n2:24 6 · Check the nozzle\n2:39 Quick cleanup\n2",
-   "views": 4,
+   "views": 7,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=JZecvYKi3CY",
@@ -36,7 +69,7 @@
    "title": "The 3D Printer That Prints Itself 🤖 #shorts",
    "published": "2026-11-24T11:00:06+00:00",
    "description": "RepRap, started in 2005 by Adrian Bowyer at the University of Bath, was designed to print many of its own parts, and it's why cheap home 3D printers exist.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #opensource #history",
-   "views": 139,
+   "views": 265,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/5uszb2VlDj8",
@@ -47,7 +80,7 @@
    "title": "3D Printing Was Invented in 1984 🤯 #shorts",
    "published": "2026-11-23T17:00:32+00:00",
    "description": "Chuck Hull filed the patent for stereolithography in 1984 (granted 1986). 3D printing is about 40 years old.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #history #tech",
-   "views": 66,
+   "views": 67,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/nhCdq6LMsmw",
@@ -58,7 +91,7 @@
    "title": "Infill Explained: Which Pattern Makes the Strongest 3D Prints?",
    "published": "2026-11-23T15:00:11+00:00",
    "description": "Your 3D prints are mostly empty inside. Grid, gyroid, cubic or adaptive cubic? How much infill do you really need? And the one setting that matters more than infill.\n\nChapters:\n0:00 Intro\n0:21 What infill is\n0:46 Grid & lines\n1:06 Gyroid\n1:27 Cubic & more\n1:47 How much infill?\n2:07 Walls beat infill\n2:27 My cheat sheet\n2:46 Top layers matter too\n3:15 Infill & print time\n3:38 Outro\n\nSources: Slicer",
-   "views": 36,
+   "views": 39,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=DNpBYp5CP_Y",
@@ -69,7 +102,7 @@
    "title": "This House Was 3D Printed in About 24 Hours 🏠 #shorts",
    "published": "2026-11-23T11:00:05+00:00",
    "description": "In 2017 Apis Cor printed the walls of a ~38 m² house on site in about a day, reported cost around $10,000.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #architecture #construction",
-   "views": 64,
+   "views": 65,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/etiI_-yLcws",
@@ -91,7 +124,7 @@
    "title": "PLA vs PETG vs ABS vs TPU: Which Filament Should You Use?",
    "published": "2026-11-22T15:00:30+00:00",
    "description": "PLA, PETG, ABS or TPU? I compare the 4 most popular 3D printing filaments: how easy they are to print, heat resistance, toughness and what each one is best for, plus which one to buy first.\n\nChapters:\n0:00 Intro\n0:21 1 · PLA\n0:54 2 · PETG\n1:34 3 · ABS\n2:08 4 · TPU\n2:32 Comparison\n2:49 Bonus · Dry your filament\n3:14 Which one to buy\n3:35 Common mistakes\n4:11 Price & where they shine\n4:34 Outro\n\nSou",
-   "views": 66,
+   "views": 69,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=YizqC6ivwAs",
@@ -107,39 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/-yQTcSIPl9M",
    "thumb": "assets/yt/-yQTcSIPl9M.webp"
-  },
-  {
-   "id": "m_rpqXkGbws",
-   "title": "A Free Computer on a Magazine Cover 🤯 #shorts",
-   "published": "2026-11-21T17:00:34+00:00",
-   "description": "In November 2015 the $5 Raspberry Pi Zero launched, and The MagPi issue 40 gave one away free on its cover. A world first.\n\nSource: raspberrypi.com, The MagPi #40\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #raspberrypi #tech #history #maker",
-   "views": 564,
-   "likes": 6,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/m_rpqXkGbws",
-   "thumb": "assets/yt/m_rpqXkGbws.webp"
-  },
-  {
-   "id": "GOS9gW6hQEs",
-   "title": "How Bitcoin Actually Works (Explained Simply in 7 Steps)",
-   "published": "2026-11-21T15:00:02+00:00",
-   "description": "What actually happens when you send bitcoin? The ledger, keys and wallets, transactions, mining, difficulty, the 21 million limit and why you can't cheat, explained simply in 7 steps.\n\nChapters:\n0:00 Intro\n0:21 1 · The ledger\n0:51 2 · Keys & wallets\n1:20 3 · Sending bitcoin\n1:42 4 · Mining\n2:11 5 · Difficulty\n2:35 6 · 21 million\n3:11 7 · Why you can't cheat\n3:44 Recap\n3:57 Outro\n\nSources: Bitcoin ",
-   "views": 5,
-   "likes": 0,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=GOS9gW6hQEs",
-   "thumb": "assets/yt/GOS9gW6hQEs.webp"
-  },
-  {
-   "id": "AX7OvusMyOc",
-   "title": "850,000 Bitcoin… Gone. (Mt. Gox) #shorts",
-   "published": "2026-11-21T11:00:38+00:00",
-   "description": "Mt. Gox once handled 70%+ of all bitcoin trades. In 2014 it collapsed with ~850,000 BTC missing. Not your keys, not your coins. Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #mtgox #crypto #history",
-   "views": 8,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/AX7OvusMyOc",
-   "thumb": "assets/yt/AX7OvusMyOc.webp"
   }
  ]
 }
