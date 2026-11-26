@@ -1,20 +1,42 @@
 {
- "updatedAt": "2026-11-26T03:35:28.543Z",
+ "updatedAt": "2026-11-26T16:56:18.663Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "73",
-  "videoCount": "93"
+  "subscribers": "79",
+  "videoCount": "95"
  },
  "videos": [
+  {
+   "id": "GiSHh4lQkU8",
+   "title": "5 Calibration Tests That Fix Most 3D Prints",
+   "published": "2026-11-26T15:00:33+00:00",
+   "description": "Most bad prints are a calibration problem. Do these 5 tests in the right order: temperature tower, flow rate, pressure advance, retraction and dimensions.\n\nChapters:\n0:00 Intro\n0:14 The right order\n0:35 1 · Temperature tower\n0:56 2 · Flow rate\n1:19 3 · Pressure advance\n1:44 4 · Retraction test\n1:58 5 · Check dimensions\n2:20 Final check\n2:32 Recap\n2:58 Check the mechanics first\n3:19 Save your profi",
+   "views": 0,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=GiSHh4lQkU8",
+   "thumb": "assets/yt/GiSHh4lQkU8.webp"
+  },
+  {
+   "id": "F4UDOGcg8sA",
+   "title": "The First 50 Bitcoin Can Never Be Spent #shorts",
+   "published": "2026-11-26T11:00:31+00:00",
+   "description": "The 50 BTC reward of the genesis block (January 3, 2009) was never added to the spendable coins. Bug or feature?\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #crypto #history",
+   "views": 0,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/F4UDOGcg8sA",
+   "thumb": "assets/yt/F4UDOGcg8sA.webp"
+  },
   {
    "id": "_uJ7Q98tOaI",
    "title": "Millions of Bitcoin Are Lost Forever 💀 #shorts",
    "published": "2026-11-25T17:00:03+00:00",
    "description": "Chainalysis estimated around 3.7 million BTC may be lost: forgotten passwords, thrown away drives and lost seed phrases. Back up yours. Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #crypto #seedphrase",
-   "views": 3,
+   "views": 2,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/_uJ7Q98tOaI",
@@ -25,7 +47,7 @@
    "title": "First Layer Won't Stick? 7 Fixes for Bed Adhesion",
    "published": "2026-11-25T15:00:21+00:00",
    "description": "Prints letting go of the bed? These 7 fixes solve bed adhesion problems in almost every case: cleaning, z-offset, bed temperature, first layer speed, brim, build surface and drafts.\n\nChapters:\n0:00 Intro\n0:14 1 · Clean the bed\n0:37 2 · Level & z-offset\n0:58 3 · Bed temperature\n1:14 4 · Slow first layer\n1:33 5 · Brim & mouse ears\n1:53 6 · Build surface\n2:24 7 · No drafts\n2:41 Checklist\n2:52 Warping",
-   "views": 6,
+   "views": 13,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=mxfvvKKlHYE",
@@ -36,7 +58,7 @@
    "title": "Satoshi's 1.1 Million Bitcoin Have Never Moved #shorts",
    "published": "2026-11-25T11:00:35+00:00",
    "description": "Researcher Sergio Lerner found a pattern in the earliest blocks suggesting one miner, widely believed to be Satoshi, mined ~1.1 million BTC. They have never moved. Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #satoshi #crypto",
-   "views": 13,
+   "views": 16,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/4LxNpFRUHto",
@@ -47,8 +69,8 @@
    "title": "This 3D Print Pattern Is Math From 1970 🌀 #shorts",
    "published": "2026-11-24T17:00:34+00:00",
    "description": "The gyroid infill was described by NASA scientist Alan Schoen in 1970. It's strong in every direction and prints smoothly.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #math #infill",
-   "views": 485,
-   "likes": 2,
+   "views": 560,
+   "likes": 3,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/QcLjJ5qI654",
    "thumb": "assets/yt/QcLjJ5qI654.webp"
@@ -58,7 +80,7 @@
    "title": "How to Stop Stringing in 3D Prints (6 Fixes That Work)",
    "published": "2026-11-24T15:00:32+00:00",
    "description": "Thin hairs all over your prints? Here are 6 fixes for stringing, from the most likely cause to the least: dry filament, temperature, retraction, travel, wipe & z-hop, and your nozzle.\n\nChapters:\n0:00 Intro\n0:15 Why it happens\n0:34 1 · Dry your filament\n0:58 2 · Lower the temperature\n1:15 3 · Tune retraction\n1:38 4 · Faster travel\n2:02 5 · Wipe & z-hop\n2:24 6 · Check the nozzle\n2:39 Quick cleanup\n2",
-   "views": 7,
+   "views": 9,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=JZecvYKi3CY",
@@ -69,7 +91,7 @@
    "title": "The 3D Printer That Prints Itself 🤖 #shorts",
    "published": "2026-11-24T11:00:06+00:00",
    "description": "RepRap, started in 2005 by Adrian Bowyer at the University of Bath, was designed to print many of its own parts, and it's why cheap home 3D printers exist.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #opensource #history",
-   "views": 270,
+   "views": 283,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/5uszb2VlDj8",
@@ -118,28 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/JJ8wNJo7dsQ",
    "thumb": "assets/yt/JJ8wNJo7dsQ.webp"
-  },
-  {
-   "id": "YizqC6ivwAs",
-   "title": "PLA vs PETG vs ABS vs TPU: Which Filament Should You Use?",
-   "published": "2026-11-22T15:00:30+00:00",
-   "description": "PLA, PETG, ABS or TPU? I compare the 4 most popular 3D printing filaments: how easy they are to print, heat resistance, toughness and what each one is best for, plus which one to buy first.\n\nChapters:\n0:00 Intro\n0:21 1 · PLA\n0:54 2 · PETG\n1:34 3 · ABS\n2:08 4 · TPU\n2:32 Comparison\n2:49 Bonus · Dry your filament\n3:14 Which one to buy\n3:35 Common mistakes\n4:11 Price & where they shine\n4:34 Outro\n\nSou",
-   "views": 72,
-   "likes": 0,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=YizqC6ivwAs",
-   "thumb": "assets/yt/YizqC6ivwAs.webp"
-  },
-  {
-   "id": "-yQTcSIPl9M",
-   "title": "Break 30% of a QR Code and It Still Works 🤯 #shorts",
-   "published": "2026-11-22T11:00:20+00:00",
-   "description": "QR codes have built-in error correction (Reed-Solomon). At level H, about 30% of the code can be damaged and it still scans, which is why logos in the middle work.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #tech #qrcode #funfacts",
-   "views": 28,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/-yQTcSIPl9M",
-   "thumb": "assets/yt/-yQTcSIPl9M.webp"
   }
  ]
 }
