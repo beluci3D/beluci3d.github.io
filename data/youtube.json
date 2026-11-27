@@ -1,20 +1,42 @@
 {
- "updatedAt": "2026-11-27T12:24:51.396Z",
+ "updatedAt": "2026-11-27T23:28:30.329Z",
  "channel": {
   "id": "UCKCNgGTK-LnKHSqhgwfvYyA",
   "handle": "Belutschy",
   "title": "Beluci ",
   "url": "https://www.youtube.com/@Belutschy",
-  "subscribers": "90",
-  "videoCount": "97"
+  "subscribers": "100",
+  "videoCount": "99"
  },
  "videos": [
+  {
+   "id": "EB2USt3EbpM",
+   "title": "There's a Maker Chip in Your Smart Plug 🔌 #shorts",
+   "published": "2026-11-27T17:00:36+00:00",
+   "description": "Many budget smart plugs and bulbs used Espressif chips like the ESP8266, which is why makers can run open source firmware like Tasmota or ESPHome. Never open devices while plugged in.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #smarthome #esp32 #tasmota",
+   "views": 9,
+   "likes": 0,
+   "isShort": true,
+   "url": "https://www.youtube.com/shorts/EB2USt3EbpM",
+   "thumb": "assets/yt/EB2USt3EbpM.webp"
+  },
+  {
+   "id": "RHdm4mRcps4",
+   "title": "Resin vs FDM: Which 3D Printer Should You Buy?",
+   "published": "2026-11-27T15:00:13+00:00",
+   "description": "Resin printers give incredible detail, filament printers give strong, practical parts. I compare detail, strength, size, mess and cost so you know which 3D printer is right for you.\n\nChapters:\n0:00 Intro\n0:16 How FDM works\n0:31 How resin works\n0:54 Detail\n1:11 The mess\n1:33 Strength & size\n1:52 Comparison\n2:05 Which one to buy\n2:23 Running costs\n2:46 Where to put it\n3:08 Who should buy what\n3:29 O",
+   "views": 4,
+   "likes": 0,
+   "isShort": false,
+   "url": "https://www.youtube.com/watch?v=RHdm4mRcps4",
+   "thumb": "assets/yt/RHdm4mRcps4.webp"
+  },
   {
    "id": "vdeaNjgilZg",
    "title": "Your ESP32 Can Feel Touch (No Sensor!) ✋ #shorts",
    "published": "2026-11-27T11:00:17+00:00",
    "description": "The original ESP32 has 10 capacitive touch pins. A wire, coin or aluminum foil becomes a touch button with one line of code.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #esp32 #arduino #diy",
-   "views": 3,
+   "views": 36,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/vdeaNjgilZg",
@@ -25,7 +47,7 @@
    "title": "Your Car Key Never Sends the Same Code Twice 🔑 #shorts",
    "published": "2026-11-26T17:00:13+00:00",
    "description": "Modern car remotes use rolling codes: every code works only once, so a recorded signal is useless.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #tech #cars #security",
-   "views": 7,
+   "views": 8,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/8LnnbUurBsQ",
@@ -36,7 +58,7 @@
    "title": "5 Calibration Tests That Fix Most 3D Prints",
    "published": "2026-11-26T15:00:33+00:00",
    "description": "Most bad prints are a calibration problem. Do these 5 tests in the right order: temperature tower, flow rate, pressure advance, retraction and dimensions.\n\nChapters:\n0:00 Intro\n0:14 The right order\n0:35 1 · Temperature tower\n0:56 2 · Flow rate\n1:19 3 · Pressure advance\n1:44 4 · Retraction test\n1:58 5 · Check dimensions\n2:20 Final check\n2:32 Recap\n2:58 Check the mechanics first\n3:19 Save your profi",
-   "views": 15,
+   "views": 25,
    "likes": 0,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=GiSHh4lQkU8",
@@ -47,7 +69,7 @@
    "title": "The First 50 Bitcoin Can Never Be Spent #shorts",
    "published": "2026-11-26T11:00:31+00:00",
    "description": "The 50 BTC reward of the genesis block (January 3, 2009) was never added to the spendable coins. Bug or feature?\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #crypto #history",
-   "views": 1,
+   "views": 4,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/F4UDOGcg8sA",
@@ -58,7 +80,7 @@
    "title": "Millions of Bitcoin Are Lost Forever 💀 #shorts",
    "published": "2026-11-25T17:00:03+00:00",
    "description": "Chainalysis estimated around 3.7 million BTC may be lost: forgotten passwords, thrown away drives and lost seed phrases. Back up yours. Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #crypto #seedphrase",
-   "views": 3,
+   "views": 4,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/_uJ7Q98tOaI",
@@ -69,7 +91,7 @@
    "title": "First Layer Won't Stick? 7 Fixes for Bed Adhesion",
    "published": "2026-11-25T15:00:21+00:00",
    "description": "Prints letting go of the bed? These 7 fixes solve bed adhesion problems in almost every case: cleaning, z-offset, bed temperature, first layer speed, brim, build surface and drafts.\n\nChapters:\n0:00 Intro\n0:14 1 · Clean the bed\n0:37 2 · Level & z-offset\n0:58 3 · Bed temperature\n1:14 4 · Slow first layer\n1:33 5 · Brim & mouse ears\n1:53 6 · Build surface\n2:24 7 · No drafts\n2:41 Checklist\n2:52 Warping",
-   "views": 14,
+   "views": 15,
    "likes": 1,
    "isShort": false,
    "url": "https://www.youtube.com/watch?v=mxfvvKKlHYE",
@@ -80,7 +102,7 @@
    "title": "Satoshi's 1.1 Million Bitcoin Have Never Moved #shorts",
    "published": "2026-11-25T11:00:35+00:00",
    "description": "Researcher Sergio Lerner found a pattern in the earliest blocks suggesting one miner, widely believed to be Satoshi, mined ~1.1 million BTC. They have never moved. Not financial advice.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #bitcoin #satoshi #crypto",
-   "views": 24,
+   "views": 25,
    "likes": 0,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/4LxNpFRUHto",
@@ -91,7 +113,7 @@
    "title": "This 3D Print Pattern Is Math From 1970 🌀 #shorts",
    "published": "2026-11-24T17:00:34+00:00",
    "description": "The gyroid infill was described by NASA scientist Alan Schoen in 1970. It's strong in every direction and prints smoothly.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #math #infill",
-   "views": 560,
+   "views": 561,
    "likes": 3,
    "isShort": true,
    "url": "https://www.youtube.com/shorts/QcLjJ5qI654",
@@ -118,28 +140,6 @@
    "isShort": true,
    "url": "https://www.youtube.com/shorts/5uszb2VlDj8",
    "thumb": "assets/yt/5uszb2VlDj8.webp"
-  },
-  {
-   "id": "nhCdq6LMsmw",
-   "title": "3D Printing Was Invented in 1984 🤯 #shorts",
-   "published": "2026-11-23T17:00:32+00:00",
-   "description": "Chuck Hull filed the patent for stereolithography in 1984 (granted 1986). 3D printing is about 40 years old.\n\nFollow Beluci for microcontrollers, 3D printing & crypto.\n\n#shorts #3dprinting #history #tech",
-   "views": 68,
-   "likes": 0,
-   "isShort": true,
-   "url": "https://www.youtube.com/shorts/nhCdq6LMsmw",
-   "thumb": "assets/yt/nhCdq6LMsmw.webp"
-  },
-  {
-   "id": "DNpBYp5CP_Y",
-   "title": "Infill Explained: Which Pattern Makes the Strongest 3D Prints?",
-   "published": "2026-11-23T15:00:11+00:00",
-   "description": "Your 3D prints are mostly empty inside. Grid, gyroid, cubic or adaptive cubic? How much infill do you really need? And the one setting that matters more than infill.\n\nChapters:\n0:00 Intro\n0:21 What infill is\n0:46 Grid & lines\n1:06 Gyroid\n1:27 Cubic & more\n1:47 How much infill?\n2:07 Walls beat infill\n2:27 My cheat sheet\n2:46 Top layers matter too\n3:15 Infill & print time\n3:38 Outro\n\nSources: Slicer",
-   "views": 40,
-   "likes": 0,
-   "isShort": false,
-   "url": "https://www.youtube.com/watch?v=DNpBYp5CP_Y",
-   "thumb": "assets/yt/DNpBYp5CP_Y.webp"
   }
  ]
 }
